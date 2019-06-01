@@ -1,3 +1,4 @@
+//Credit to https://github.com/drcmda for this effect
 import ReactDOM from 'react-dom'
 import {Math as ThreeMath, OctahedronBufferGeometry, MeshBasicMaterial, Color} from 'three/src/Three'
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react'
@@ -118,7 +119,6 @@ const Effects = React.memo(({ factor }) => {
   useEffect(() => void composer.current.setSize(size.width, size.height), [size])
   // This takes over as the main render-loop (when 2nd arg is set to true)
   useRender(() => composer.current.render(), true)
-  console.log("scene",scene);
   return (
     <effectComposer ref={composer} args={[gl]}>
       <renderPass attachArray="passes" args={[scene, camera]} />
@@ -128,7 +128,7 @@ const Effects = React.memo(({ factor }) => {
 })
 
 /** This component maintains the scene */
-function Scene({ top, mouse, effectsTop }) {
+function Scene({ top, effectsTop }) {
   const { size } = useThree()
   const scrollMax = size.height * 4.5
   return (
@@ -150,7 +150,7 @@ function Scene({ top, mouse, effectsTop }) {
 const LandingPage = () => {
   // This tiny spring right here controlls all(!) the animations, one for scroll, the other for mouse movement ...
   const [{ top, mouse }] = useSpring(() => ({ top: 0, mouse: [0, 0] }))
-  const [{ top: effectsTop }] = useSpring(() => ({ top: 85 }))
+  const [{ top: effectsTop }] = useSpring(() => ({ top: 95 }))
   return (
     <>
       <Canvas className="canvas">
@@ -158,7 +158,7 @@ const LandingPage = () => {
       </Canvas>
       <div style={{position: 'absolute', top: '65%', left: '50%', transform: 'translateY(-50%)translateX(-50%)'}}>
           <a href="https://discord.gg/UAJMkPV" style={{textDecoration: 'none'}} target="_blank" rel="noreferrer noopener">
-            <Fab onClick={() => {}} style={{opacity: '0.85'}} color="primary" size="medium" variant="extended">
+            <Fab style={{opacity: '0.85'}} color="default" size="medium" variant="extended">
                 Join Discussion
             </Fab>
             </a>
