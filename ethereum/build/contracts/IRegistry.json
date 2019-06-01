@@ -1,0 +1,247 @@
+{
+  "contractName": "IRegistry",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "who",
+          "type": "address"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"who\",\"type\":\"address\"}],\"name\":\"add\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol\":\"IRegistry\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol\":{\"keccak256\":\"0x14027c30d5ef83f03c8916744f81708e67778edc9a1f82cebda31c9c96ebcd82\",\"urls\":[\"bzzr://2e44a7dc694c80d96f220238f8812409c020648d2c5bc83a28ef1c4d2456167c\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.7;\npragma experimental ABIEncoderV2;\n\n\ncontract IRegistry {\n    function add(address who) public;\n}",
+  "sourcePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol",
+  "ast": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol",
+    "exportedSymbols": {
+      "IRegistry": [
+        2009
+      ]
+    },
+    "id": 2010,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2002,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:14"
+      },
+      {
+        "id": 2003,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2009,
+        "linearizedBaseContracts": [
+          2009
+        ],
+        "name": "IRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2008,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2006,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2005,
+                  "name": "who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2008,
+                  "src": "97:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2004,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "97:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "96:13:14"
+            },
+            "returnParameters": {
+              "id": 2007,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "116:0:14"
+            },
+            "scope": 2009,
+            "src": "84:33:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2010,
+        "src": "59:60:14"
+      }
+    ],
+    "src": "0:119:14"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol",
+    "exportedSymbols": {
+      "IRegistry": [
+        2009
+      ]
+    },
+    "id": 2010,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2002,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:14"
+      },
+      {
+        "id": 2003,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2009,
+        "linearizedBaseContracts": [
+          2009
+        ],
+        "name": "IRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2008,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2006,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2005,
+                  "name": "who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2008,
+                  "src": "97:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2004,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "97:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "96:13:14"
+            },
+            "returnParameters": {
+              "id": 2007,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "116:0:14"
+            },
+            "scope": 2009,
+            "src": "84:33:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2010,
+        "src": "59:60:14"
+      }
+    ],
+    "src": "0:119:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-06-01T13:06:25.408Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "contractName": "Void",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/Void.sol\":\"Void\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/Void.sol\":{\"keccak256\":\"0x6231381f8a5e6d54c6a05a341eb07f8dc73691b4237f15337a1aca2616a6504a\",\"urls\":[\"bzzr://56da613317786f2fcefd531874563d46c275b5b80b801f40a361402688b8b215\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a723058207783f100472e6d5ae91e7ba47e30d3eb17df24d3b0cfb9c2198419c17ee88ba70029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058207783f100472e6d5ae91e7ba47e30d3eb17df24d3b0cfb9c2198419c17ee88ba70029",
+  "sourceMap": "71:16:11:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:16:11;;;;;;;",
+  "deployedSourceMap": "71:16:11:-;;;;;",
+  "source": "pragma solidity 0.5.7;\n\n\n// @title Void collects failed proposal fees.\ncontract Void {}",
+  "sourcePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/Void.sol",
+  "ast": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/Void.sol",
+    "exportedSymbols": {
+      "Void": [
+        1964
+      ]
+    },
+    "id": 1965,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1963,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:11"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1964,
+        "linearizedBaseContracts": [
+          1964
+        ],
+        "name": "Void",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1965,
+        "src": "71:16:11"
+      }
+    ],
+    "src": "0:87:11"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/Void.sol",
+    "exportedSymbols": {
+      "Void": [
+        1964
+      ]
+    },
+    "id": 1965,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1963,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:11"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1964,
+        "linearizedBaseContracts": [
+          1964
+        ],
+        "name": "Void",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1965,
+        "src": "71:16:11"
+      }
+    ],
+    "src": "0:87:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-06-01T13:06:25.404Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

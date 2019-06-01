@@ -1,0 +1,542 @@
+{
+  "contractName": "IGovernance",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "feeRecipient",
+          "type": "address"
+        },
+        {
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "proposeWithFeeRecipient",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proposalFee",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"proposalFee\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"feeRecipient\",\"type\":\"address\"},{\"name\":\"target\",\"type\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"proposeWithFeeRecipient\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol\":\"IGovernance\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol\":{\"keccak256\":\"0xe03168e2b564f23c0e2fcf8c7c8a32b2aec90e1d4d1cafa548bf9922704db189\",\"urls\":[\"bzzr://f505ff20e430568923739dc44f504b06b5353398ad493f6b46db8439ded0b752\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.7;\npragma experimental ABIEncoderV2;\n\n\ncontract IGovernance {\n    function proposeWithFeeRecipient(address feeRecipient, address target, bytes memory data) public returns (uint);\n    function proposalFee() public view returns (uint);\n}",
+  "sourcePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol",
+  "ast": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol",
+    "exportedSymbols": {
+      "IGovernance": [
+        1984
+      ]
+    },
+    "id": 1985,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1966,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:12"
+      },
+      {
+        "id": 1967,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:12"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1984,
+        "linearizedBaseContracts": [
+          1984
+        ],
+        "name": "IGovernance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1978,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proposeWithFeeRecipient",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1974,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1969,
+                  "name": "feeRecipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1978,
+                  "src": "119:20:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1968,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "119:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1971,
+                  "name": "target",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1978,
+                  "src": "141:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1970,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "141:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1973,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1978,
+                  "src": "157:17:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1972,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "157:5:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "118:57:12"
+            },
+            "returnParameters": {
+              "id": 1977,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1976,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1978,
+                  "src": "192:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1975,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "192:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "191:6:12"
+            },
+            "scope": 1984,
+            "src": "86:112:12",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1983,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proposalFee",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1979,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "223:2:12"
+            },
+            "returnParameters": {
+              "id": 1982,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1981,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1983,
+                  "src": "247:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1980,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "247:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "246:6:12"
+            },
+            "scope": 1984,
+            "src": "203:50:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1985,
+        "src": "59:196:12"
+      }
+    ],
+    "src": "0:255:12"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol",
+    "exportedSymbols": {
+      "IGovernance": [
+        1984
+      ]
+    },
+    "id": 1985,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1966,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:12"
+      },
+      {
+        "id": 1967,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:12"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1984,
+        "linearizedBaseContracts": [
+          1984
+        ],
+        "name": "IGovernance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1978,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proposeWithFeeRecipient",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1974,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1969,
+                  "name": "feeRecipient",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1978,
+                  "src": "119:20:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1968,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "119:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1971,
+                  "name": "target",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1978,
+                  "src": "141:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1970,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "141:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1973,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1978,
+                  "src": "157:17:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1972,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "157:5:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "118:57:12"
+            },
+            "returnParameters": {
+              "id": 1977,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1976,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1978,
+                  "src": "192:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1975,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "192:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "191:6:12"
+            },
+            "scope": 1984,
+            "src": "86:112:12",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1983,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proposalFee",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1979,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "223:2:12"
+            },
+            "returnParameters": {
+              "id": 1982,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1981,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1983,
+                  "src": "247:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1980,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "247:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "246:6:12"
+            },
+            "scope": 1984,
+            "src": "203:50:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1985,
+        "src": "59:196:12"
+      }
+    ],
+    "src": "0:255:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-06-01T13:06:25.406Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

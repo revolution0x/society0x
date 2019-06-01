@@ -1,0 +1,1446 @@
+{
+  "contractName": "MockHumanityGovernance",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "proposals",
+      "outputs": [
+        {
+          "name": "result",
+          "type": "uint8"
+        },
+        {
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "name": "proposer",
+          "type": "address"
+        },
+        {
+          "name": "feeRecipient",
+          "type": "address"
+        },
+        {
+          "name": "fee",
+          "type": "uint256"
+        },
+        {
+          "name": "startTime",
+          "type": "uint256"
+        },
+        {
+          "name": "yesCount",
+          "type": "uint256"
+        },
+        {
+          "name": "noCount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "finalize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "yesVotes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "fee",
+          "type": "uint256"
+        }
+      ],
+      "name": "setProposalFee",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "voteNo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "removeVote",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "OPEN_VOTE_PERIOD",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "voteYes",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "TOTAL_VOTE_PERIOD",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getProposalsCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "propose",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "void",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawTimes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "timestamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proposalFee",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getProposal",
+      "outputs": [
+        {
+          "components": [
+            {
+              "name": "result",
+              "type": "uint8"
+            },
+            {
+              "name": "target",
+              "type": "address"
+            },
+            {
+              "name": "data",
+              "type": "bytes"
+            },
+            {
+              "name": "proposer",
+              "type": "address"
+            },
+            {
+              "name": "feeRecipient",
+              "type": "address"
+            },
+            {
+              "name": "fee",
+              "type": "uint256"
+            },
+            {
+              "name": "startTime",
+              "type": "uint256"
+            },
+            {
+              "name": "yesCount",
+              "type": "uint256"
+            },
+            {
+              "name": "noCount",
+              "type": "uint256"
+            }
+          ],
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "noVotes",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "feeRecipient",
+          "type": "address"
+        },
+        {
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "proposeWithFeeRecipient",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "VETO_PERIOD",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "deposits",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "proposalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Execute",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "proposalId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "proposer",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "Propose",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "proposalId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "voter",
+          "type": "address"
+        }
+      ],
+      "name": "RemoveVote",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "proposalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Terminate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "proposalId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "voter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "approve",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "name": "weight",
+          "type": "uint256"
+        }
+      ],
+      "name": "Vote",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "time",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBlockTimestampIncrease",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "time",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"proposals\",\"outputs\":[{\"name\":\"result\",\"type\":\"uint8\"},{\"name\":\"target\",\"type\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\"},{\"name\":\"proposer\",\"type\":\"address\"},{\"name\":\"feeRecipient\",\"type\":\"address\"},{\"name\":\"fee\",\"type\":\"uint256\"},{\"name\":\"startTime\",\"type\":\"uint256\"},{\"name\":\"yesCount\",\"type\":\"uint256\"},{\"name\":\"noCount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"proposalId\",\"type\":\"uint256\"}],\"name\":\"finalize\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"setBlockTimestampIncrease\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"address\"}],\"name\":\"yesVotes\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"fee\",\"type\":\"uint256\"}],\"name\":\"setProposalFee\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"time\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"proposalId\",\"type\":\"uint256\"}],\"name\":\"voteNo\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"proposalId\",\"type\":\"uint256\"}],\"name\":\"removeVote\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"OPEN_VOTE_PERIOD\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"proposalId\",\"type\":\"uint256\"}],\"name\":\"voteYes\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TOTAL_VOTE_PERIOD\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getProposalsCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"target\",\"type\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"propose\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"void\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"withdrawTimes\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"timestamp\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"proposalFee\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"proposalId\",\"type\":\"uint256\"}],\"name\":\"getProposal\",\"outputs\":[{\"components\":[{\"name\":\"result\",\"type\":\"uint8\"},{\"name\":\"target\",\"type\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\"},{\"name\":\"proposer\",\"type\":\"address\"},{\"name\":\"feeRecipient\",\"type\":\"address\"},{\"name\":\"fee\",\"type\":\"uint256\"},{\"name\":\"startTime\",\"type\":\"uint256\"},{\"name\":\"yesCount\",\"type\":\"uint256\"},{\"name\":\"noCount\",\"type\":\"uint256\"}],\"name\":\"\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"address\"}],\"name\":\"noVotes\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"feeRecipient\",\"type\":\"address\"},{\"name\":\"target\",\"type\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"proposeWithFeeRecipient\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"VETO_PERIOD\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"deposits\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"proposalId\",\"type\":\"uint256\"}],\"name\":\"Execute\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"proposalId\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"proposer\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"target\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"Propose\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"proposalId\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"voter\",\"type\":\"address\"}],\"name\":\"RemoveVote\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"proposalId\",\"type\":\"uint256\"}],\"name\":\"Terminate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"proposalId\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"approve\",\"type\":\"bool\"},{\"indexed\":false,\"name\":\"weight\",\"type\":\"uint256\"}],\"name\":\"Vote\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityGovernance.sol\":\"MockHumanityGovernance\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/Governance.sol\":{\"keccak256\":\"0xf60a875da7a9858e94d9a64db274516a7f9958b402916818f8ceedadfc609969\",\"urls\":[\"bzzr://c80cfa0bd12048909ba80b11a3018c9a1a2228151553f64162d977af718f5acb\"]},\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/HumanityGovernance.sol\":{\"keccak256\":\"0x04022e7312183ebb4ecee284a2dcb998a2af8e52355bcc67875a8463dfbfeb1f\",\"urls\":[\"bzzr://1a395282255b5b315c5313f075d8092643282b8e079b28af28f03ceb19150edc\"]},\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/Void.sol\":{\"keccak256\":\"0x6231381f8a5e6d54c6a05a341eb07f8dc73691b4237f15337a1aca2616a6504a\",\"urls\":[\"bzzr://56da613317786f2fcefd531874563d46c275b5b80b801f40a361402688b8b215\"]},\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityGovernance.sol\":{\"keccak256\":\"0xf48037e6d2f291b60304decadce41118643fad3073aa4316b14025fb1950f7c9\",\"urls\":[\"bzzr://22f25ea7feac2ca066051f88efce21dc88688cee6fa962bbd0089e330ecfd340\"]},\"openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x4d2395bda94bb5bb6c524ecda59f07fd6a6d754277e9982143c3858e35145189\",\"urls\":[\"bzzr://5d8b1a44381d54d7c5db45eeb163e74a1c8f61152780eb0769442fbd19aeb52b\"]},\"openzeppelin-solidity/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x079c4e23ee448f529e43bfa3c4e8fb4be52cd0318ee923a276835bedf45b93d8\",\"urls\":[\"bzzr://48248e86f64407a95f241d6c5c8cfea6b4d4ebf4ebb467e5c98c8af3868fafe4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.7;\npragma experimental ABIEncoderV2;\n\nimport { SafeMath } from \"openzeppelin-solidity/contracts/math/SafeMath.sol\";\n\nimport { HumanityGovernance } from \"../HumanityGovernance.sol\";\n\n\ncontract MockHumanityGovernance is HumanityGovernance {\n    using SafeMath for uint;\n\n    uint public timestamp = block.timestamp;\n\n    function setBlockTimestampIncrease(uint time) public {\n        timestamp = timestamp.add(time);\n    }\n\n    function time() public view returns (uint) {\n        return timestamp;\n    }\n\n}",
+  "sourcePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityGovernance.sol",
+  "ast": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityGovernance.sol",
+    "exportedSymbols": {
+      "MockHumanityGovernance": [
+        2081
+      ]
+    },
+    "id": 2082,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2045,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:17"
+      },
+      {
+        "id": 2046,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:17"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "file": "openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "id": 2048,
+        "nodeType": "ImportDirective",
+        "scope": 2082,
+        "sourceUnit": 2337,
+        "src": "58:77:17",
+        "symbolAliases": [
+          {
+            "foreign": 2047,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/HumanityGovernance.sol",
+        "file": "../HumanityGovernance.sol",
+        "id": 2050,
+        "nodeType": "ImportDirective",
+        "scope": 2082,
+        "sourceUnit": 1108,
+        "src": "137:63:17",
+        "symbolAliases": [
+          {
+            "foreign": 2049,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2051,
+              "name": "HumanityGovernance",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1107,
+              "src": "238:18:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_HumanityGovernance_$1107",
+                "typeString": "contract HumanityGovernance"
+              }
+            },
+            "id": 2052,
+            "nodeType": "InheritanceSpecifier",
+            "src": "238:18:17"
+          }
+        ],
+        "contractDependencies": [
+          890,
+          1107
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2081,
+        "linearizedBaseContracts": [
+          2081,
+          1107,
+          890
+        ],
+        "name": "MockHumanityGovernance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 2055,
+            "libraryName": {
+              "contractScope": null,
+              "id": 2053,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2336,
+              "src": "269:8:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$2336",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "263:24:17",
+            "typeName": {
+              "id": 2054,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "282:4:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 2059,
+            "name": "timestamp",
+            "nodeType": "VariableDeclaration",
+            "scope": 2081,
+            "src": "293:39:17",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2056,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "293:4:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "expression": {
+                "argumentTypes": null,
+                "id": 2057,
+                "name": "block",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 2848,
+                "src": "317:5:17",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_magic_block",
+                  "typeString": "block"
+                }
+              },
+              "id": 2058,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "lValueRequested": false,
+              "memberName": "timestamp",
+              "nodeType": "MemberAccess",
+              "referencedDeclaration": null,
+              "src": "317:15:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2071,
+              "nodeType": "Block",
+              "src": "392:48:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2069,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2064,
+                      "name": "timestamp",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2059,
+                      "src": "402:9:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 2067,
+                          "name": "time",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2061,
+                          "src": "428:4:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 2065,
+                          "name": "timestamp",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2059,
+                          "src": "414:9:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 2066,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "add",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 2314,
+                        "src": "414:13:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                          "typeString": "function (uint256,uint256) pure returns (uint256)"
+                        }
+                      },
+                      "id": 2068,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "414:19:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "402:31:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2070,
+                  "nodeType": "ExpressionStatement",
+                  "src": "402:31:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2072,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBlockTimestampIncrease",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2062,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2061,
+                  "name": "time",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2072,
+                  "src": "374:9:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2060,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "374:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "373:11:17"
+            },
+            "returnParameters": {
+              "id": 2063,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "392:0:17"
+            },
+            "scope": 2081,
+            "src": "339:101:17",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2079,
+              "nodeType": "Block",
+              "src": "489:33:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2077,
+                    "name": "timestamp",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2059,
+                    "src": "506:9:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2076,
+                  "id": 2078,
+                  "nodeType": "Return",
+                  "src": "499:16:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2080,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "time",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2073,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "459:2:17"
+            },
+            "returnParameters": {
+              "id": 2076,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2075,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2080,
+                  "src": "483:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2074,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "483:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "482:6:17"
+            },
+            "scope": 2081,
+            "src": "446:76:17",
+            "stateMutability": "view",
+            "superFunction": 868,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2082,
+        "src": "203:322:17"
+      }
+    ],
+    "src": "0:525:17"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityGovernance.sol",
+    "exportedSymbols": {
+      "MockHumanityGovernance": [
+        2081
+      ]
+    },
+    "id": 2082,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2045,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:17"
+      },
+      {
+        "id": 2046,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:17"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "file": "openzeppelin-solidity/contracts/math/SafeMath.sol",
+        "id": 2048,
+        "nodeType": "ImportDirective",
+        "scope": 2082,
+        "sourceUnit": 2337,
+        "src": "58:77:17",
+        "symbolAliases": [
+          {
+            "foreign": 2047,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/HumanityGovernance.sol",
+        "file": "../HumanityGovernance.sol",
+        "id": 2050,
+        "nodeType": "ImportDirective",
+        "scope": 2082,
+        "sourceUnit": 1108,
+        "src": "137:63:17",
+        "symbolAliases": [
+          {
+            "foreign": 2049,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2051,
+              "name": "HumanityGovernance",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1107,
+              "src": "238:18:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_HumanityGovernance_$1107",
+                "typeString": "contract HumanityGovernance"
+              }
+            },
+            "id": 2052,
+            "nodeType": "InheritanceSpecifier",
+            "src": "238:18:17"
+          }
+        ],
+        "contractDependencies": [
+          890,
+          1107
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2081,
+        "linearizedBaseContracts": [
+          2081,
+          1107,
+          890
+        ],
+        "name": "MockHumanityGovernance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 2055,
+            "libraryName": {
+              "contractScope": null,
+              "id": 2053,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2336,
+              "src": "269:8:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$2336",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "263:24:17",
+            "typeName": {
+              "id": 2054,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "282:4:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 2059,
+            "name": "timestamp",
+            "nodeType": "VariableDeclaration",
+            "scope": 2081,
+            "src": "293:39:17",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2056,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "293:4:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "expression": {
+                "argumentTypes": null,
+                "id": 2057,
+                "name": "block",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 2848,
+                "src": "317:5:17",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_magic_block",
+                  "typeString": "block"
+                }
+              },
+              "id": 2058,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "lValueRequested": false,
+              "memberName": "timestamp",
+              "nodeType": "MemberAccess",
+              "referencedDeclaration": null,
+              "src": "317:15:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2071,
+              "nodeType": "Block",
+              "src": "392:48:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2069,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2064,
+                      "name": "timestamp",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2059,
+                      "src": "402:9:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 2067,
+                          "name": "time",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2061,
+                          "src": "428:4:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 2065,
+                          "name": "timestamp",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2059,
+                          "src": "414:9:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 2066,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "add",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 2314,
+                        "src": "414:13:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                          "typeString": "function (uint256,uint256) pure returns (uint256)"
+                        }
+                      },
+                      "id": 2068,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "414:19:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "402:31:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2070,
+                  "nodeType": "ExpressionStatement",
+                  "src": "402:31:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2072,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBlockTimestampIncrease",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2062,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2061,
+                  "name": "time",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2072,
+                  "src": "374:9:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2060,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "374:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "373:11:17"
+            },
+            "returnParameters": {
+              "id": 2063,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "392:0:17"
+            },
+            "scope": 2081,
+            "src": "339:101:17",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2079,
+              "nodeType": "Block",
+              "src": "489:33:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2077,
+                    "name": "timestamp",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2059,
+                    "src": "506:9:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2076,
+                  "id": 2078,
+                  "nodeType": "Return",
+                  "src": "499:16:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2080,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "time",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2073,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "459:2:17"
+            },
+            "returnParameters": {
+              "id": 2076,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2075,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2080,
+                  "src": "483:4:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2074,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "483:4:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "482:6:17"
+            },
+            "scope": 2081,
+            "src": "446:76:17",
+            "stateMutability": "view",
+            "superFunction": 868,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2082,
+        "src": "203:322:17"
+      }
+    ],
+    "src": "0:525:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-06-01T13:06:25.420Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

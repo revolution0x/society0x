@@ -1,0 +1,682 @@
+{
+  "contractName": "MockHumanityRegistry",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "result",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "who",
+          "type": "address"
+        }
+      ],
+      "name": "isHuman",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_result",
+          "type": "bool"
+        }
+      ],
+      "name": "setResult",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"result\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_result\",\"type\":\"bool\"}],\"name\":\"setResult\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"who\",\"type\":\"address\"}],\"name\":\"isHuman\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityRegistry.sol\":\"MockHumanityRegistry\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityRegistry.sol\":{\"keccak256\":\"0xc44b65abca9913cd85553ce5cc89f6f6ae1392cecc7c014104f1111fcb36d993\",\"urls\":[\"bzzr://80aa75887e9f44d9cdf5533e6023d401c48519acfffd1f61068583dc7b990a72\"]}},\"version\":1}",
+  "bytecode": "0x608060405260016000806101000a81548160ff02191690831515021790555034801561002a57600080fd5b5061023b8061003a6000396000f3fe608060405234801561001057600080fd5b506004361061005e576000357c0100000000000000000000000000000000000000000000000000000000900480636537214714610063578063f4b4dc2e14610081578063f72c436f1461009d575b600080fd5b61006b6100cd565b604051610078919061019c565b60405180910390f35b61009b60048036036100969190810190610164565b6100df565b005b6100b760048036036100b2919081019061013b565b6100fb565b6040516100c4919061019c565b60405180910390f35b6000809054906101000a900460ff1681565b806000806101000a81548160ff02191690831515021790555050565b60008060009054906101000a900460ff169050919050565b600061011f82356101c3565b905092915050565b600061013382356101d5565b905092915050565b60006020828403121561014d57600080fd5b600061015b84828501610113565b91505092915050565b60006020828403121561017657600080fd5b600061018484828501610127565b91505092915050565b610196816101b7565b82525050565b60006020820190506101b1600083018461018d565b92915050565b60008115159050919050565b60006101ce826101e1565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff8216905091905056fea265627a7a72305820916d0ce4b121f515f0b9bbb8805f4d629da0c449bb23c3b155d8c1281876411e6c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061005e576000357c0100000000000000000000000000000000000000000000000000000000900480636537214714610063578063f4b4dc2e14610081578063f72c436f1461009d575b600080fd5b61006b6100cd565b604051610078919061019c565b60405180910390f35b61009b60048036036100969190810190610164565b6100df565b005b6100b760048036036100b2919081019061013b565b6100fb565b6040516100c4919061019c565b60405180910390f35b6000809054906101000a900460ff1681565b806000806101000a81548160ff02191690831515021790555050565b60008060009054906101000a900460ff169050919050565b600061011f82356101c3565b905092915050565b600061013382356101d5565b905092915050565b60006020828403121561014d57600080fd5b600061015b84828501610113565b91505092915050565b60006020828403121561017657600080fd5b600061018484828501610127565b91505092915050565b610196816101b7565b82525050565b60006020820190506101b1600083018461018d565b92915050565b60008115159050919050565b60006101ce826101e1565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff8216905091905056fea265627a7a72305820916d0ce4b121f515f0b9bbb8805f4d629da0c449bb23c3b155d8c1281876411e6c6578706572696d656e74616cf50037",
+  "sourceMap": "59:238:18:-;;;117:4;96:25;;;;;;;;;;;;;;;;;;;;59:238;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:238:18;;;;;;;",
+  "deployedSourceMap": "59:238:18:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:238:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;96:25;;;:::i;:::-;;;;;;;;;;;;;;;;221:73;;;;;;;;;;;;;;;;:::i;:::-;;128:87;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;96:25;;;;;;;;;;;;;:::o;221:73::-;280:7;271:6;;:16;;;;;;;;;;;;;;;;;;221:73;:::o;128:87::-;179:4;202:6;;;;;;;;;;;195:13;;128:87;;;:::o;5:118:-1:-;;72:46;110:6;97:20;72:46;;;63:55;;57:66;;;;;130:112;;194:43;229:6;216:20;194:43;;;185:52;;179:63;;;;;249:241;;353:2;341:9;332:7;328:23;324:32;321:2;;;369:1;366;359:12;321:2;404:1;421:53;466:7;457:6;446:9;442:22;421:53;;;411:63;;383:97;315:175;;;;;497:235;;598:2;586:9;577:7;573:23;569:32;566:2;;;614:1;611;604:12;566:2;649:1;666:50;708:7;699:6;688:9;684:22;666:50;;;656:60;;628:94;560:172;;;;;739:111;816:28;838:5;816:28;;;811:3;804:41;798:52;;;857:201;;969:2;958:9;954:18;946:26;;983:65;1045:1;1034:9;1030:17;1021:6;983:65;;;940:118;;;;;1065:92;;1145:5;1138:13;1131:21;1120:32;;1114:43;;;;1164:105;;1233:31;1258:5;1233:31;;;1222:42;;1216:53;;;;1276:92;;1356:5;1349:13;1342:21;1331:32;;1325:43;;;;1375:128;;1455:42;1448:5;1444:54;1433:65;;1427:76;;;",
+  "source": "pragma solidity 0.5.7;\npragma experimental ABIEncoderV2;\n\n\ncontract MockHumanityRegistry {\n\n    bool public result = true;\n\n    function isHuman(address who) public view returns (bool) {\n        return result;\n    }\n\n    function setResult(bool _result) public {\n        result = _result;\n    }\n\n}",
+  "sourcePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityRegistry.sol",
+  "ast": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityRegistry.sol",
+    "exportedSymbols": {
+      "MockHumanityRegistry": [
+        2108
+      ]
+    },
+    "id": 2109,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2083,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:18"
+      },
+      {
+        "id": 2084,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2108,
+        "linearizedBaseContracts": [
+          2108
+        ],
+        "name": "MockHumanityRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2087,
+            "name": "result",
+            "nodeType": "VariableDeclaration",
+            "scope": 2108,
+            "src": "96:25:18",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2085,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "96:4:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "74727565",
+              "id": 2086,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "117:4:18",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2096,
+              "nodeType": "Block",
+              "src": "185:30:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2094,
+                    "name": "result",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2087,
+                    "src": "202:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 2093,
+                  "id": 2095,
+                  "nodeType": "Return",
+                  "src": "195:13:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2097,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isHuman",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2090,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2089,
+                  "name": "who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2097,
+                  "src": "145:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2088,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "144:13:18"
+            },
+            "returnParameters": {
+              "id": 2093,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2092,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2097,
+                  "src": "179:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2091,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "179:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "178:6:18"
+            },
+            "scope": 2108,
+            "src": "128:87:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2106,
+              "nodeType": "Block",
+              "src": "261:33:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2104,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2102,
+                      "name": "result",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2087,
+                      "src": "271:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2103,
+                      "name": "_result",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2099,
+                      "src": "280:7:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "271:16:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2105,
+                  "nodeType": "ExpressionStatement",
+                  "src": "271:16:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2107,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setResult",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2099,
+                  "name": "_result",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2107,
+                  "src": "240:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2098,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "240:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "239:14:18"
+            },
+            "returnParameters": {
+              "id": 2101,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "261:0:18"
+            },
+            "scope": 2108,
+            "src": "221:73:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2109,
+        "src": "59:238:18"
+      }
+    ],
+    "src": "0:297:18"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityRegistry.sol",
+    "exportedSymbols": {
+      "MockHumanityRegistry": [
+        2108
+      ]
+    },
+    "id": 2109,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2083,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:18"
+      },
+      {
+        "id": 2084,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2108,
+        "linearizedBaseContracts": [
+          2108
+        ],
+        "name": "MockHumanityRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2087,
+            "name": "result",
+            "nodeType": "VariableDeclaration",
+            "scope": 2108,
+            "src": "96:25:18",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2085,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "96:4:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "74727565",
+              "id": 2086,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "117:4:18",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2096,
+              "nodeType": "Block",
+              "src": "185:30:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2094,
+                    "name": "result",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2087,
+                    "src": "202:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 2093,
+                  "id": 2095,
+                  "nodeType": "Return",
+                  "src": "195:13:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2097,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isHuman",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2090,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2089,
+                  "name": "who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2097,
+                  "src": "145:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2088,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "144:13:18"
+            },
+            "returnParameters": {
+              "id": 2093,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2092,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2097,
+                  "src": "179:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2091,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "179:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "178:6:18"
+            },
+            "scope": 2108,
+            "src": "128:87:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2106,
+              "nodeType": "Block",
+              "src": "261:33:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2104,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2102,
+                      "name": "result",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2087,
+                      "src": "271:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2103,
+                      "name": "_result",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2099,
+                      "src": "280:7:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "271:16:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2105,
+                  "nodeType": "ExpressionStatement",
+                  "src": "271:16:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2107,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setResult",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2099,
+                  "name": "_result",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2107,
+                  "src": "240:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2098,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "240:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "239:14:18"
+            },
+            "returnParameters": {
+              "id": 2101,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "261:0:18"
+            },
+            "scope": 2108,
+            "src": "221:73:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2109,
+        "src": "59:238:18"
+      }
+    ],
+    "src": "0:297:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-06-01T13:06:25.421Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
