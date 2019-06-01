@@ -102,7 +102,7 @@ module.exports = function(deployer, network, accounts) {
         throw new Error("ERC20Contract Address Does Not Match Expected Address (ERC20Address) - Aborting Deployment");
       }
 
-      const GovernanceContract = await deployer.deploy(HumanityGovernance, ERC20Address, proposalFee);
+      const GovernanceContract = await deployer.deploy(HumanityGovernance, ERC20Address, proposalFee, RegistryAddress);
       if(GovernanceContract.address.toLowerCase() !== GovernanceAddress) {
         throw new Error("GovernanceContract Address Does Not Match Expected Address (GovernanceAddress) - Aborting Deployment");
       }

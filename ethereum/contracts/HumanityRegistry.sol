@@ -35,7 +35,7 @@ contract HumanityRegistry {
         delete humans[who];
     }
 
-    function isHuman(address who) public view returns (bool) {
+    function isCitizen(address who) public view returns (bool) {
         return humans[who];
     }
 

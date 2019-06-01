@@ -4,6 +4,8 @@ pragma experimental ABIEncoderV2;
 import { IERC20 } from "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
 import { SafeMath } from "openzeppelin-solidity/contracts/math/SafeMath.sol";
 
+import { HumanityRegistry } from "./HumanityRegistry.sol";
+
 import { Void } from "./Void.sol";
 
 /**
@@ -38,6 +40,7 @@ contract Governance {
     uint public constant TOTAL_VOTE_PERIOD = OPEN_VOTE_PERIOD + VETO_PERIOD;
 
     uint public proposalFee;
+    HumanityRegistry public registry;
     IERC20 public token;
     Void public void;
 
@@ -55,13 +58,15 @@ contract Governance {
     // Voter => Withdraw timestamp
     mapping (address => uint) public withdrawTimes;
 
-    constructor(IERC20 _token, uint _initialProposalFee) public {
+    constructor(IERC20 _token, uint _initialProposalFee, HumanityRegistry _registry) public {
         token = _token;
         proposalFee = _initialProposalFee;
+        registry = _registry;
         void = new Void();
     }
 
     function deposit(uint amount) public {
+        require(registry.isCitizen(msg.sender), "Governance::deposit: You must be a Citizen to make deposits to Governance");
         require(token.transferFrom(msg.sender, address(this), amount), "Governance::deposit: Transfer failed");
         deposits[msg.sender] = deposits[msg.sender].add(amount);
     }
@@ -73,10 +78,12 @@ contract Governance {
     }
 
     function propose(address target, bytes memory data) public returns (uint) {
+        require(registry.isCitizen(msg.sender), "Governance::propose: You must be a Citizen to make a Governance proposal");
         return proposeWithFeeRecipient(msg.sender, target, data);
     }
 
     function proposeWithFeeRecipient(address feeRecipient, address target, bytes memory data) public returns (uint) {
+        require(registry.isCitizen(msg.sender), "Governance::proposeWithFeeRecipient: You must be a Citizen to make a Governance proposal");
         require(msg.sender != address(this) && target != address(token), "Governance::proposeWithFeeRecipient: Invalid proposal");
         require(token.transferFrom(msg.sender, address(this), proposalFee), "Governance::proposeWithFeeRecipient: Transfer failed");
 
@@ -100,8 +107,9 @@ contract Governance {
     }
 
     function voteYes(uint proposalId) public {
+        require(registry.isCitizen(msg.sender), "Governance::vote: You must be a Citizen to vote");
         Proposal storage proposal = proposals[proposalId];
-        require(time() <= proposal.startTime.add(OPEN_VOTE_PERIOD), "Governance::voteYes: Proposal is no longer accepting yes votes");
+        require(time() <= proposal.startTime.add(OPEN_VOTE_PERIOD), "Governance::vote: Proposal is no longer in voting period");
 
         uint proposalEndTime = proposal.startTime.add(TOTAL_VOTE_PERIOD);
         if (proposalEndTime > withdrawTimes[msg.sender]) withdrawTimes[msg.sender] = proposalEndTime;
@@ -114,12 +122,13 @@ contract Governance {
     }
 
     function voteNo(uint proposalId) public {
+        require(registry.isCitizen(msg.sender), "Governance::vote: You must be a Citizen to vote");
         Proposal storage proposal = proposals[proposalId];
-        require(proposal.result == Result.Pending, "Governance::voteNo: Proposal is already finalized");
+        require(proposal.result == Result.Pending, "Governance::vote: Proposal is already finalized");
 
         uint proposalEndTime = proposal.startTime.add(TOTAL_VOTE_PERIOD);
         uint _time = time();
-        require(_time <= proposalEndTime, "Governance::voteNo: Proposal is no longer in voting period");
+        require(_time <= proposalEndTime, "Governance::vote: Proposal is no longer in voting period");
 
         uint _deposit = deposits[msg.sender];
         uint weight = _deposit.sub(noVotes[proposalId][msg.sender]);
@@ -131,7 +140,7 @@ contract Governance {
         // Finalize the vote and burn the proposal fee if no votes outnumber yes votes and open voting has ended
         if (_time > proposal.startTime.add(OPEN_VOTE_PERIOD) && proposal.noCount >= proposal.yesCount) {
             proposal.result = Result.No;
-            require(token.transfer(address(void), proposal.fee), "Governance::voteNo: Transfer to void failed");
+            require(token.transfer(address(void), proposal.fee), "Governance::vote: Transfer to void failed");
             emit Terminate(proposalId);
         } else if (proposalEndTime > withdrawTimes[msg.sender]) {
             withdrawTimes[msg.sender] = proposalEndTime;
@@ -153,6 +162,7 @@ contract Governance {
     }
 
     function finalize(uint proposalId) public {
+        require(registry.isCitizen(msg.sender), "Governance::vote: You need to be a Citizen to finalise a proposal");
         Proposal storage proposal = proposals[proposalId];
         require(proposal.result == Result.Pending, "Governance::finalize: Proposal is already finalized");
         uint _time = time();
