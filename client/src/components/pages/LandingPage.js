@@ -128,12 +128,12 @@ const Effects = React.memo(({ factor }) => {
 })
 
 /** This component maintains the scene */
-function Scene({ top, effectsTop }) {
+function Scene({ glitch, top, effectsTop }) {
   const { size } = useThree()
   const scrollMax = size.height * 4.5
   return (
     <>
-      <Effects factor={effectsTop.interpolate([0, 150], [1, 0])} />
+      {glitch && <Effects factor={effectsTop.interpolate([0, 150], [1, 0])} />}
       <Background color={top.interpolate([0, scrollMax * 0.25, scrollMax * 0.8, scrollMax], ['#27282F'])} />
       <Octahedrons position={top.interpolate(top => [0, -1 + top / 20, 0])} />
       <Icon opacity={0.3} position={top.interpolate(top => [0, -1 + top / 200, 0])}>
@@ -150,11 +150,11 @@ function Scene({ top, effectsTop }) {
 const LandingPage = () => {
   // This tiny spring right here controlls all(!) the animations, one for scroll, the other for mouse movement ...
   const [{ top, mouse }] = useSpring(() => ({ top: 0, mouse: [0, 0] }))
-  const [{ top: effectsTop }] = useSpring(() => ({ top: 95 }))
+  const [{ top: effectsTop }] = useSpring(() => ({ top: 80 }))
   return (
     <>
       <Canvas className="canvas">
-        <Scene top={top} effectsTop={effectsTop} mouse={mouse} />
+        <Scene glitch={false} top={top} effectsTop={effectsTop} mouse={mouse} />
       </Canvas>
       <div style={{position: 'absolute', top: '65%', left: '50%', transform: 'translateY(-50%)translateX(-50%)'}}>
           <a href="https://discord.gg/UAJMkPV" style={{textDecoration: 'none'}} target="_blank" rel="noreferrer noopener">
