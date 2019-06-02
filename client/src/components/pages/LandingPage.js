@@ -8,8 +8,8 @@ import { apply as applyThree, Canvas, useRender, useThree } from 'react-three-fi
 import { apply as applySpring, useSpring, a, interpolate } from 'react-spring/three'
 import '../../landingStyles.css';
 import Fab from "@material-ui/core/Fab";
-import store from "../../state";
-import {showLandingSite} from '../../state/actions';
+import {store} from "../../state";
+import {showLandingSite, showNavigationWrapper} from '../../state/actions';
 
 // Import and register postprocessing classes as three-native-elements for both react-three-fiber & react-spring
 // They'll be available as native elements <effectComposer /> from then on ...
@@ -94,10 +94,12 @@ function Octahedrons({ position }) {
   let group = useRef()
   let theta = 0
   useRender(() => {
-    const r = 5 * Math.sin(ThreeMath.degToRad((theta += 0.01)))
-    const s = Math.cos(ThreeMath.degToRad(theta * 2))
-    group.current.rotation.set(r, r, r)
-    group.current.scale.set(s, s, s)
+    if(group.current){
+      const r = 5 * Math.sin(ThreeMath.degToRad((theta += 0.01)))
+      const s = Math.cos(ThreeMath.degToRad(theta * 2))
+      group.current.rotation.set(r, r, r)
+      group.current.scale.set(s, s, s)
+    }
   })
   const [geo, mat, coords] = useMemo(() => {
     const geo = new OctahedronBufferGeometry(2)
@@ -135,7 +137,7 @@ function Scene({ glitch, top, effectsTop }) {
   const scrollMax = size.height * 4.5
   return (
     <>
-      {glitch && <Effects factor={effectsTop.interpolate([0, 150], [1, 0])} />}
+      <Effects factor={effectsTop.interpolate([0, 150], [1, 0])} />
       <Background color={top.interpolate([0, scrollMax * 0.25, scrollMax * 0.8, scrollMax], ['#272727'])} />
       <Octahedrons position={top.interpolate(top => [0, -1 + top / 20, 0])} />
       <Icon opacity={0.3} position={top.interpolate(top => [0, -1 + top / 200, 0])}>
@@ -150,17 +152,19 @@ function Scene({ glitch, top, effectsTop }) {
 
 const launchBeta = () => {
   store.dispatch(showLandingSite(false));
+  store.dispatch(showNavigationWrapper(true));
 }
 
 /** Main component */
 const LandingPage = () => {
   // This tiny spring right here controlls all(!) the animations, one for scroll, the other for mouse movement ...
   const [{ top, mouse }] = useSpring(() => ({ top: 0, mouse: [0, 0] }))
-  const [{ top: effectsTop }] = useSpring(() => ({ top: 80 }))
+  const [{ top: effectsTop }] = useSpring(() => ({ top: 135 }))
+  const [{ topOverride }] = useSpring(() => ({ topOverride: 70 }))
   return (
     <>
       <Canvas className="canvas">
-        <Scene glitch={false} top={top} effectsTop={effectsTop} mouse={mouse} />
+        <Scene topOverride={topOverride} top={top} effectsTop={store.getState().showLeftMenu ? topOverride : effectsTop} mouse={mouse} />
       </Canvas>
       <div style={{position: 'absolute', top: '65%', left: '50%', transform: 'translateY(-50%)translateX(-50%)'}}>
         <a href="https://discord.gg/UAJMkPV" style={{ textDecoration: 'none', display: 'block' }} target="_blank" rel="noreferrer noopener">

@@ -13,9 +13,9 @@ import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import {connect} from 'react-redux';
-import store from '../state';
+import {store} from '../state';
 import {showLeftMenu, setActiveAccount} from '../state/actions';
-import social0xLogo from "../images/social0x-compressed.png";
+import society0xLogo from "../images/society0x_transparent_white_thicker.png";
 import {Link} from "react-router-dom";
 import { PublicAddress, Blockie } from 'rimble-ui';
 
@@ -106,7 +106,7 @@ class OurAppBar extends React.Component {
               <MenuIcon />
             </IconButton>
             <Link to="/" className={"logo-container" + " " + classes.grow}>
-              <img src={social0xLogo} alt="social0x Logo"/>
+              <img src={society0xLogo} alt="society0x Logo"/>
             </Link>
             {activeAccountAddress && (
               <div>

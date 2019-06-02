@@ -8,7 +8,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import RegisterIcon from "@material-ui/icons/VerifiedUser";
-import store from '../state';
+import {store} from '../state';
 import {connect} from 'react-redux';
 import {showLeftMenu} from '../state/actions';
 import {Link} from 'react-router-dom';
@@ -60,12 +60,12 @@ class OurDrawers extends React.Component {
                 <ListItemText primary={"Home"} />
                 </ListItem>
             </Link>
-            <Link to={'/register'} className={"no-decorate"}>
+            {/* <Link to={'/register'} className={"no-decorate"}>
                 <ListItem button key={"Register"}>
                 <ListItemIcon><RegisterIcon /></ListItemIcon>
                 <ListItemText primary={"Register"} />
                 </ListItem>
-            </Link>
+            </Link> */}
         </List>
       </div>
     );

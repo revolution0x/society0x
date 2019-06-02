@@ -9,9 +9,10 @@ import OurAppBar from "./components/OurAppBar";
 import OurDrawers from "./components/OurDrawers";
 import { Provider } from "react-redux";
 import {setActiveAccount, setWeb3} from './state/actions';
+import { PersistGate } from 'redux-persist/lib/integration/react';
 //import {getMemberProfileFromAddress} from "./services/social0x";
 import {connect} from 'react-redux';
-import store from "./state";
+import {store, persistor} from "./state";
 import "./App.css";
 
 const history = configureHistory();
@@ -123,14 +124,16 @@ class App extends Component {
     return (
       <Router history={history}>
         <Provider store={store}>
-          <MuiThemeProvider theme={theme}>
-            <React.Fragment>
-              <OurDrawers/>
-              <OurAppBar {...this.state}/>
-              <PageContainer />
-              {/* <Web3Info {...this.state} /> */}
-            </React.Fragment>
-          </MuiThemeProvider>
+          <PersistGate persistor={persistor}>
+            <MuiThemeProvider theme={theme}>
+              <React.Fragment>
+                <OurDrawers/>
+                <OurAppBar {...this.state}/>
+                <PageContainer />
+                {/* <Web3Info {...this.state} /> */}
+              </React.Fragment>
+            </MuiThemeProvider>
+          </PersistGate>
         </Provider>
       </Router>
     );

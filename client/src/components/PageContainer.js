@@ -7,8 +7,8 @@ import RegisterPage from "./pages/RegisterPage";
 import ProfilePage from "./pages/ProfilePage";
 import LandingPage from "./pages/LandingPage";
 import { connect } from "react-redux";
-import {showNavigationWrapper} from "../state/actions";
-import store from "../state";
+import {showNavigationWrapper, showLandingSite} from "../state/actions";
+import {store} from "../state";
 
 const styles = theme => ({
     pageContainer: {
@@ -23,53 +23,53 @@ class PageContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showNavigationWrapper: store.getState().showNavigationWrapper,
-            showLandingSite: true,
+            showNavigationWrapperState: store.getState().showNavigationWrapper,
+            showLandingSiteState: store.getState().showLandingSite,
         };
         store.subscribe(() => {
             this.setState({
-                showNavigationWrapper: store.getState().showNavigationWrapper,
-                showLandingSite: store.getState().showLandingSite,
+                showNavigationWrapperState: store.getState().showNavigationWrapper,
+                showLandingSiteState: store.getState().showLandingSite,
             });
         });
     }
 
-    componentWillMount(){
-        let willNavigationShow = store.getState().showNavigationWrapper;
-        let showLandingSite = store.getState().showLandingSite;
-        if (!showLandingSite && !willNavigationShow) {
-            store.dispatch(showNavigationWrapper(true));
-        } else if (showLandingSite && willNavigationShow) {
-            store.dispatch(showNavigationWrapper(false));
+    componentWillReceiveProps(nextProps){
+        const {showLandingSiteState} = this.state;
+        if(nextProps.location && (nextProps.location.pathname !== "/") && showLandingSiteState){
+            store.dispatch(showLandingSite(false));
         }
     }
 
-    componentWillReceiveProps(){
-        let willNavigationShow = store.getState().showNavigationWrapper;
-        let showLandingSite = store.getState().showLandingSite;
-        if (!showLandingSite && !willNavigationShow) {
+    componentDidMount() {
+        const {showLandingSiteState, showNavigationWrapperState} = this.state;
+        if(showLandingSiteState && !showNavigationWrapperState){
             store.dispatch(showNavigationWrapper(true));
-        } else if (showLandingSite && willNavigationShow) {
-            store.dispatch(showNavigationWrapper(false));
         }
     }
 
     render() {
         const {classes} = this.props;
-        const {showNavigationWrapper, showLandingSite} = this.state;
-        console.log("showNavigationWrapper",showNavigationWrapper);
+        const { showLandingSiteState, showNavigationWrapperState } = this.state;
         return (
             <React.Fragment>
-                <div className={showNavigationWrapper ? classes.pageContainer : classes.fullScreen}>
-                    <Switch>
-                        {/* <Route path="/" exact render={(props) => homeRoute(props)} /> */}
-                        {showLandingSite && <Route path="/" exact render={(props) => landingRoute(props)} />}
-                        {!showLandingSite && <Route path="/" exact render={(props) => homeRoute(props)} />}
-                        <Route path="/register" exact render={(props) => registerRoute(props)} />
-                        <Route path="/element/:elementName" exact render={(props) => elementRoute(props)} />
-                        <Route path="/:memberName" exact render={(props) => profileRoute(props)} />
-                    </Switch>
-                </div>
+                {showLandingSiteState && 
+                    <div className={classes.fullScreen}>
+                        <Switch>
+                            <Route path="/" exact render={(props) => landingRoute(props)} />
+                        </Switch>
+                    </div>
+                }
+                {!showLandingSiteState &&
+                    <div className={showNavigationWrapperState ? classes.pageContainer : classes.fullScreen}>
+                        <Switch>
+                            <Route path="/" exact render={(props) => homeRoute(props)} />
+                            <Route path="/register" exact render={(props) => registerRoute(props)} />
+                            <Route path="/element/:elementName" exact render={(props) => elementRoute(props)} />
+                            <Route path="/:memberName" exact render={(props) => profileRoute(props)} />
+                        </Switch>
+                    </div>
+                }
             </React.Fragment>
         )
     }   

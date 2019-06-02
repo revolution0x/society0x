@@ -7,7 +7,7 @@ import CreateIcon from '@material-ui/icons/LeakAdd';
 import * as yup from "yup";
 import {uploadToIPFS,getFromIPFS,downloadFromIPFS} from "../utils/ipfs";
 import {registerMember} from "../services/social0x";
-import store from '../state';
+import {store} from '../state';
 import {Redirect} from 'react-router-dom';
 import RegisterIcon from "@material-ui/icons/VerifiedUser";
 
