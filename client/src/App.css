@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  background-color: #272727;
 }
 
 .logo-container {
@@ -34,7 +35,7 @@ html, body {
 }
 
 .our-gradient {
-  background: #e65500;
+  background: #0c0c13;
   background: -webkit-linear-gradient(-90deg, #0c0c13, #0c0715);
   background: -o-linear-gradient(-90deg, #0c0c13, #0c0715);
   background: -moz-linear-gradient(-90deg, #0c0c13, #0c0715);

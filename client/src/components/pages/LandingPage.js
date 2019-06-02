@@ -8,6 +8,8 @@ import { apply as applyThree, Canvas, useRender, useThree } from 'react-three-fi
 import { apply as applySpring, useSpring, a, interpolate } from 'react-spring/three'
 import '../../landingStyles.css';
 import Fab from "@material-ui/core/Fab";
+import store from "../../state";
+import {showLandingSite} from '../../state/actions';
 
 // Import and register postprocessing classes as three-native-elements for both react-three-fiber & react-spring
 // They'll be available as native elements <effectComposer /> from then on ...
@@ -134,7 +136,7 @@ function Scene({ glitch, top, effectsTop }) {
   return (
     <>
       {glitch && <Effects factor={effectsTop.interpolate([0, 150], [1, 0])} />}
-      <Background color={top.interpolate([0, scrollMax * 0.25, scrollMax * 0.8, scrollMax], ['#27282F'])} />
+      <Background color={top.interpolate([0, scrollMax * 0.25, scrollMax * 0.8, scrollMax], ['#272727'])} />
       <Octahedrons position={top.interpolate(top => [0, -1 + top / 20, 0])} />
       <Icon opacity={0.3} position={top.interpolate(top => [0, -1 + top / 200, 0])}>
         ⎊
@@ -144,6 +146,10 @@ function Scene({ glitch, top, effectsTop }) {
       </Text>
     </>
   )
+}
+
+const launchBeta = () => {
+  store.dispatch(showLandingSite(false));
 }
 
 /** Main component */
@@ -157,12 +163,15 @@ const LandingPage = () => {
         <Scene glitch={false} top={top} effectsTop={effectsTop} mouse={mouse} />
       </Canvas>
       <div style={{position: 'absolute', top: '65%', left: '50%', transform: 'translateY(-50%)translateX(-50%)'}}>
-          <a href="https://discord.gg/UAJMkPV" style={{textDecoration: 'none'}} target="_blank" rel="noreferrer noopener">
-            <Fab style={{opacity: '0.85'}} color="default" size="medium" variant="extended">
-                Join Discussion
-            </Fab>
-            </a>
-        </div>
+        <a href="https://discord.gg/UAJMkPV" style={{ textDecoration: 'none', display: 'block' }} target="_blank" rel="noreferrer noopener">
+          <Fab style={{ opacity: '0.85' }} color="default" size="medium" variant="extended">
+            Join Discussion
+          </Fab>
+        </a>
+        {/* <Fab onClick={() => launchBeta()} style={{opacity: '0.85', display: 'block', width: '100%', marginTop: '10px'}} color="default" size="medium" variant="extended">
+          Launch Beta
+        </Fab> */}
+      </div>
     </>
   )
 }
