@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {Math as ThreeMath, OctahedronBufferGeometry, MeshBasicMaterial, Color} from 'three/src/Three'
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 // A THREE.js React renderer, see: https://github.com/drcmda/react-three-fiber
-import { apply as applyThree, Canvas, useRender, useThree } from 'react-three-fiber'
+import { extend as applyThree, Canvas, useRender, useThree } from 'react-three-fiber'
 // A React animation lib, see: https://github.com/react-spring/react-spring
 import { apply as applySpring, useSpring, a, interpolate } from 'react-spring/three'
 import '../../landingStyles.css';
@@ -20,12 +20,23 @@ applySpring({ EffectComposer, RenderPass, GlitchPass })
 applyThree({ EffectComposer, RenderPass, GlitchPass })
 
 /** This renders text via canvas and projects it as a sprite */
-function Text({ children, position, opacity, color = 'white', fontSize = 200 }) {
+function Text({ children, position, opacity, color = 'white', fontSize = 200, isConsideredMobile, showFragmentDistortion }) {
   const {
     size: { width, height },
     viewport: { width: viewportWidth, height: viewportHeight }
   } = useThree()
   const scale = viewportWidth > viewportHeight ? viewportWidth : viewportHeight
+  if(isConsideredMobile) {
+    fontSize = 200
+    if(showFragmentDistortion){
+      fontSize = 400
+    }
+  }else{
+    fontSize = 210
+    if(showFragmentDistortion){
+      fontSize = 400
+    }
+  }
   const canvas = useMemo(
     () => {
       const canvas = document.createElement('canvas')
@@ -35,6 +46,10 @@ function Text({ children, position, opacity, color = 'white', fontSize = 200 }) 
       context.textAlign = 'center'
       context.textBaseline = 'middle'
       context.fillStyle = color
+      context.shadowColor = "rgba(0,0,0,0.7)";
+      context.shadowOffsetX = 0;
+      context.shadowOffsetY = 10;
+      context.shadowBlur = 15;
       context.fillText(children, 1024, 1024 - 410 / 2)
       return canvas
     },
@@ -49,12 +64,17 @@ function Text({ children, position, opacity, color = 'white', fontSize = 200 }) 
   )
 }
 
-function Icon({ children, position, opacity, color = '#000000', fontSize = 800 }) {
+function Icon({ children, position, opacity, color = '#000000', fontSize = 800, isConsideredMobile }) {
     const {
       size: { width, height },
       viewport: { width: viewportWidth, height: viewportHeight }
     } = useThree()
     const scale = viewportWidth > viewportHeight ? viewportWidth : viewportHeight
+    if(isConsideredMobile) {
+      fontSize = 800
+    }else{
+      fontSize = 1200
+    }
     const canvas = useMemo(
       () => {
         const canvas = document.createElement('canvas')
@@ -64,6 +84,10 @@ function Icon({ children, position, opacity, color = '#000000', fontSize = 800 }
         context.textAlign = 'center'
         context.textBaseline = 'middle'
         context.fillStyle = color
+        context.shadowColor = "rgba(0,0,0,0.7)";
+        context.shadowOffsetX = 0;
+        context.shadowOffsetY = 5;
+        context.shadowBlur = 10;
         context.fillText(children, 1024, 1024 - 410 / 2)
         return canvas
       },
@@ -90,7 +114,7 @@ function Background({ color }) {
 }
 
 /** This component rotates a bunch of Octahedrons */
-function Octahedrons({ position }) {
+function Octahedrons({ position, color }) {
   let group = useRef()
   let theta = 0
   useRender(() => {
@@ -103,7 +127,7 @@ function Octahedrons({ position }) {
   })
   const [geo, mat, coords] = useMemo(() => {
     const geo = new OctahedronBufferGeometry(2)
-    const mat = new MeshBasicMaterial({ color: new Color('black'), transparent: true, wireframe: true })
+    const mat = new MeshBasicMaterial({ color: new Color(0xFFFFFF), transparent: true, wireframe: true })
     const coords = new Array(1000).fill().map(i => [Math.random() * 800 - 400, Math.random() * 800 - 400, Math.random() * 800 - 400])
     return [geo, mat, coords]
   }, [])
@@ -117,7 +141,7 @@ function Octahedrons({ position }) {
 }
 
 /** This component creates a glitch effect */
-const Effects = React.memo(({ factor }) => {
+const Effects = React.memo(({ factor, showFragmentDistortion }) => {
   const { gl, scene, camera, size } = useThree()
   const composer = useRef()
   useEffect(() => void composer.current.setSize(size.width, size.height), [size])
@@ -126,25 +150,25 @@ const Effects = React.memo(({ factor }) => {
   return (
     <effectComposer ref={composer} args={[gl]}>
       <renderPass attachArray="passes" args={[scene, camera]} />
-      <a.glitchPass attachArray="passes" renderToScreen factor={factor} />
+      <a.glitchPass attachArray="passes" renderToScreen factor={factor} showFragmentDistortion={showFragmentDistortion} />
     </effectComposer>
   )
 })
 
 /** This component maintains the scene */
-function Scene({ glitch, top, effectsTop }) {
+function Scene({ glitch, top, effectsTop, isConsideredMobile, showFragmentDistortion, showDAO}) {
   const { size } = useThree()
   const scrollMax = size.height * 4.5
   return (
     <>
-      <Effects factor={effectsTop.interpolate([0, 150], [1, 0])} />
+      <Effects showFragmentDistortion={showFragmentDistortion} factor={effectsTop.interpolate([0, 150], [1, 0])} />
       <Background color={top.interpolate([0, scrollMax * 0.25, scrollMax * 0.8, scrollMax], ['#272727'])} />
       <Octahedrons position={top.interpolate(top => [0, -1 + top / 20, 0])} />
-      <Icon opacity={0.3} position={top.interpolate(top => [0, -1 + top / 200, 0])}>
+      <Icon opacity={0.8} isConsideredMobile={isConsideredMobile} position={top.interpolate(top => [0, isConsideredMobile ? 0.1 : -1.2, 0])}>
         ⎊
       </Icon>
-      <Text opacity={0.8} position={top.interpolate(top => [0, -1 + top / 200, 0])}>
-        {"society0x"}
+      <Text opacity={0.9} showFragmentDistortion={showFragmentDistortion} isConsideredMobile={isConsideredMobile} position={top.interpolate(top => [0, isConsideredMobile ? 0.23 : -0.88, 0])}>
+        {showDAO ? "D A O" : "society0x"}
       </Text>
     </>
   )
@@ -161,14 +185,16 @@ const LandingPage = () => {
   const [{ top, mouse }] = useSpring(() => ({ top: 0, mouse: [0, 0] }))
   const [{ top: effectsTop }] = useSpring(() => ({ top: 135 }))
   const [{ topOverride }] = useSpring(() => ({ topOverride: 70 }))
+  let showLeftMenu = store.getState().showLeftMenu;
+  let isConsideredMobile = store.getState().isConsideredMobile;
   return (
     <>
       <Canvas className="canvas">
-        <Scene topOverride={topOverride} top={top} effectsTop={store.getState().showLeftMenu ? topOverride : effectsTop} mouse={mouse} />
+        <Scene topOverride={topOverride} top={top} isConsideredMobile={isConsideredMobile} showDAO={showLeftMenu} showFragmentDistortion={showLeftMenu} effectsTop={showLeftMenu ? topOverride : effectsTop} mouse={mouse} />
       </Canvas>
       <div style={{position: 'absolute', top: '65%', left: '50%', transform: 'translateY(-50%)translateX(-50%)'}}>
         <a href="https://discord.gg/UAJMkPV" style={{ textDecoration: 'none', display: 'block' }} target="_blank" rel="noreferrer noopener">
-          <Fab style={{ opacity: '0.85' }} color="default" size="medium" variant="extended">
+          <Fab style={{ opacity: '0.85' }} color="default" size="large" variant="extended">
             Join Discussion
           </Fab>
         </a>

@@ -44,11 +44,12 @@ GlitchPass.prototype = Object.assign(Object.create(Pass.prototype), {
     this.uniforms['tDiffuse'].value = readBuffer.texture
     this.uniforms['seed'].value = Math.random() * factor //default seeding
     this.uniforms['byp'].value = 0
+    const showFragmentDistortions = this.showFragmentDistortion;
     if (factor) {
       this.uniforms['amount'].value = (Math.random() / 90) * factor
       this.uniforms['angle'].value = _Math.randFloat(-Math.PI, Math.PI) * factor
-      this.uniforms['distortion_x'].value = 1
-      this.uniforms['distortion_y'].value = 1
+      this.uniforms['distortion_x'].value = showFragmentDistortions ? _Math.randFloat(0, 1) : 1
+      this.uniforms['distortion_y'].value = showFragmentDistortions ? _Math.randFloat(0, 1) : 1
       this.uniforms['seed_x'].value = _Math.randFloat(-0.3, 0.3) * factor
       this.uniforms['seed_y'].value = _Math.randFloat(-0.3, 0.3) * factor
     } else this.uniforms['byp'].value = 1

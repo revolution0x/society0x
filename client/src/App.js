@@ -20,6 +20,9 @@ const history = configureHistory();
 const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
+  },
+  palette: {
+    type: 'dark',
   }
 });
 class App extends Component {
@@ -108,7 +111,7 @@ class App extends Component {
 
   renderLoader() {
     return (
-      <div className={"loader"}>
+      <div className={"loader"} style={{color: 'white'}}>
         <Loader size="80px" color="red" />
         <h3> Loading Web3, accounts, and contract...</h3>
         <p> Unlock your metamask </p>
@@ -120,7 +123,6 @@ class App extends Component {
     // if (!store.getState().setWeb3) {
     //   return this.renderLoader();
     // }
-    console.log('store.getState()', store.getState());
     return (
       <Router history={history}>
         <Provider store={store}>

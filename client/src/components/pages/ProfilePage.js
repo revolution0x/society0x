@@ -86,7 +86,6 @@ class ProfilePage extends Component {
         try {
             const {memberName} = this.props;
             let memberProfile = await getMemberProfileFromName(memberName);
-            console.log('memberProfile',memberProfile);
             let profilePictureIpfsHash = memberProfile[2];
             let coverPictureIpfsHash = memberProfile[3];
             this.setState({

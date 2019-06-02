@@ -19,8 +19,6 @@ import society0xLogo from "../images/society0x_transparent_white_thicker.png";
 import {Link} from "react-router-dom";
 import { PublicAddress, Blockie } from 'rimble-ui';
 
-console.log('store',store.getState());
-
 const styles = {
   root: {
     flexGrow: 1,
@@ -119,11 +117,12 @@ class OurAppBar extends React.Component {
                   onClick={this.handleMenu}
                   color="inherit"
                   className={classes.appBarProfilePicContainer}
+                  style={{borderRadius: '20px', padding:'0px', marginLeft:'25px', marginRight:'5px'}}
                 >
                 {activeAccountProfilePic && <img className={classes.appBarProfilePic} src={"https://ipfs.infura.io/ipfs/" + activeAccountProfilePic} alt="Profile"></img>}
                 {!activeAccountProfilePic && <Blockie opts={{seed: activeAccountAddress, size: 15, scale: 3}}></Blockie>}
                 </IconButton>
-                <Menu
+                {/* <Menu
                   id="menu-appbar"
                   anchorEl={anchorEl}
                   anchorOrigin={{
@@ -141,7 +140,7 @@ class OurAppBar extends React.Component {
                     {activeAccountMemberName && <Link className={"no-decorate"} to={"/" + activeAccountMemberName}>Profile</Link>}
                     {!activeAccountMemberName && <Link className={"no-decorate"} to={"/register"}>Register</Link>}
                   </MenuItem>
-                </Menu>
+                </Menu> */}
               </div>
             )}
           </Toolbar>

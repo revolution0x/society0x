@@ -7,6 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
+import LoveIcon from '@material-ui/icons/Favorite';
 import RegisterIcon from "@material-ui/icons/VerifiedUser";
 import {store} from '../state';
 import {connect} from 'react-redux';
@@ -55,9 +56,9 @@ class OurDrawers extends React.Component {
       <div className={classes.list}>
         <List>
             <Link to={'/'} className={"no-decorate"}>
-                <ListItem button key={"Home"}>
-                <ListItemIcon><HomeIcon /></ListItemIcon>
-                <ListItemText primary={"Home"} />
+                <ListItem button key={"⎊ With Love ⎊"}>
+                <ListItemIcon><LoveIcon /></ListItemIcon>
+                <ListItemText primary={"⎊ With Love ⎊"} />
                 </ListItem>
             </Link>
             {/* <Link to={'/register'} className={"no-decorate"}>
@@ -72,7 +73,7 @@ class OurDrawers extends React.Component {
 
     return (
       showNavigationWrapper && <div>
-        <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
+        <Drawer PaperProps={{classes: {root: 'our-gradient'}}} open={this.state.left} onClose={this.toggleDrawer('left', false)}>
           <div
             tabIndex={0}
             role="button"

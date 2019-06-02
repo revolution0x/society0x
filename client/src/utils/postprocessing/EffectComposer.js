@@ -108,7 +108,6 @@ Object.assign(EffectComposer.prototype, {
     this.readBuffer = this.renderTarget2
   },
   setSize: function(width, height) {
-    console.log({width})
     this.renderTarget1.setSize(width, height)
     this.renderTarget2.setSize(width, height)
     for (var i = 0; i < this.passes.length; i++) {

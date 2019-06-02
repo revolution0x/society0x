@@ -53,14 +53,14 @@ class PageContainer extends Component {
         const { showLandingSiteState, showNavigationWrapperState } = this.state;
         return (
             <React.Fragment>
-                {showLandingSiteState && 
+                {/* {showLandingSiteState &&  */}
                     <div className={classes.fullScreen}>
                         <Switch>
-                            <Route path="/" exact render={(props) => landingRoute(props)} />
+                            <Route path="/" render={(props) => landingRoute(props)} />
                         </Switch>
                     </div>
-                }
-                {!showLandingSiteState &&
+                {/* } */}
+                {/* {!showLandingSiteState &&
                     <div className={showNavigationWrapperState ? classes.pageContainer : classes.fullScreen}>
                         <Switch>
                             <Route path="/" exact render={(props) => homeRoute(props)} />
@@ -69,7 +69,7 @@ class PageContainer extends Component {
                             <Route path="/:memberName" exact render={(props) => profileRoute(props)} />
                         </Switch>
                     </div>
-                }
+                } */}
             </React.Fragment>
         )
     }   
