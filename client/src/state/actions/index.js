@@ -17,8 +17,3 @@ export const showNavigationWrapper = show => ({
     type: "SHOW_NAVIGATION_WRAPPER",
     show
 })
-
-export const showLandingSite = show => ({
-    type: "SHOW_LANDING_SITE",
-    show
-})

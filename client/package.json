@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
+    "@material-ui/core": "^4.0.2",
     "@material-ui/icons": "^3.0.2",
     "buffer": "^5.2.1",
     "classnames": "^2.2.6",
@@ -21,7 +21,6 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
     "react-spring": "^8.0.20",
-    "react-three-fiber": "^2.1.6",
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
     "rimble-ui": "^0.2.0",
