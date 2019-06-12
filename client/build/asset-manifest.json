@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.8fb47cf9.chunk.css",
-    "main.js": "/static/js/main.4f313e54.chunk.js",
+    "main.css": "/static/css/main.b347188c.chunk.css",
+    "main.js": "/static/js/main.d9578981.chunk.js",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "static/js/2.87867312.chunk.js": "/static/js/2.87867312.chunk.js",
+    "static/js/2.b9e820d0.chunk.js": "/static/js/2.b9e820d0.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.8fa032675eb371991c2e517a363dacf0.js": "/precache-manifest.8fa032675eb371991c2e517a363dacf0.js",
+    "precache-manifest.7eaec5b2beb6cf218dd267570ad0efb6.js": "/precache-manifest.7eaec5b2beb6cf218dd267570ad0efb6.js",
     "service-worker.js": "/service-worker.js",
     "static/media/demo-img-0.jpg": "/static/media/demo-img-0.0c443b2a.jpg",
     "static/media/society0x_transparent_white_thicker.png": "/static/media/society0x_transparent_white_thicker.dd51ea69.png"
