@@ -10,7 +10,7 @@ import { Void } from "./Void.sol";
 
 /**
  * @title Governance
- * @dev Plutocratic voting system.
+ * @dev For The People.
  */
 contract Governance {
     using SafeMath for uint;
