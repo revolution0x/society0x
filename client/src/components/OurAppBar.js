@@ -112,34 +112,10 @@ class OurAppBar extends React.Component {
                   className={classes.appBarProfilePicContainer}
                   style={{borderRadius: '20px', padding:'0px', marginLeft:'25px', marginRight:'5px'}}
                 >
-                {activeAccountProfilePic && <img className={classes.appBarProfilePic} src={IPFS_DATA_GATEWAY + activeAccountProfilePic} alt="Profile"></img>}
-                {!activeAccountProfilePic && <Blockie seed={activeAccountAddress}></Blockie>}
+                  
+                {activeAccountProfilePic && <Link className={"no-decorate"} to={"/" + activeAccountPseudonym}><img className={classes.appBarProfilePic} src={IPFS_DATA_GATEWAY + activeAccountProfilePic} alt="Profile"></img></Link>}
+                {!activeAccountProfilePic && <Link className={"no-decorate"} to={"/register"}><Blockie seed={activeAccountAddress}></Blockie></Link>}
                 </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  open={open}
-                  onClose={this.handleClose}
-                >
-                    {activeAccountPseudonym && 
-                      <Link className={"no-decorate"} to={"/" + activeAccountPseudonym}>
-                        <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                      </Link>
-                    }
-                    {!activeAccountPseudonym &&
-                      <Link className={"no-decorate"} to={"/register"}>
-                        <MenuItem onClick={this.handleClose}>Register</MenuItem>
-                      </Link>
-                    }
-                </Menu>
               </div>
             )}
           </Toolbar>
