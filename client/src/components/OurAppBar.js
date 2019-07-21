@@ -17,7 +17,8 @@ import {store} from '../state';
 import {showLeftMenu, setActiveAccount} from '../state/actions';
 import society0xLogo from "../images/society0x_transparent_white_thicker.png";
 import {Link} from "react-router-dom";
-import { PublicAddress, Blockie } from 'rimble-ui';
+import Blockie from "./BlockiesIdenticon";
+import {IPFS_DATA_GATEWAY} from "../utils/constants";
 
 const styles = {
   root: {
@@ -48,17 +49,17 @@ class OurAppBar extends React.Component {
     super(props);
     this.state = {
       showLeftMenu: store.getState().showLeftMenu,
-      activeAccountAddress: store.getState().setActiveAccount.address,
-      activeAccountMemberName: store.getState().setActiveAccount.memberName,
-      activeAccountProfilePic: store.getState().setActiveAccount.profilePicIpfsHash,
+      activeAccountAddress: store.getState().setMyProfileMetaData.id,
+      activeAccountPseudonym: store.getState().setMyProfileMetaData.pseudonym,
+      activeAccountProfilePic: store.getState().setMyProfileMetaData.profilePictureIpfsHash,
       showNavigationWrapper: store.getState().showNavigationWrapper,
     };
     store.subscribe(() => {
       this.setState({
         showLeftMenu: store.getState().showLeftMenu,
-        activeAccountAddress: store.getState().setActiveAccount.address,
-        activeAccountMemberName: store.getState().setActiveAccount.memberName,
-        activeAccountProfilePic: store.getState().setActiveAccount.profilePicIpfsHash,
+        activeAccountAddress: store.getState().setMyProfileMetaData.id,
+        activeAccountPseudonym: store.getState().setMyProfileMetaData.pseudonym,
+        activeAccountProfilePic: store.getState().setMyProfileMetaData.profilePictureIpfsHash,
         showNavigationWrapper: store.getState().showNavigationWrapper,
       });
     });
@@ -67,14 +68,6 @@ class OurAppBar extends React.Component {
   state = {
     anchorEl: null,
   };
-
-  componentDidMount() {
-    const {accounts} = this.props;
-    const {activeAccountAddress} = this.state;
-    // if((accounts && accounts[0]) && (activeAccountAddress !== accounts[0])){
-    //   this.props.dispatch(setActiveAccount(accounts[0]));
-    // }
-  }
 
   handleMenu = event => {
     this.setState({ anchorEl: event.currentTarget });
@@ -89,8 +82,8 @@ class OurAppBar extends React.Component {
   }
 
   render() {
-    const { classes, accounts, dispatch } = this.props;
-    const { activeAccountAddress, activeAccountMemberName, activeAccountProfilePic, anchorEl, showNavigationWrapper } = this.state;
+    const { classes } = this.props;
+    const { activeAccountAddress, activeAccountPseudonym, activeAccountProfilePic, anchorEl, showNavigationWrapper } = this.state;
     const open = Boolean(anchorEl);
     return (
       showNavigationWrapper && <div className={classes.root}>
@@ -103,13 +96,13 @@ class OurAppBar extends React.Component {
             <IconButton onClick={() => this.toggleMenu()} className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
-            <Link to="/" className={"logo-container" + " " + classes.grow}>
+            <Link to="/" className={["logo-container", classes.grow].join(" ")}>
               <img src={society0xLogo} alt="society0x Logo"/>
             </Link>
             {activeAccountAddress && (
               <div>
                 <Typography className={classes.accountAddressStyle}>
-                  {activeAccountMemberName ? activeAccountMemberName : activeAccountAddress}
+                  {activeAccountPseudonym ? activeAccountPseudonym : activeAccountAddress}
                 </Typography>
                 <IconButton
                   aria-owns={open ? 'menu-appbar' : undefined}
@@ -119,10 +112,10 @@ class OurAppBar extends React.Component {
                   className={classes.appBarProfilePicContainer}
                   style={{borderRadius: '20px', padding:'0px', marginLeft:'25px', marginRight:'5px'}}
                 >
-                {activeAccountProfilePic && <img className={classes.appBarProfilePic} src={"https://ipfs.infura.io/ipfs/" + activeAccountProfilePic} alt="Profile"></img>}
-                {!activeAccountProfilePic && <Blockie opts={{seed: activeAccountAddress, size: 15, scale: 3}}></Blockie>}
+                {activeAccountProfilePic && <img className={classes.appBarProfilePic} src={IPFS_DATA_GATEWAY + activeAccountProfilePic} alt="Profile"></img>}
+                {!activeAccountProfilePic && <Blockie seed={activeAccountAddress}></Blockie>}
                 </IconButton>
-                {/* <Menu
+                <Menu
                   id="menu-appbar"
                   anchorEl={anchorEl}
                   anchorOrigin={{
@@ -136,11 +129,17 @@ class OurAppBar extends React.Component {
                   open={open}
                   onClose={this.handleClose}
                 >
-                  <MenuItem onClick={this.handleClose}>
-                    {activeAccountMemberName && <Link className={"no-decorate"} to={"/" + activeAccountMemberName}>Profile</Link>}
-                    {!activeAccountMemberName && <Link className={"no-decorate"} to={"/register"}>Register</Link>}
-                  </MenuItem>
-                </Menu> */}
+                    {activeAccountPseudonym && 
+                      <Link className={"no-decorate"} to={"/" + activeAccountPseudonym}>
+                        <MenuItem onClick={this.handleClose}>Profile</MenuItem>
+                      </Link>
+                    }
+                    {!activeAccountPseudonym &&
+                      <Link className={"no-decorate"} to={"/register"}>
+                        <MenuItem onClick={this.handleClose}>Register</MenuItem>
+                      </Link>
+                    }
+                </Menu>
               </div>
             )}
           </Toolbar>

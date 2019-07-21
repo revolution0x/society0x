@@ -241,14 +241,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/TwitterHumanityApplicant.sol",
     "exportedSymbols": {
       "TwitterHumanityApplicant": [
-        1836
+        2093
       ]
     },
-    "id": 1837,
+    "id": 2094,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1720,
+        "id": 1977,
         "literals": [
           "solidity",
           "0.5",
@@ -258,7 +258,7 @@
         "src": "0:22:9"
       },
       {
-        "id": 1721,
+        "id": 1978,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -269,14 +269,14 @@
       {
         "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
         "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
-        "id": 1723,
+        "id": 1980,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 2844,
+        "scope": 2094,
+        "sourceUnit": 3101,
         "src": "58:80:9",
         "symbolAliases": [
           {
-            "foreign": 1722,
+            "foreign": 1979,
             "local": null
           }
         ],
@@ -285,14 +285,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol",
         "file": "./interface/IRegistry.sol",
-        "id": 1725,
+        "id": 1982,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 2010,
+        "scope": 2094,
+        "sourceUnit": 2267,
         "src": "140:54:9",
         "symbolAliases": [
           {
-            "foreign": 1724,
+            "foreign": 1981,
             "local": null
           }
         ],
@@ -301,14 +301,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IUniswapExchange.sol",
         "file": "./interface/IUniswapExchange.sol",
-        "id": 1727,
+        "id": 1984,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 2023,
+        "scope": 2094,
+        "sourceUnit": 2280,
         "src": "195:68:9",
         "symbolAliases": [
           {
-            "foreign": 1726,
+            "foreign": 1983,
             "local": null
           }
         ],
@@ -317,14 +317,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol",
         "file": "./interface/IGovernance.sol",
-        "id": 1729,
+        "id": 1986,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 1985,
+        "scope": 2094,
+        "sourceUnit": 2242,
         "src": "265:58:9",
         "symbolAliases": [
           {
-            "foreign": 1728,
+            "foreign": 1985,
             "local": null
           }
         ],
@@ -333,14 +333,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/PayableHumanityApplicant.sol",
         "file": "./PayableHumanityApplicant.sol",
-        "id": 1731,
+        "id": 1988,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 1402,
+        "scope": 2094,
+        "sourceUnit": 1659,
         "src": "324:74:9",
         "symbolAliases": [
           {
-            "foreign": 1730,
+            "foreign": 1987,
             "local": null
           }
         ],
@@ -352,33 +352,33 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1732,
+              "id": 1989,
               "name": "PayableHumanityApplicant",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1401,
+              "referencedDeclaration": 1658,
               "src": "583:24:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1401",
+                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1658",
                 "typeString": "contract PayableHumanityApplicant"
               }
             },
-            "id": 1733,
+            "id": 1990,
             "nodeType": "InheritanceSpecifier",
             "src": "583:24:9"
           }
         ],
         "contractDependencies": [
-          1085,
-          1401
+          1328,
+          1658
         ],
         "contractKind": "contract",
         "documentation": "@title TwitterHumanityApplicant\n@dev Convenient interface for applying to the Humanity registry using Twitter as proof of identity.",
         "fullyImplemented": true,
-        "id": 1836,
+        "id": 2093,
         "linearizedBaseContracts": [
-          1836,
-          1401,
-          1085
+          2093,
+          1658,
+          1328
         ],
         "name": "TwitterHumanityApplicant",
         "nodeType": "ContractDefinition",
@@ -386,20 +386,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1741,
+            "id": 1998,
             "name": "Apply",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1740,
+              "id": 1997,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1735,
+                  "id": 1992,
                   "indexed": true,
                   "name": "proposalId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1741,
+                  "scope": 1998,
                   "src": "627:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -408,7 +408,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1734,
+                    "id": 1991,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "627:4:9",
@@ -422,11 +422,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1737,
+                  "id": 1994,
                   "indexed": true,
                   "name": "applicant",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1741,
+                  "scope": 1998,
                   "src": "652:25:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -435,7 +435,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1736,
+                    "id": 1993,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "652:7:9",
@@ -450,11 +450,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1739,
+                  "id": 1996,
                   "indexed": false,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1741,
+                  "scope": 1998,
                   "src": "679:15:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -463,7 +463,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1738,
+                    "id": 1995,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "679:6:9",
@@ -482,13 +482,13 @@
           },
           {
             "body": {
-              "id": 1758,
+              "id": 2015,
               "nodeType": "Block",
               "src": "930:2:9",
               "statements": []
             },
             "documentation": null,
-            "id": 1759,
+            "id": 2016,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -496,68 +496,68 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1752,
+                    "id": 2009,
                     "name": "_governance",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1743,
+                    "referencedDeclaration": 2000,
                     "src": "884:11:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IGovernance_$1984",
+                      "typeIdentifier": "t_contract$_IGovernance_$2241",
                       "typeString": "contract IGovernance"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1753,
+                    "id": 2010,
                     "name": "_registry",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1745,
+                    "referencedDeclaration": 2002,
                     "src": "897:9:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IRegistry_$2009",
+                      "typeIdentifier": "t_contract$_IRegistry_$2266",
                       "typeString": "contract IRegistry"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1754,
+                    "id": 2011,
                     "name": "_humanity",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1747,
+                    "referencedDeclaration": 2004,
                     "src": "908:9:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2843",
+                      "typeIdentifier": "t_contract$_IERC20_$3100",
                       "typeString": "contract IERC20"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1755,
+                    "id": 2012,
                     "name": "_exchange",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1749,
+                    "referencedDeclaration": 2006,
                     "src": "919:9:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                      "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                       "typeString": "contract IUniswapExchange"
                     }
                   }
                 ],
-                "id": 1756,
+                "id": 2013,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1751,
+                  "id": 2008,
                   "name": "PayableHumanityApplicant",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1401,
+                  "referencedDeclaration": 1658,
                   "src": "859:24:9",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_PayableHumanityApplicant_$1401_$",
+                    "typeIdentifier": "t_type$_t_contract$_PayableHumanityApplicant_$1658_$",
                     "typeString": "type(contract PayableHumanityApplicant)"
                   }
                 },
@@ -568,31 +568,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1750,
+              "id": 2007,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1743,
+                  "id": 2000,
                   "name": "_governance",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1759,
+                  "scope": 2016,
                   "src": "723:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IGovernance_$1984",
+                    "typeIdentifier": "t_contract$_IGovernance_$2241",
                     "typeString": "contract IGovernance"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1742,
+                    "id": 1999,
                     "name": "IGovernance",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1984,
+                    "referencedDeclaration": 2241,
                     "src": "723:11:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IGovernance_$1984",
+                      "typeIdentifier": "t_contract$_IGovernance_$2241",
                       "typeString": "contract IGovernance"
                     }
                   },
@@ -601,26 +601,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1745,
+                  "id": 2002,
                   "name": "_registry",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1759,
+                  "scope": 2016,
                   "src": "756:19:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IRegistry_$2009",
+                    "typeIdentifier": "t_contract$_IRegistry_$2266",
                     "typeString": "contract IRegistry"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1744,
+                    "id": 2001,
                     "name": "IRegistry",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2009,
+                    "referencedDeclaration": 2266,
                     "src": "756:9:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IRegistry_$2009",
+                      "typeIdentifier": "t_contract$_IRegistry_$2266",
                       "typeString": "contract IRegistry"
                     }
                   },
@@ -629,26 +629,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1747,
+                  "id": 2004,
                   "name": "_humanity",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1759,
+                  "scope": 2016,
                   "src": "785:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IERC20_$2843",
+                    "typeIdentifier": "t_contract$_IERC20_$3100",
                     "typeString": "contract IERC20"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1746,
+                    "id": 2003,
                     "name": "IERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2843,
+                    "referencedDeclaration": 3100,
                     "src": "785:6:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2843",
+                      "typeIdentifier": "t_contract$_IERC20_$3100",
                       "typeString": "contract IERC20"
                     }
                   },
@@ -657,26 +657,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1749,
+                  "id": 2006,
                   "name": "_exchange",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1759,
+                  "scope": 2016,
                   "src": "811:26:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                    "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                     "typeString": "contract IUniswapExchange"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1748,
+                    "id": 2005,
                     "name": "IUniswapExchange",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2022,
+                    "referencedDeclaration": 2279,
                     "src": "811:16:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                      "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                       "typeString": "contract IUniswapExchange"
                     }
                   },
@@ -687,12 +687,12 @@
               "src": "713:130:9"
             },
             "returnParameters": {
-              "id": 1757,
+              "id": 2014,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "930:0:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "702:230:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -700,7 +700,7 @@
           },
           {
             "body": {
-              "id": 1772,
+              "id": 2029,
               "nodeType": "Block",
               "src": "1010:65:9",
               "statements": [
@@ -712,18 +712,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1767,
+                          "id": 2024,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2858,
+                          "referencedDeclaration": 3115,
                           "src": "1047:3:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1768,
+                        "id": 2025,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -739,11 +739,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1769,
+                        "id": 2026,
                         "name": "username",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1761,
+                        "referencedDeclaration": 2018,
                         "src": "1059:8:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -762,18 +762,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1766,
+                      "id": 2023,
                       "name": "applyWithTwitterFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1797,
+                      "referencedDeclaration": 2054,
                       "src": "1027:19:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$_t_uint256_$",
                         "typeString": "function (address,string memory) returns (uint256)"
                       }
                     },
-                    "id": 1770,
+                    "id": 2027,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -787,30 +787,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1765,
-                  "id": 1771,
+                  "functionReturnParameters": 2022,
+                  "id": 2028,
                   "nodeType": "Return",
                   "src": "1020:48:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 1773,
+            "id": 2030,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithTwitter",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1762,
+              "id": 2019,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1761,
+                  "id": 2018,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1773,
+                  "scope": 2030,
                   "src": "964:22:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -819,7 +819,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1760,
+                    "id": 2017,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "964:6:9",
@@ -835,15 +835,15 @@
               "src": "963:24:9"
             },
             "returnParameters": {
-              "id": 1765,
+              "id": 2022,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1764,
+                  "id": 2021,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1773,
+                  "scope": 2030,
                   "src": "1004:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -852,7 +852,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1763,
+                    "id": 2020,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1004:4:9",
@@ -867,7 +867,7 @@
               ],
               "src": "1003:6:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "938:137:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -875,21 +875,21 @@
           },
           {
             "body": {
-              "id": 1796,
+              "id": 2053,
               "nodeType": "Block",
               "src": "1169:122:9",
               "statements": [
                 {
                   "assignments": [
-                    1783
+                    2040
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1783,
+                      "id": 2040,
                       "name": "proposalId",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1796,
+                      "scope": 2053,
                       "src": "1179:15:9",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -898,7 +898,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1782,
+                        "id": 2039,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1179:4:9",
@@ -911,17 +911,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1787,
+                  "id": 2044,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1785,
+                        "id": 2042,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1775,
+                        "referencedDeclaration": 2032,
                         "src": "1206:3:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -936,18 +936,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1784,
+                      "id": 2041,
                       "name": "applyFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1084,
+                      "referencedDeclaration": 1327,
                       "src": "1197:8:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 1786,
+                    "id": 2043,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -970,11 +970,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1789,
+                        "id": 2046,
                         "name": "proposalId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1783,
+                        "referencedDeclaration": 2040,
                         "src": "1231:10:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -983,11 +983,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1790,
+                        "id": 2047,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1775,
+                        "referencedDeclaration": 2032,
                         "src": "1243:3:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -996,11 +996,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1791,
+                        "id": 2048,
                         "name": "username",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1777,
+                        "referencedDeclaration": 2034,
                         "src": "1248:8:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1023,18 +1023,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1788,
+                      "id": 2045,
                       "name": "Apply",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1741,
+                      "referencedDeclaration": 1998,
                       "src": "1225:5:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,address,string memory)"
                       }
                     },
-                    "id": 1792,
+                    "id": 2049,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1048,48 +1048,48 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1793,
+                  "id": 2050,
                   "nodeType": "EmitStatement",
                   "src": "1220:37:9"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1794,
+                    "id": 2051,
                     "name": "proposalId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1783,
+                    "referencedDeclaration": 2040,
                     "src": "1274:10:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1781,
-                  "id": 1795,
+                  "functionReturnParameters": 2038,
+                  "id": 2052,
                   "nodeType": "Return",
                   "src": "1267:17:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 1797,
+            "id": 2054,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithTwitterFor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1778,
+              "id": 2035,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1775,
+                  "id": 2032,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1797,
+                  "scope": 2054,
                   "src": "1110:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1098,7 +1098,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1774,
+                    "id": 2031,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1110:7:9",
@@ -1113,10 +1113,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1777,
+                  "id": 2034,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1797,
+                  "scope": 2054,
                   "src": "1123:22:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1125,7 +1125,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1776,
+                    "id": 2033,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1123:6:9",
@@ -1141,15 +1141,15 @@
               "src": "1109:37:9"
             },
             "returnParameters": {
-              "id": 1781,
+              "id": 2038,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1780,
+                  "id": 2037,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1797,
+                  "scope": 2054,
                   "src": "1163:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1158,7 +1158,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1779,
+                    "id": 2036,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1163:4:9",
@@ -1173,7 +1173,7 @@
               ],
               "src": "1162:6:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "1081:210:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1181,7 +1181,7 @@
           },
           {
             "body": {
-              "id": 1810,
+              "id": 2067,
               "nodeType": "Block",
               "src": "1387:75:9",
               "statements": [
@@ -1193,18 +1193,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1805,
+                          "id": 2062,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2858,
+                          "referencedDeclaration": 3115,
                           "src": "1434:3:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1806,
+                        "id": 2063,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1220,11 +1220,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1807,
+                        "id": 2064,
                         "name": "username",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1799,
+                        "referencedDeclaration": 2056,
                         "src": "1446:8:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1243,18 +1243,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1804,
+                      "id": 2061,
                       "name": "applyWithTwitterUsingEtherFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1835,
+                      "referencedDeclaration": 2092,
                       "src": "1404:29:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$_t_uint256_$",
                         "typeString": "function (address,string memory) returns (uint256)"
                       }
                     },
-                    "id": 1808,
+                    "id": 2065,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1268,30 +1268,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1803,
-                  "id": 1809,
+                  "functionReturnParameters": 2060,
+                  "id": 2066,
                   "nodeType": "Return",
                   "src": "1397:58:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 1811,
+            "id": 2068,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithTwitterUsingEther",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1800,
+              "id": 2057,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1799,
+                  "id": 2056,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1811,
+                  "scope": 2068,
                   "src": "1333:22:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1300,7 +1300,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1798,
+                    "id": 2055,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1333:6:9",
@@ -1316,15 +1316,15 @@
               "src": "1332:24:9"
             },
             "returnParameters": {
-              "id": 1803,
+              "id": 2060,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1802,
+                  "id": 2059,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1811,
+                  "scope": 2068,
                   "src": "1381:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1333,7 +1333,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1801,
+                    "id": 2058,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1381:4:9",
@@ -1348,7 +1348,7 @@
               ],
               "src": "1380:6:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "1297:165:9",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1356,21 +1356,21 @@
           },
           {
             "body": {
-              "id": 1834,
+              "id": 2091,
               "nodeType": "Block",
               "src": "1574:131:9",
               "statements": [
                 {
                   "assignments": [
-                    1821
+                    2078
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1821,
+                      "id": 2078,
                       "name": "proposalId",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1834,
+                      "scope": 2091,
                       "src": "1584:15:9",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1379,7 +1379,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1820,
+                        "id": 2077,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1584:4:9",
@@ -1392,17 +1392,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1825,
+                  "id": 2082,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1823,
+                        "id": 2080,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1813,
+                        "referencedDeclaration": 2070,
                         "src": "1620:3:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1417,18 +1417,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1822,
+                      "id": 2079,
                       "name": "applyWithEtherFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1400,
+                      "referencedDeclaration": 1657,
                       "src": "1602:17:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 1824,
+                    "id": 2081,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1451,11 +1451,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1827,
+                        "id": 2084,
                         "name": "proposalId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1821,
+                        "referencedDeclaration": 2078,
                         "src": "1645:10:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1464,11 +1464,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1828,
+                        "id": 2085,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1813,
+                        "referencedDeclaration": 2070,
                         "src": "1657:3:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1477,11 +1477,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1829,
+                        "id": 2086,
                         "name": "username",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1815,
+                        "referencedDeclaration": 2072,
                         "src": "1662:8:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1504,18 +1504,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1826,
+                      "id": 2083,
                       "name": "Apply",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1741,
+                      "referencedDeclaration": 1998,
                       "src": "1639:5:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,address,string memory)"
                       }
                     },
-                    "id": 1830,
+                    "id": 2087,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1529,48 +1529,48 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1831,
+                  "id": 2088,
                   "nodeType": "EmitStatement",
                   "src": "1634:37:9"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1832,
+                    "id": 2089,
                     "name": "proposalId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1821,
+                    "referencedDeclaration": 2078,
                     "src": "1688:10:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1819,
-                  "id": 1833,
+                  "functionReturnParameters": 2076,
+                  "id": 2090,
                   "nodeType": "Return",
                   "src": "1681:17:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 1835,
+            "id": 2092,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithTwitterUsingEtherFor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1816,
+              "id": 2073,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1813,
+                  "id": 2070,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1835,
+                  "scope": 2092,
                   "src": "1507:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1579,7 +1579,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1812,
+                    "id": 2069,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1507:7:9",
@@ -1594,10 +1594,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1815,
+                  "id": 2072,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1835,
+                  "scope": 2092,
                   "src": "1520:22:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1606,7 +1606,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1814,
+                    "id": 2071,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1520:6:9",
@@ -1622,15 +1622,15 @@
               "src": "1506:37:9"
             },
             "returnParameters": {
-              "id": 1819,
+              "id": 2076,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1818,
+                  "id": 2075,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1835,
+                  "scope": 2092,
                   "src": "1568:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1639,7 +1639,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1817,
+                    "id": 2074,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1568:4:9",
@@ -1654,14 +1654,14 @@
               ],
               "src": "1567:6:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "1468:237:9",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1837,
+        "scope": 2094,
         "src": "546:1162:9"
       }
     ],
@@ -1671,14 +1671,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/TwitterHumanityApplicant.sol",
     "exportedSymbols": {
       "TwitterHumanityApplicant": [
-        1836
+        2093
       ]
     },
-    "id": 1837,
+    "id": 2094,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1720,
+        "id": 1977,
         "literals": [
           "solidity",
           "0.5",
@@ -1688,7 +1688,7 @@
         "src": "0:22:9"
       },
       {
-        "id": 1721,
+        "id": 1978,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -1699,14 +1699,14 @@
       {
         "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
         "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
-        "id": 1723,
+        "id": 1980,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 2844,
+        "scope": 2094,
+        "sourceUnit": 3101,
         "src": "58:80:9",
         "symbolAliases": [
           {
-            "foreign": 1722,
+            "foreign": 1979,
             "local": null
           }
         ],
@@ -1715,14 +1715,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol",
         "file": "./interface/IRegistry.sol",
-        "id": 1725,
+        "id": 1982,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 2010,
+        "scope": 2094,
+        "sourceUnit": 2267,
         "src": "140:54:9",
         "symbolAliases": [
           {
-            "foreign": 1724,
+            "foreign": 1981,
             "local": null
           }
         ],
@@ -1731,14 +1731,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IUniswapExchange.sol",
         "file": "./interface/IUniswapExchange.sol",
-        "id": 1727,
+        "id": 1984,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 2023,
+        "scope": 2094,
+        "sourceUnit": 2280,
         "src": "195:68:9",
         "symbolAliases": [
           {
-            "foreign": 1726,
+            "foreign": 1983,
             "local": null
           }
         ],
@@ -1747,14 +1747,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol",
         "file": "./interface/IGovernance.sol",
-        "id": 1729,
+        "id": 1986,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 1985,
+        "scope": 2094,
+        "sourceUnit": 2242,
         "src": "265:58:9",
         "symbolAliases": [
           {
-            "foreign": 1728,
+            "foreign": 1985,
             "local": null
           }
         ],
@@ -1763,14 +1763,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/PayableHumanityApplicant.sol",
         "file": "./PayableHumanityApplicant.sol",
-        "id": 1731,
+        "id": 1988,
         "nodeType": "ImportDirective",
-        "scope": 1837,
-        "sourceUnit": 1402,
+        "scope": 2094,
+        "sourceUnit": 1659,
         "src": "324:74:9",
         "symbolAliases": [
           {
-            "foreign": 1730,
+            "foreign": 1987,
             "local": null
           }
         ],
@@ -1782,33 +1782,33 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1732,
+              "id": 1989,
               "name": "PayableHumanityApplicant",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1401,
+              "referencedDeclaration": 1658,
               "src": "583:24:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1401",
+                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1658",
                 "typeString": "contract PayableHumanityApplicant"
               }
             },
-            "id": 1733,
+            "id": 1990,
             "nodeType": "InheritanceSpecifier",
             "src": "583:24:9"
           }
         ],
         "contractDependencies": [
-          1085,
-          1401
+          1328,
+          1658
         ],
         "contractKind": "contract",
         "documentation": "@title TwitterHumanityApplicant\n@dev Convenient interface for applying to the Humanity registry using Twitter as proof of identity.",
         "fullyImplemented": true,
-        "id": 1836,
+        "id": 2093,
         "linearizedBaseContracts": [
-          1836,
-          1401,
-          1085
+          2093,
+          1658,
+          1328
         ],
         "name": "TwitterHumanityApplicant",
         "nodeType": "ContractDefinition",
@@ -1816,20 +1816,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1741,
+            "id": 1998,
             "name": "Apply",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1740,
+              "id": 1997,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1735,
+                  "id": 1992,
                   "indexed": true,
                   "name": "proposalId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1741,
+                  "scope": 1998,
                   "src": "627:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1838,7 +1838,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1734,
+                    "id": 1991,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "627:4:9",
@@ -1852,11 +1852,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1737,
+                  "id": 1994,
                   "indexed": true,
                   "name": "applicant",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1741,
+                  "scope": 1998,
                   "src": "652:25:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1865,7 +1865,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1736,
+                    "id": 1993,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "652:7:9",
@@ -1880,11 +1880,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1739,
+                  "id": 1996,
                   "indexed": false,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1741,
+                  "scope": 1998,
                   "src": "679:15:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1893,7 +1893,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1738,
+                    "id": 1995,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "679:6:9",
@@ -1912,13 +1912,13 @@
           },
           {
             "body": {
-              "id": 1758,
+              "id": 2015,
               "nodeType": "Block",
               "src": "930:2:9",
               "statements": []
             },
             "documentation": null,
-            "id": 1759,
+            "id": 2016,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -1926,68 +1926,68 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1752,
+                    "id": 2009,
                     "name": "_governance",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1743,
+                    "referencedDeclaration": 2000,
                     "src": "884:11:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IGovernance_$1984",
+                      "typeIdentifier": "t_contract$_IGovernance_$2241",
                       "typeString": "contract IGovernance"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1753,
+                    "id": 2010,
                     "name": "_registry",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1745,
+                    "referencedDeclaration": 2002,
                     "src": "897:9:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IRegistry_$2009",
+                      "typeIdentifier": "t_contract$_IRegistry_$2266",
                       "typeString": "contract IRegistry"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1754,
+                    "id": 2011,
                     "name": "_humanity",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1747,
+                    "referencedDeclaration": 2004,
                     "src": "908:9:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2843",
+                      "typeIdentifier": "t_contract$_IERC20_$3100",
                       "typeString": "contract IERC20"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1755,
+                    "id": 2012,
                     "name": "_exchange",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1749,
+                    "referencedDeclaration": 2006,
                     "src": "919:9:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                      "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                       "typeString": "contract IUniswapExchange"
                     }
                   }
                 ],
-                "id": 1756,
+                "id": 2013,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1751,
+                  "id": 2008,
                   "name": "PayableHumanityApplicant",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1401,
+                  "referencedDeclaration": 1658,
                   "src": "859:24:9",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_PayableHumanityApplicant_$1401_$",
+                    "typeIdentifier": "t_type$_t_contract$_PayableHumanityApplicant_$1658_$",
                     "typeString": "type(contract PayableHumanityApplicant)"
                   }
                 },
@@ -1998,31 +1998,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1750,
+              "id": 2007,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1743,
+                  "id": 2000,
                   "name": "_governance",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1759,
+                  "scope": 2016,
                   "src": "723:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IGovernance_$1984",
+                    "typeIdentifier": "t_contract$_IGovernance_$2241",
                     "typeString": "contract IGovernance"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1742,
+                    "id": 1999,
                     "name": "IGovernance",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1984,
+                    "referencedDeclaration": 2241,
                     "src": "723:11:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IGovernance_$1984",
+                      "typeIdentifier": "t_contract$_IGovernance_$2241",
                       "typeString": "contract IGovernance"
                     }
                   },
@@ -2031,26 +2031,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1745,
+                  "id": 2002,
                   "name": "_registry",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1759,
+                  "scope": 2016,
                   "src": "756:19:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IRegistry_$2009",
+                    "typeIdentifier": "t_contract$_IRegistry_$2266",
                     "typeString": "contract IRegistry"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1744,
+                    "id": 2001,
                     "name": "IRegistry",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2009,
+                    "referencedDeclaration": 2266,
                     "src": "756:9:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IRegistry_$2009",
+                      "typeIdentifier": "t_contract$_IRegistry_$2266",
                       "typeString": "contract IRegistry"
                     }
                   },
@@ -2059,26 +2059,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1747,
+                  "id": 2004,
                   "name": "_humanity",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1759,
+                  "scope": 2016,
                   "src": "785:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IERC20_$2843",
+                    "typeIdentifier": "t_contract$_IERC20_$3100",
                     "typeString": "contract IERC20"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1746,
+                    "id": 2003,
                     "name": "IERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2843,
+                    "referencedDeclaration": 3100,
                     "src": "785:6:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2843",
+                      "typeIdentifier": "t_contract$_IERC20_$3100",
                       "typeString": "contract IERC20"
                     }
                   },
@@ -2087,26 +2087,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1749,
+                  "id": 2006,
                   "name": "_exchange",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1759,
+                  "scope": 2016,
                   "src": "811:26:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                    "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                     "typeString": "contract IUniswapExchange"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1748,
+                    "id": 2005,
                     "name": "IUniswapExchange",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2022,
+                    "referencedDeclaration": 2279,
                     "src": "811:16:9",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                      "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                       "typeString": "contract IUniswapExchange"
                     }
                   },
@@ -2117,12 +2117,12 @@
               "src": "713:130:9"
             },
             "returnParameters": {
-              "id": 1757,
+              "id": 2014,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "930:0:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "702:230:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2130,7 +2130,7 @@
           },
           {
             "body": {
-              "id": 1772,
+              "id": 2029,
               "nodeType": "Block",
               "src": "1010:65:9",
               "statements": [
@@ -2142,18 +2142,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1767,
+                          "id": 2024,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2858,
+                          "referencedDeclaration": 3115,
                           "src": "1047:3:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1768,
+                        "id": 2025,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2169,11 +2169,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1769,
+                        "id": 2026,
                         "name": "username",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1761,
+                        "referencedDeclaration": 2018,
                         "src": "1059:8:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -2192,18 +2192,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1766,
+                      "id": 2023,
                       "name": "applyWithTwitterFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1797,
+                      "referencedDeclaration": 2054,
                       "src": "1027:19:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$_t_uint256_$",
                         "typeString": "function (address,string memory) returns (uint256)"
                       }
                     },
-                    "id": 1770,
+                    "id": 2027,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2217,30 +2217,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1765,
-                  "id": 1771,
+                  "functionReturnParameters": 2022,
+                  "id": 2028,
                   "nodeType": "Return",
                   "src": "1020:48:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 1773,
+            "id": 2030,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithTwitter",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1762,
+              "id": 2019,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1761,
+                  "id": 2018,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1773,
+                  "scope": 2030,
                   "src": "964:22:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2249,7 +2249,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1760,
+                    "id": 2017,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "964:6:9",
@@ -2265,15 +2265,15 @@
               "src": "963:24:9"
             },
             "returnParameters": {
-              "id": 1765,
+              "id": 2022,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1764,
+                  "id": 2021,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1773,
+                  "scope": 2030,
                   "src": "1004:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2282,7 +2282,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1763,
+                    "id": 2020,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1004:4:9",
@@ -2297,7 +2297,7 @@
               ],
               "src": "1003:6:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "938:137:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2305,21 +2305,21 @@
           },
           {
             "body": {
-              "id": 1796,
+              "id": 2053,
               "nodeType": "Block",
               "src": "1169:122:9",
               "statements": [
                 {
                   "assignments": [
-                    1783
+                    2040
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1783,
+                      "id": 2040,
                       "name": "proposalId",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1796,
+                      "scope": 2053,
                       "src": "1179:15:9",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2328,7 +2328,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1782,
+                        "id": 2039,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1179:4:9",
@@ -2341,17 +2341,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1787,
+                  "id": 2044,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1785,
+                        "id": 2042,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1775,
+                        "referencedDeclaration": 2032,
                         "src": "1206:3:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2366,18 +2366,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1784,
+                      "id": 2041,
                       "name": "applyFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1084,
+                      "referencedDeclaration": 1327,
                       "src": "1197:8:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 1786,
+                    "id": 2043,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2400,11 +2400,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1789,
+                        "id": 2046,
                         "name": "proposalId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1783,
+                        "referencedDeclaration": 2040,
                         "src": "1231:10:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2413,11 +2413,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1790,
+                        "id": 2047,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1775,
+                        "referencedDeclaration": 2032,
                         "src": "1243:3:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2426,11 +2426,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1791,
+                        "id": 2048,
                         "name": "username",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1777,
+                        "referencedDeclaration": 2034,
                         "src": "1248:8:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -2453,18 +2453,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1788,
+                      "id": 2045,
                       "name": "Apply",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1741,
+                      "referencedDeclaration": 1998,
                       "src": "1225:5:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,address,string memory)"
                       }
                     },
-                    "id": 1792,
+                    "id": 2049,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2478,48 +2478,48 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1793,
+                  "id": 2050,
                   "nodeType": "EmitStatement",
                   "src": "1220:37:9"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1794,
+                    "id": 2051,
                     "name": "proposalId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1783,
+                    "referencedDeclaration": 2040,
                     "src": "1274:10:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1781,
-                  "id": 1795,
+                  "functionReturnParameters": 2038,
+                  "id": 2052,
                   "nodeType": "Return",
                   "src": "1267:17:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 1797,
+            "id": 2054,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithTwitterFor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1778,
+              "id": 2035,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1775,
+                  "id": 2032,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1797,
+                  "scope": 2054,
                   "src": "1110:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2528,7 +2528,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1774,
+                    "id": 2031,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1110:7:9",
@@ -2543,10 +2543,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1777,
+                  "id": 2034,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1797,
+                  "scope": 2054,
                   "src": "1123:22:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2555,7 +2555,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1776,
+                    "id": 2033,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1123:6:9",
@@ -2571,15 +2571,15 @@
               "src": "1109:37:9"
             },
             "returnParameters": {
-              "id": 1781,
+              "id": 2038,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1780,
+                  "id": 2037,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1797,
+                  "scope": 2054,
                   "src": "1163:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2588,7 +2588,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1779,
+                    "id": 2036,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1163:4:9",
@@ -2603,7 +2603,7 @@
               ],
               "src": "1162:6:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "1081:210:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2611,7 +2611,7 @@
           },
           {
             "body": {
-              "id": 1810,
+              "id": 2067,
               "nodeType": "Block",
               "src": "1387:75:9",
               "statements": [
@@ -2623,18 +2623,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1805,
+                          "id": 2062,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2858,
+                          "referencedDeclaration": 3115,
                           "src": "1434:3:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1806,
+                        "id": 2063,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2650,11 +2650,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1807,
+                        "id": 2064,
                         "name": "username",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1799,
+                        "referencedDeclaration": 2056,
                         "src": "1446:8:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -2673,18 +2673,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1804,
+                      "id": 2061,
                       "name": "applyWithTwitterUsingEtherFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1835,
+                      "referencedDeclaration": 2092,
                       "src": "1404:29:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_string_memory_ptr_$returns$_t_uint256_$",
                         "typeString": "function (address,string memory) returns (uint256)"
                       }
                     },
-                    "id": 1808,
+                    "id": 2065,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2698,30 +2698,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1803,
-                  "id": 1809,
+                  "functionReturnParameters": 2060,
+                  "id": 2066,
                   "nodeType": "Return",
                   "src": "1397:58:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 1811,
+            "id": 2068,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithTwitterUsingEther",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1800,
+              "id": 2057,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1799,
+                  "id": 2056,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1811,
+                  "scope": 2068,
                   "src": "1333:22:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2730,7 +2730,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1798,
+                    "id": 2055,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1333:6:9",
@@ -2746,15 +2746,15 @@
               "src": "1332:24:9"
             },
             "returnParameters": {
-              "id": 1803,
+              "id": 2060,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1802,
+                  "id": 2059,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1811,
+                  "scope": 2068,
                   "src": "1381:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2763,7 +2763,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1801,
+                    "id": 2058,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1381:4:9",
@@ -2778,7 +2778,7 @@
               ],
               "src": "1380:6:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "1297:165:9",
             "stateMutability": "payable",
             "superFunction": null,
@@ -2786,21 +2786,21 @@
           },
           {
             "body": {
-              "id": 1834,
+              "id": 2091,
               "nodeType": "Block",
               "src": "1574:131:9",
               "statements": [
                 {
                   "assignments": [
-                    1821
+                    2078
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1821,
+                      "id": 2078,
                       "name": "proposalId",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1834,
+                      "scope": 2091,
                       "src": "1584:15:9",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2809,7 +2809,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1820,
+                        "id": 2077,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1584:4:9",
@@ -2822,17 +2822,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1825,
+                  "id": 2082,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1823,
+                        "id": 2080,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1813,
+                        "referencedDeclaration": 2070,
                         "src": "1620:3:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2847,18 +2847,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1822,
+                      "id": 2079,
                       "name": "applyWithEtherFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1400,
+                      "referencedDeclaration": 1657,
                       "src": "1602:17:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 1824,
+                    "id": 2081,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2881,11 +2881,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1827,
+                        "id": 2084,
                         "name": "proposalId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1821,
+                        "referencedDeclaration": 2078,
                         "src": "1645:10:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2894,11 +2894,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1828,
+                        "id": 2085,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1813,
+                        "referencedDeclaration": 2070,
                         "src": "1657:3:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2907,11 +2907,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1829,
+                        "id": 2086,
                         "name": "username",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1815,
+                        "referencedDeclaration": 2072,
                         "src": "1662:8:9",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -2934,18 +2934,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 1826,
+                      "id": 2083,
                       "name": "Apply",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1741,
+                      "referencedDeclaration": 1998,
                       "src": "1639:5:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,address,string memory)"
                       }
                     },
-                    "id": 1830,
+                    "id": 2087,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2959,48 +2959,48 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1831,
+                  "id": 2088,
                   "nodeType": "EmitStatement",
                   "src": "1634:37:9"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1832,
+                    "id": 2089,
                     "name": "proposalId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1821,
+                    "referencedDeclaration": 2078,
                     "src": "1688:10:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1819,
-                  "id": 1833,
+                  "functionReturnParameters": 2076,
+                  "id": 2090,
                   "nodeType": "Return",
                   "src": "1681:17:9"
                 }
               ]
             },
             "documentation": null,
-            "id": 1835,
+            "id": 2092,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithTwitterUsingEtherFor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1816,
+              "id": 2073,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1813,
+                  "id": 2070,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1835,
+                  "scope": 2092,
                   "src": "1507:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3009,7 +3009,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1812,
+                    "id": 2069,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1507:7:9",
@@ -3024,10 +3024,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1815,
+                  "id": 2072,
                   "name": "username",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1835,
+                  "scope": 2092,
                   "src": "1520:22:9",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3036,7 +3036,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1814,
+                    "id": 2071,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1520:6:9",
@@ -3052,15 +3052,15 @@
               "src": "1506:37:9"
             },
             "returnParameters": {
-              "id": 1819,
+              "id": 2076,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1818,
+                  "id": 2075,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1835,
+                  "scope": 2092,
                   "src": "1568:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3069,7 +3069,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1817,
+                    "id": 2074,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1568:4:9",
@@ -3084,14 +3084,14 @@
               ],
               "src": "1567:6:9"
             },
-            "scope": 1836,
+            "scope": 2093,
             "src": "1468:237:9",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1837,
+        "scope": 2094,
         "src": "546:1162:9"
       }
     ],
@@ -3129,12 +3129,12 @@
         }
       },
       "links": {},
-      "address": "0x51e33cC46F0dFCe428CE33d4ac516A74dB60F3C9",
-      "transactionHash": "0xc09d6a3c2270a772a2fb38af735d31f0a200801a3f55291fe452a763602ca4ae"
+      "address": "0x1D3dbd2102aB5cD12014c0f426588c86Dd7988b4",
+      "transactionHash": "0x491d78dc4f581872bb8199f7b90923283cb1c51a17534b58194a9b6ef7a8e623"
     }
   },
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-06-01T13:06:25.399Z",
+  "updatedAt": "2019-07-21T12:29:37.370Z",
   "devdoc": {
     "details": "Convenient interface for applying to the Humanity registry using Twitter as proof of identity.",
     "methods": {},

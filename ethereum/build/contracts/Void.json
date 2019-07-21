@@ -12,14 +12,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/Void.sol",
     "exportedSymbols": {
       "Void": [
-        1964
+        2221
       ]
     },
-    "id": 1965,
+    "id": 2222,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1963,
+        "id": 2220,
         "literals": [
           "solidity",
           "0.5",
@@ -34,14 +34,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1964,
+        "id": 2221,
         "linearizedBaseContracts": [
-          1964
+          2221
         ],
         "name": "Void",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 1965,
+        "scope": 2222,
         "src": "71:16:11"
       }
     ],
@@ -51,14 +51,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/Void.sol",
     "exportedSymbols": {
       "Void": [
-        1964
+        2221
       ]
     },
-    "id": 1965,
+    "id": 2222,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1963,
+        "id": 2220,
         "literals": [
           "solidity",
           "0.5",
@@ -73,14 +73,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1964,
+        "id": 2221,
         "linearizedBaseContracts": [
-          1964
+          2221
         ],
         "name": "Void",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 1965,
+        "scope": 2222,
         "src": "71:16:11"
       }
     ],
@@ -92,7 +92,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-06-01T13:06:25.404Z",
+  "updatedAt": "2019-06-15T13:06:42.102Z",
   "devdoc": {
     "methods": {}
   },

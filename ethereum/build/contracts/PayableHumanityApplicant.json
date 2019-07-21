@@ -135,14 +135,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/PayableHumanityApplicant.sol",
     "exportedSymbols": {
       "PayableHumanityApplicant": [
-        1401
+        1658
       ]
     },
-    "id": 1402,
+    "id": 1659,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1314,
+        "id": 1571,
         "literals": [
           "solidity",
           "0.5",
@@ -152,7 +152,7 @@
         "src": "0:22:7"
       },
       {
-        "id": 1315,
+        "id": 1572,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -163,14 +163,14 @@
       {
         "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
         "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
-        "id": 1317,
+        "id": 1574,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 2844,
+        "scope": 1659,
+        "sourceUnit": 3101,
         "src": "58:80:7",
         "symbolAliases": [
           {
-            "foreign": 1316,
+            "foreign": 1573,
             "local": null
           }
         ],
@@ -179,14 +179,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol",
         "file": "./interface/IGovernance.sol",
-        "id": 1319,
+        "id": 1576,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 1985,
+        "scope": 1659,
+        "sourceUnit": 2242,
         "src": "140:58:7",
         "symbolAliases": [
           {
-            "foreign": 1318,
+            "foreign": 1575,
             "local": null
           }
         ],
@@ -195,14 +195,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol",
         "file": "./interface/IRegistry.sol",
-        "id": 1321,
+        "id": 1578,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 2010,
+        "scope": 1659,
+        "sourceUnit": 2267,
         "src": "199:54:7",
         "symbolAliases": [
           {
-            "foreign": 1320,
+            "foreign": 1577,
             "local": null
           }
         ],
@@ -211,14 +211,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IUniswapExchange.sol",
         "file": "./interface/IUniswapExchange.sol",
-        "id": 1323,
+        "id": 1580,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 2023,
+        "scope": 1659,
+        "sourceUnit": 2280,
         "src": "254:68:7",
         "symbolAliases": [
           {
-            "foreign": 1322,
+            "foreign": 1579,
             "local": null
           }
         ],
@@ -227,14 +227,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/HumanityApplicant.sol",
         "file": "./HumanityApplicant.sol",
-        "id": 1325,
+        "id": 1582,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 1086,
+        "scope": 1659,
+        "sourceUnit": 1329,
         "src": "324:60:7",
         "symbolAliases": [
           {
-            "foreign": 1324,
+            "foreign": 1581,
             "local": null
           }
         ],
@@ -246,57 +246,57 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1326,
+              "id": 1583,
               "name": "HumanityApplicant",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1085,
+              "referencedDeclaration": 1328,
               "src": "546:17:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HumanityApplicant_$1085",
+                "typeIdentifier": "t_contract$_HumanityApplicant_$1328",
                 "typeString": "contract HumanityApplicant"
               }
             },
-            "id": 1327,
+            "id": 1584,
             "nodeType": "InheritanceSpecifier",
             "src": "546:17:7"
           }
         ],
         "contractDependencies": [
-          1085
+          1328
         ],
         "contractKind": "contract",
         "documentation": "@title PayableHumanityApplicant\n@dev Convenient interface for applying to the Humanity registry using Ether.",
         "fullyImplemented": true,
-        "id": 1401,
+        "id": 1658,
         "linearizedBaseContracts": [
-          1401,
-          1085
+          1658,
+          1328
         ],
         "name": "PayableHumanityApplicant",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1329,
+            "id": 1586,
             "name": "exchange",
             "nodeType": "VariableDeclaration",
-            "scope": 1401,
+            "scope": 1658,
             "src": "571:32:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+              "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
               "typeString": "contract IUniswapExchange"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1328,
+              "id": 1585,
               "name": "IUniswapExchange",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2022,
+              "referencedDeclaration": 2279,
               "src": "571:16:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                 "typeString": "contract IUniswapExchange"
               }
             },
@@ -305,28 +305,28 @@
           },
           {
             "body": {
-              "id": 1349,
+              "id": 1606,
               "nodeType": "Block",
               "src": "786:37:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1347,
+                    "id": 1604,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1345,
+                      "id": 1602,
                       "name": "exchange",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1329,
+                      "referencedDeclaration": 1586,
                       "src": "796:8:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                        "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                         "typeString": "contract IUniswapExchange"
                       }
                     },
@@ -334,31 +334,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1346,
+                      "id": 1603,
                       "name": "_exchange",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1337,
+                      "referencedDeclaration": 1594,
                       "src": "807:9:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                        "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                         "typeString": "contract IUniswapExchange"
                       }
                     },
                     "src": "796:20:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                      "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                       "typeString": "contract IUniswapExchange"
                     }
                   },
-                  "id": 1348,
+                  "id": 1605,
                   "nodeType": "ExpressionStatement",
                   "src": "796:20:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1350,
+            "id": 1607,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -366,55 +366,55 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1340,
+                    "id": 1597,
                     "name": "_governance",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1331,
+                    "referencedDeclaration": 1588,
                     "src": "747:11:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IGovernance_$1984",
+                      "typeIdentifier": "t_contract$_IGovernance_$2241",
                       "typeString": "contract IGovernance"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1341,
+                    "id": 1598,
                     "name": "_registry",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1333,
+                    "referencedDeclaration": 1590,
                     "src": "760:9:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IRegistry_$2009",
+                      "typeIdentifier": "t_contract$_IRegistry_$2266",
                       "typeString": "contract IRegistry"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1342,
+                    "id": 1599,
                     "name": "_humanity",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1335,
+                    "referencedDeclaration": 1592,
                     "src": "771:9:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2843",
+                      "typeIdentifier": "t_contract$_IERC20_$3100",
                       "typeString": "contract IERC20"
                     }
                   }
                 ],
-                "id": 1343,
+                "id": 1600,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1339,
+                  "id": 1596,
                   "name": "HumanityApplicant",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1085,
+                  "referencedDeclaration": 1328,
                   "src": "729:17:7",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_HumanityApplicant_$1085_$",
+                    "typeIdentifier": "t_type$_t_contract$_HumanityApplicant_$1328_$",
                     "typeString": "type(contract HumanityApplicant)"
                   }
                 },
@@ -425,31 +425,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1338,
+              "id": 1595,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1331,
+                  "id": 1588,
                   "name": "_governance",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1350,
+                  "scope": 1607,
                   "src": "622:23:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IGovernance_$1984",
+                    "typeIdentifier": "t_contract$_IGovernance_$2241",
                     "typeString": "contract IGovernance"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1330,
+                    "id": 1587,
                     "name": "IGovernance",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1984,
+                    "referencedDeclaration": 2241,
                     "src": "622:11:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IGovernance_$1984",
+                      "typeIdentifier": "t_contract$_IGovernance_$2241",
                       "typeString": "contract IGovernance"
                     }
                   },
@@ -458,26 +458,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1333,
+                  "id": 1590,
                   "name": "_registry",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1350,
+                  "scope": 1607,
                   "src": "647:19:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IRegistry_$2009",
+                    "typeIdentifier": "t_contract$_IRegistry_$2266",
                     "typeString": "contract IRegistry"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1332,
+                    "id": 1589,
                     "name": "IRegistry",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2009,
+                    "referencedDeclaration": 2266,
                     "src": "647:9:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IRegistry_$2009",
+                      "typeIdentifier": "t_contract$_IRegistry_$2266",
                       "typeString": "contract IRegistry"
                     }
                   },
@@ -486,26 +486,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1335,
+                  "id": 1592,
                   "name": "_humanity",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1350,
+                  "scope": 1607,
                   "src": "668:16:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IERC20_$2843",
+                    "typeIdentifier": "t_contract$_IERC20_$3100",
                     "typeString": "contract IERC20"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1334,
+                    "id": 1591,
                     "name": "IERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2843,
+                    "referencedDeclaration": 3100,
                     "src": "668:6:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2843",
+                      "typeIdentifier": "t_contract$_IERC20_$3100",
                       "typeString": "contract IERC20"
                     }
                   },
@@ -514,26 +514,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1337,
+                  "id": 1594,
                   "name": "_exchange",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1350,
+                  "scope": 1607,
                   "src": "686:26:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                    "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                     "typeString": "contract IUniswapExchange"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1336,
+                    "id": 1593,
                     "name": "IUniswapExchange",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2022,
+                    "referencedDeclaration": 2279,
                     "src": "686:16:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                      "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                       "typeString": "contract IUniswapExchange"
                     }
                   },
@@ -544,12 +544,12 @@
               "src": "621:92:7"
             },
             "returnParameters": {
-              "id": 1344,
+              "id": 1601,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "786:0:7"
             },
-            "scope": 1401,
+            "scope": 1658,
             "src": "610:213:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -557,31 +557,31 @@
           },
           {
             "body": {
-              "id": 1353,
+              "id": 1610,
               "nodeType": "Block",
               "src": "858:2:7",
               "statements": []
             },
             "documentation": null,
-            "id": 1354,
+            "id": 1611,
             "implemented": true,
             "kind": "fallback",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1351,
+              "id": 1608,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "838:2:7"
             },
             "returnParameters": {
-              "id": 1352,
+              "id": 1609,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "858:0:7"
             },
-            "scope": 1401,
+            "scope": 1658,
             "src": "829:31:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -589,21 +589,21 @@
           },
           {
             "body": {
-              "id": 1399,
+              "id": 1656,
               "nodeType": "Block",
               "src": "936:368:7",
               "statements": [
                 {
                   "assignments": [
-                    1362
+                    1619
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1362,
+                      "id": 1619,
                       "name": "fee",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1399,
+                      "scope": 1656,
                       "src": "992:8:7",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -612,7 +612,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1361,
+                        "id": 1618,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "992:4:7",
@@ -625,7 +625,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1366,
+                  "id": 1623,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
@@ -633,32 +633,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1363,
+                        "id": 1620,
                         "name": "governance",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 982,
+                        "referencedDeclaration": 1225,
                         "src": "1003:10:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IGovernance_$1984",
+                          "typeIdentifier": "t_contract$_IGovernance_$2241",
                           "typeString": "contract IGovernance"
                         }
                       },
-                      "id": 1364,
+                      "id": 1621,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "proposalFee",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1983,
+                      "referencedDeclaration": 2240,
                       "src": "1003:22:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
                         "typeString": "function () view external returns (uint256)"
                       }
                     },
-                    "id": 1365,
+                    "id": 1622,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -681,11 +681,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1375,
+                        "id": 1632,
                         "name": "fee",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1362,
+                        "referencedDeclaration": 1619,
                         "src": "1084:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -696,18 +696,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1376,
+                          "id": 1633,
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2848,
+                          "referencedDeclaration": 3105,
                           "src": "1089:5:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
                             "typeString": "block"
                           }
                         },
-                        "id": 1377,
+                        "id": 1634,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -738,18 +738,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1372,
+                            "id": 1629,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2858,
+                            "referencedDeclaration": 3115,
                             "src": "1073:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 1373,
+                          "id": 1630,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -775,32 +775,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1367,
+                            "id": 1624,
                             "name": "exchange",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1329,
+                            "referencedDeclaration": 1586,
                             "src": "1037:8:7",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                              "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                               "typeString": "contract IUniswapExchange"
                             }
                           },
-                          "id": 1370,
+                          "id": 1627,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "ethToTokenSwapOutput",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 2021,
+                          "referencedDeclaration": 2278,
                           "src": "1037:29:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_payable$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
                             "typeString": "function (uint256,uint256) payable external returns (uint256)"
                           }
                         },
-                        "id": 1371,
+                        "id": 1628,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -814,7 +814,7 @@
                           "typeString": "function (uint256) returns (function (uint256,uint256) payable external returns (uint256))"
                         }
                       },
-                      "id": 1374,
+                      "id": 1631,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -828,7 +828,7 @@
                         "typeString": "function (uint256,uint256) payable external returns (uint256)"
                       }
                     },
-                    "id": 1378,
+                    "id": 1635,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -842,21 +842,21 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1379,
+                  "id": 1636,
                   "nodeType": "ExpressionStatement",
                   "src": "1037:68:7"
                 },
                 {
                   "assignments": [
-                    1381
+                    1638
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1381,
+                      "id": 1638,
                       "name": "proposalId",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1399,
+                      "scope": 1656,
                       "src": "1149:15:7",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -865,7 +865,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1380,
+                        "id": 1637,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1149:4:7",
@@ -878,17 +878,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1385,
+                  "id": 1642,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1383,
+                        "id": 1640,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1356,
+                        "referencedDeclaration": 1613,
                         "src": "1176:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -903,18 +903,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1382,
+                      "id": 1639,
                       "name": "applyFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1084,
+                      "referencedDeclaration": 1327,
                       "src": "1167:8:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 1384,
+                    "id": 1641,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -942,14 +942,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1392,
+                              "id": 1649,
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2902,
+                              "referencedDeclaration": 3159,
                               "src": "1255:4:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1401",
+                                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1658",
                                 "typeString": "contract PayableHumanityApplicant"
                               }
                             }
@@ -957,11 +957,11 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1401",
+                                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1658",
                                 "typeString": "contract PayableHumanityApplicant"
                               }
                             ],
-                            "id": 1391,
+                            "id": 1648,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -974,7 +974,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 1393,
+                          "id": 1650,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -988,7 +988,7 @@
                             "typeString": "address payable"
                           }
                         },
-                        "id": 1394,
+                        "id": 1651,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1014,18 +1014,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1386,
+                          "id": 1643,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2858,
+                          "referencedDeclaration": 3115,
                           "src": "1231:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1389,
+                        "id": 1646,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1039,7 +1039,7 @@
                           "typeString": "address payable"
                         }
                       },
-                      "id": 1390,
+                      "id": 1647,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1053,7 +1053,7 @@
                         "typeString": "function (uint256) returns (bool)"
                       }
                     },
-                    "id": 1395,
+                    "id": 1652,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1067,48 +1067,48 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1396,
+                  "id": 1653,
                   "nodeType": "ExpressionStatement",
                   "src": "1231:38:7"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1397,
+                    "id": 1654,
                     "name": "proposalId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1381,
+                    "referencedDeclaration": 1638,
                     "src": "1287:10:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1360,
-                  "id": 1398,
+                  "functionReturnParameters": 1617,
+                  "id": 1655,
                   "nodeType": "Return",
                   "src": "1280:17:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1400,
+            "id": 1657,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithEtherFor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1357,
+              "id": 1614,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1356,
+                  "id": 1613,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1400,
+                  "scope": 1657,
                   "src": "893:11:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1117,7 +1117,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1355,
+                    "id": 1612,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "893:7:7",
@@ -1134,15 +1134,15 @@
               "src": "892:13:7"
             },
             "returnParameters": {
-              "id": 1360,
+              "id": 1617,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1359,
+                  "id": 1616,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1400,
+                  "scope": 1657,
                   "src": "930:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1151,7 +1151,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1358,
+                    "id": 1615,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "930:4:7",
@@ -1166,14 +1166,14 @@
               ],
               "src": "929:6:7"
             },
-            "scope": 1401,
+            "scope": 1658,
             "src": "866:438:7",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1402,
+        "scope": 1659,
         "src": "509:798:7"
       }
     ],
@@ -1183,14 +1183,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/PayableHumanityApplicant.sol",
     "exportedSymbols": {
       "PayableHumanityApplicant": [
-        1401
+        1658
       ]
     },
-    "id": 1402,
+    "id": 1659,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1314,
+        "id": 1571,
         "literals": [
           "solidity",
           "0.5",
@@ -1200,7 +1200,7 @@
         "src": "0:22:7"
       },
       {
-        "id": 1315,
+        "id": 1572,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -1211,14 +1211,14 @@
       {
         "absolutePath": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
         "file": "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol",
-        "id": 1317,
+        "id": 1574,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 2844,
+        "scope": 1659,
+        "sourceUnit": 3101,
         "src": "58:80:7",
         "symbolAliases": [
           {
-            "foreign": 1316,
+            "foreign": 1573,
             "local": null
           }
         ],
@@ -1227,14 +1227,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol",
         "file": "./interface/IGovernance.sol",
-        "id": 1319,
+        "id": 1576,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 1985,
+        "scope": 1659,
+        "sourceUnit": 2242,
         "src": "140:58:7",
         "symbolAliases": [
           {
-            "foreign": 1318,
+            "foreign": 1575,
             "local": null
           }
         ],
@@ -1243,14 +1243,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol",
         "file": "./interface/IRegistry.sol",
-        "id": 1321,
+        "id": 1578,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 2010,
+        "scope": 1659,
+        "sourceUnit": 2267,
         "src": "199:54:7",
         "symbolAliases": [
           {
-            "foreign": 1320,
+            "foreign": 1577,
             "local": null
           }
         ],
@@ -1259,14 +1259,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IUniswapExchange.sol",
         "file": "./interface/IUniswapExchange.sol",
-        "id": 1323,
+        "id": 1580,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 2023,
+        "scope": 1659,
+        "sourceUnit": 2280,
         "src": "254:68:7",
         "symbolAliases": [
           {
-            "foreign": 1322,
+            "foreign": 1579,
             "local": null
           }
         ],
@@ -1275,14 +1275,14 @@
       {
         "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/HumanityApplicant.sol",
         "file": "./HumanityApplicant.sol",
-        "id": 1325,
+        "id": 1582,
         "nodeType": "ImportDirective",
-        "scope": 1402,
-        "sourceUnit": 1086,
+        "scope": 1659,
+        "sourceUnit": 1329,
         "src": "324:60:7",
         "symbolAliases": [
           {
-            "foreign": 1324,
+            "foreign": 1581,
             "local": null
           }
         ],
@@ -1294,57 +1294,57 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1326,
+              "id": 1583,
               "name": "HumanityApplicant",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1085,
+              "referencedDeclaration": 1328,
               "src": "546:17:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_HumanityApplicant_$1085",
+                "typeIdentifier": "t_contract$_HumanityApplicant_$1328",
                 "typeString": "contract HumanityApplicant"
               }
             },
-            "id": 1327,
+            "id": 1584,
             "nodeType": "InheritanceSpecifier",
             "src": "546:17:7"
           }
         ],
         "contractDependencies": [
-          1085
+          1328
         ],
         "contractKind": "contract",
         "documentation": "@title PayableHumanityApplicant\n@dev Convenient interface for applying to the Humanity registry using Ether.",
         "fullyImplemented": true,
-        "id": 1401,
+        "id": 1658,
         "linearizedBaseContracts": [
-          1401,
-          1085
+          1658,
+          1328
         ],
         "name": "PayableHumanityApplicant",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1329,
+            "id": 1586,
             "name": "exchange",
             "nodeType": "VariableDeclaration",
-            "scope": 1401,
+            "scope": 1658,
             "src": "571:32:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+              "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
               "typeString": "contract IUniswapExchange"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1328,
+              "id": 1585,
               "name": "IUniswapExchange",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2022,
+              "referencedDeclaration": 2279,
               "src": "571:16:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                 "typeString": "contract IUniswapExchange"
               }
             },
@@ -1353,28 +1353,28 @@
           },
           {
             "body": {
-              "id": 1349,
+              "id": 1606,
               "nodeType": "Block",
               "src": "786:37:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1347,
+                    "id": 1604,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1345,
+                      "id": 1602,
                       "name": "exchange",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1329,
+                      "referencedDeclaration": 1586,
                       "src": "796:8:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                        "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                         "typeString": "contract IUniswapExchange"
                       }
                     },
@@ -1382,31 +1382,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1346,
+                      "id": 1603,
                       "name": "_exchange",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1337,
+                      "referencedDeclaration": 1594,
                       "src": "807:9:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                        "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                         "typeString": "contract IUniswapExchange"
                       }
                     },
                     "src": "796:20:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                      "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                       "typeString": "contract IUniswapExchange"
                     }
                   },
-                  "id": 1348,
+                  "id": 1605,
                   "nodeType": "ExpressionStatement",
                   "src": "796:20:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1350,
+            "id": 1607,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
@@ -1414,55 +1414,55 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1340,
+                    "id": 1597,
                     "name": "_governance",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1331,
+                    "referencedDeclaration": 1588,
                     "src": "747:11:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IGovernance_$1984",
+                      "typeIdentifier": "t_contract$_IGovernance_$2241",
                       "typeString": "contract IGovernance"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1341,
+                    "id": 1598,
                     "name": "_registry",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1333,
+                    "referencedDeclaration": 1590,
                     "src": "760:9:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IRegistry_$2009",
+                      "typeIdentifier": "t_contract$_IRegistry_$2266",
                       "typeString": "contract IRegistry"
                     }
                   },
                   {
                     "argumentTypes": null,
-                    "id": 1342,
+                    "id": 1599,
                     "name": "_humanity",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1335,
+                    "referencedDeclaration": 1592,
                     "src": "771:9:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2843",
+                      "typeIdentifier": "t_contract$_IERC20_$3100",
                       "typeString": "contract IERC20"
                     }
                   }
                 ],
-                "id": 1343,
+                "id": 1600,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1339,
+                  "id": 1596,
                   "name": "HumanityApplicant",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1085,
+                  "referencedDeclaration": 1328,
                   "src": "729:17:7",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_HumanityApplicant_$1085_$",
+                    "typeIdentifier": "t_type$_t_contract$_HumanityApplicant_$1328_$",
                     "typeString": "type(contract HumanityApplicant)"
                   }
                 },
@@ -1473,31 +1473,31 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1338,
+              "id": 1595,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1331,
+                  "id": 1588,
                   "name": "_governance",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1350,
+                  "scope": 1607,
                   "src": "622:23:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IGovernance_$1984",
+                    "typeIdentifier": "t_contract$_IGovernance_$2241",
                     "typeString": "contract IGovernance"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1330,
+                    "id": 1587,
                     "name": "IGovernance",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1984,
+                    "referencedDeclaration": 2241,
                     "src": "622:11:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IGovernance_$1984",
+                      "typeIdentifier": "t_contract$_IGovernance_$2241",
                       "typeString": "contract IGovernance"
                     }
                   },
@@ -1506,26 +1506,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1333,
+                  "id": 1590,
                   "name": "_registry",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1350,
+                  "scope": 1607,
                   "src": "647:19:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IRegistry_$2009",
+                    "typeIdentifier": "t_contract$_IRegistry_$2266",
                     "typeString": "contract IRegistry"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1332,
+                    "id": 1589,
                     "name": "IRegistry",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2009,
+                    "referencedDeclaration": 2266,
                     "src": "647:9:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IRegistry_$2009",
+                      "typeIdentifier": "t_contract$_IRegistry_$2266",
                       "typeString": "contract IRegistry"
                     }
                   },
@@ -1534,26 +1534,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1335,
+                  "id": 1592,
                   "name": "_humanity",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1350,
+                  "scope": 1607,
                   "src": "668:16:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IERC20_$2843",
+                    "typeIdentifier": "t_contract$_IERC20_$3100",
                     "typeString": "contract IERC20"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1334,
+                    "id": 1591,
                     "name": "IERC20",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2843,
+                    "referencedDeclaration": 3100,
                     "src": "668:6:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20_$2843",
+                      "typeIdentifier": "t_contract$_IERC20_$3100",
                       "typeString": "contract IERC20"
                     }
                   },
@@ -1562,26 +1562,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1337,
+                  "id": 1594,
                   "name": "_exchange",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1350,
+                  "scope": 1607,
                   "src": "686:26:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                    "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                     "typeString": "contract IUniswapExchange"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1336,
+                    "id": 1593,
                     "name": "IUniswapExchange",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2022,
+                    "referencedDeclaration": 2279,
                     "src": "686:16:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                      "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                       "typeString": "contract IUniswapExchange"
                     }
                   },
@@ -1592,12 +1592,12 @@
               "src": "621:92:7"
             },
             "returnParameters": {
-              "id": 1344,
+              "id": 1601,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "786:0:7"
             },
-            "scope": 1401,
+            "scope": 1658,
             "src": "610:213:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1605,31 +1605,31 @@
           },
           {
             "body": {
-              "id": 1353,
+              "id": 1610,
               "nodeType": "Block",
               "src": "858:2:7",
               "statements": []
             },
             "documentation": null,
-            "id": 1354,
+            "id": 1611,
             "implemented": true,
             "kind": "fallback",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1351,
+              "id": 1608,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "838:2:7"
             },
             "returnParameters": {
-              "id": 1352,
+              "id": 1609,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "858:0:7"
             },
-            "scope": 1401,
+            "scope": 1658,
             "src": "829:31:7",
             "stateMutability": "payable",
             "superFunction": null,
@@ -1637,21 +1637,21 @@
           },
           {
             "body": {
-              "id": 1399,
+              "id": 1656,
               "nodeType": "Block",
               "src": "936:368:7",
               "statements": [
                 {
                   "assignments": [
-                    1362
+                    1619
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1362,
+                      "id": 1619,
                       "name": "fee",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1399,
+                      "scope": 1656,
                       "src": "992:8:7",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1660,7 +1660,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1361,
+                        "id": 1618,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "992:4:7",
@@ -1673,7 +1673,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1366,
+                  "id": 1623,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
@@ -1681,32 +1681,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1363,
+                        "id": 1620,
                         "name": "governance",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 982,
+                        "referencedDeclaration": 1225,
                         "src": "1003:10:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IGovernance_$1984",
+                          "typeIdentifier": "t_contract$_IGovernance_$2241",
                           "typeString": "contract IGovernance"
                         }
                       },
-                      "id": 1364,
+                      "id": 1621,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "proposalFee",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1983,
+                      "referencedDeclaration": 2240,
                       "src": "1003:22:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
                         "typeString": "function () view external returns (uint256)"
                       }
                     },
-                    "id": 1365,
+                    "id": 1622,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1729,11 +1729,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1375,
+                        "id": 1632,
                         "name": "fee",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1362,
+                        "referencedDeclaration": 1619,
                         "src": "1084:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1744,18 +1744,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1376,
+                          "id": 1633,
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2848,
+                          "referencedDeclaration": 3105,
                           "src": "1089:5:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
                             "typeString": "block"
                           }
                         },
-                        "id": 1377,
+                        "id": 1634,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1786,18 +1786,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1372,
+                            "id": 1629,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2858,
+                            "referencedDeclaration": 3115,
                             "src": "1073:3:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 1373,
+                          "id": 1630,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1823,32 +1823,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1367,
+                            "id": 1624,
                             "name": "exchange",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1329,
+                            "referencedDeclaration": 1586,
                             "src": "1037:8:7",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_IUniswapExchange_$2022",
+                              "typeIdentifier": "t_contract$_IUniswapExchange_$2279",
                               "typeString": "contract IUniswapExchange"
                             }
                           },
-                          "id": 1370,
+                          "id": 1627,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "ethToTokenSwapOutput",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 2021,
+                          "referencedDeclaration": 2278,
                           "src": "1037:29:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_payable$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
                             "typeString": "function (uint256,uint256) payable external returns (uint256)"
                           }
                         },
-                        "id": 1371,
+                        "id": 1628,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1862,7 +1862,7 @@
                           "typeString": "function (uint256) returns (function (uint256,uint256) payable external returns (uint256))"
                         }
                       },
-                      "id": 1374,
+                      "id": 1631,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1876,7 +1876,7 @@
                         "typeString": "function (uint256,uint256) payable external returns (uint256)"
                       }
                     },
-                    "id": 1378,
+                    "id": 1635,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1890,21 +1890,21 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1379,
+                  "id": 1636,
                   "nodeType": "ExpressionStatement",
                   "src": "1037:68:7"
                 },
                 {
                   "assignments": [
-                    1381
+                    1638
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1381,
+                      "id": 1638,
                       "name": "proposalId",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1399,
+                      "scope": 1656,
                       "src": "1149:15:7",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1913,7 +1913,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1380,
+                        "id": 1637,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1149:4:7",
@@ -1926,17 +1926,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1385,
+                  "id": 1642,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1383,
+                        "id": 1640,
                         "name": "who",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1356,
+                        "referencedDeclaration": 1613,
                         "src": "1176:3:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1951,18 +1951,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1382,
+                      "id": 1639,
                       "name": "applyFor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1084,
+                      "referencedDeclaration": 1327,
                       "src": "1167:8:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 1384,
+                    "id": 1641,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1990,14 +1990,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1392,
+                              "id": 1649,
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2902,
+                              "referencedDeclaration": 3159,
                               "src": "1255:4:7",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1401",
+                                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1658",
                                 "typeString": "contract PayableHumanityApplicant"
                               }
                             }
@@ -2005,11 +2005,11 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1401",
+                                "typeIdentifier": "t_contract$_PayableHumanityApplicant_$1658",
                                 "typeString": "contract PayableHumanityApplicant"
                               }
                             ],
-                            "id": 1391,
+                            "id": 1648,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2022,7 +2022,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 1393,
+                          "id": 1650,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2036,7 +2036,7 @@
                             "typeString": "address payable"
                           }
                         },
-                        "id": 1394,
+                        "id": 1651,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2062,18 +2062,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1386,
+                          "id": 1643,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2858,
+                          "referencedDeclaration": 3115,
                           "src": "1231:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 1389,
+                        "id": 1646,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2087,7 +2087,7 @@
                           "typeString": "address payable"
                         }
                       },
-                      "id": 1390,
+                      "id": 1647,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2101,7 +2101,7 @@
                         "typeString": "function (uint256) returns (bool)"
                       }
                     },
-                    "id": 1395,
+                    "id": 1652,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2115,48 +2115,48 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1396,
+                  "id": 1653,
                   "nodeType": "ExpressionStatement",
                   "src": "1231:38:7"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1397,
+                    "id": 1654,
                     "name": "proposalId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1381,
+                    "referencedDeclaration": 1638,
                     "src": "1287:10:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1360,
-                  "id": 1398,
+                  "functionReturnParameters": 1617,
+                  "id": 1655,
                   "nodeType": "Return",
                   "src": "1280:17:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1400,
+            "id": 1657,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "applyWithEtherFor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1357,
+              "id": 1614,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1356,
+                  "id": 1613,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1400,
+                  "scope": 1657,
                   "src": "893:11:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2165,7 +2165,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1355,
+                    "id": 1612,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "893:7:7",
@@ -2182,15 +2182,15 @@
               "src": "892:13:7"
             },
             "returnParameters": {
-              "id": 1360,
+              "id": 1617,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1359,
+                  "id": 1616,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1400,
+                  "scope": 1657,
                   "src": "930:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2199,7 +2199,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1358,
+                    "id": 1615,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "930:4:7",
@@ -2214,14 +2214,14 @@
               ],
               "src": "929:6:7"
             },
-            "scope": 1401,
+            "scope": 1658,
             "src": "866:438:7",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1402,
+        "scope": 1659,
         "src": "509:798:7"
       }
     ],
@@ -2233,7 +2233,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-06-01T13:06:25.389Z",
+  "updatedAt": "2019-06-15T13:06:42.079Z",
   "devdoc": {
     "details": "Convenient interface for applying to the Humanity registry using Ether.",
     "methods": {},

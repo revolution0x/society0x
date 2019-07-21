@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -7,6 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
+import CreateIcon from '@material-ui/icons/LeakAdd';
 import LoveIcon from '@material-ui/icons/Favorite';
 import RegisterIcon from "@material-ui/icons/VerifiedUser";
 import {store} from '../state';
@@ -55,18 +56,28 @@ class OurDrawers extends React.Component {
     const sideList = (
       <div className={classes.list}>
         <List>
+            {(process.env["NODE_ENV"] === 'development') &&
+              <Fragment>
+                <Link to={'/register'} className={"no-decorate"}>
+                  <ListItem button key={"Register"}>
+                    <ListItemIcon><RegisterIcon /></ListItemIcon>
+                    <ListItemText primary={"Register"} />
+                  </ListItem>
+                </Link>
+                <Link to={'/creation'} className={"no-decorate"}>
+                  <ListItem button key={"Creation"}>
+                    <ListItemIcon><CreateIcon /></ListItemIcon>
+                    <ListItemText primary={"Creation"} />
+                  </ListItem>
+                </Link>
+              </Fragment>
+            }
             <Link to={'/'} className={"no-decorate"}>
                 <ListItem button key={"⎊ With Love ⎊"}>
                 <ListItemIcon><LoveIcon /></ListItemIcon>
                 <ListItemText primary={"⎊ With Love ⎊"} />
                 </ListItem>
             </Link>
-            {/* <Link to={'/register'} className={"no-decorate"}>
-                <ListItem button key={"Register"}>
-                <ListItemIcon><RegisterIcon /></ListItemIcon>
-                <ListItemText primary={"Register"} />
-                </ListItem>
-            </Link> */}
         </List>
       </div>
     );

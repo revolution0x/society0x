@@ -45,14 +45,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IHumanity.sol",
     "exportedSymbols": {
       "IHumanity": [
-        2000
+        2257
       ]
     },
-    "id": 2001,
+    "id": 2258,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1986,
+        "id": 2243,
         "literals": [
           "solidity",
           "0.5",
@@ -62,7 +62,7 @@
         "src": "0:22:13"
       },
       {
-        "id": 1987,
+        "id": 2244,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -76,9 +76,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2000,
+        "id": 2257,
         "linearizedBaseContracts": [
-          2000
+          2257
         ],
         "name": "IHumanity",
         "nodeType": "ContractDefinition",
@@ -86,22 +86,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1994,
+            "id": 2251,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1992,
+              "id": 2249,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1989,
+                  "id": 2246,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1994,
+                  "scope": 2251,
                   "src": "98:15:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -110,7 +110,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1988,
+                    "id": 2245,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "98:7:13",
@@ -125,10 +125,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1991,
+                  "id": 2248,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1994,
+                  "scope": 2251,
                   "src": "115:13:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -137,7 +137,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1990,
+                    "id": 2247,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "115:7:13",
@@ -153,12 +153,12 @@
               "src": "97:32:13"
             },
             "returnParameters": {
-              "id": 1993,
+              "id": 2250,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "136:0:13"
             },
-            "scope": 2000,
+            "scope": 2257,
             "src": "84:53:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -167,28 +167,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1999,
+            "id": 2256,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "totalSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1995,
+              "id": 2252,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "162:2:13"
             },
             "returnParameters": {
-              "id": 1998,
+              "id": 2255,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1997,
+                  "id": 2254,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1999,
+                  "scope": 2256,
                   "src": "186:7:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -197,7 +197,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1996,
+                    "id": 2253,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "186:7:13",
@@ -212,14 +212,14 @@
               ],
               "src": "185:9:13"
             },
-            "scope": 2000,
+            "scope": 2257,
             "src": "142:53:13",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2001,
+        "scope": 2258,
         "src": "59:138:13"
       }
     ],
@@ -229,14 +229,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IHumanity.sol",
     "exportedSymbols": {
       "IHumanity": [
-        2000
+        2257
       ]
     },
-    "id": 2001,
+    "id": 2258,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1986,
+        "id": 2243,
         "literals": [
           "solidity",
           "0.5",
@@ -246,7 +246,7 @@
         "src": "0:22:13"
       },
       {
-        "id": 1987,
+        "id": 2244,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -260,9 +260,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2000,
+        "id": 2257,
         "linearizedBaseContracts": [
-          2000
+          2257
         ],
         "name": "IHumanity",
         "nodeType": "ContractDefinition",
@@ -270,22 +270,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1994,
+            "id": 2251,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1992,
+              "id": 2249,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1989,
+                  "id": 2246,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1994,
+                  "scope": 2251,
                   "src": "98:15:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -294,7 +294,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1988,
+                    "id": 2245,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "98:7:13",
@@ -309,10 +309,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1991,
+                  "id": 2248,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1994,
+                  "scope": 2251,
                   "src": "115:13:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -321,7 +321,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1990,
+                    "id": 2247,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "115:7:13",
@@ -337,12 +337,12 @@
               "src": "97:32:13"
             },
             "returnParameters": {
-              "id": 1993,
+              "id": 2250,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "136:0:13"
             },
-            "scope": 2000,
+            "scope": 2257,
             "src": "84:53:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -351,28 +351,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1999,
+            "id": 2256,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "totalSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1995,
+              "id": 2252,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "162:2:13"
             },
             "returnParameters": {
-              "id": 1998,
+              "id": 2255,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1997,
+                  "id": 2254,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1999,
+                  "scope": 2256,
                   "src": "186:7:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -381,7 +381,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1996,
+                    "id": 2253,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "186:7:13",
@@ -396,14 +396,14 @@
               ],
               "src": "185:9:13"
             },
-            "scope": 2000,
+            "scope": 2257,
             "src": "142:53:13",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2001,
+        "scope": 2258,
         "src": "59:138:13"
       }
     ],
@@ -415,7 +415,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-06-01T13:06:25.407Z",
+  "updatedAt": "2019-06-15T13:06:42.104Z",
   "devdoc": {
     "methods": {}
   },

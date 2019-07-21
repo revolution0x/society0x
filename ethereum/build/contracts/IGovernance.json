@@ -54,14 +54,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol",
     "exportedSymbols": {
       "IGovernance": [
-        1984
+        2241
       ]
     },
-    "id": 1985,
+    "id": 2242,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1966,
+        "id": 2223,
         "literals": [
           "solidity",
           "0.5",
@@ -71,7 +71,7 @@
         "src": "0:22:12"
       },
       {
-        "id": 1967,
+        "id": 2224,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -85,9 +85,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 1984,
+        "id": 2241,
         "linearizedBaseContracts": [
-          1984
+          2241
         ],
         "name": "IGovernance",
         "nodeType": "ContractDefinition",
@@ -95,22 +95,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1978,
+            "id": 2235,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "proposeWithFeeRecipient",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1974,
+              "id": 2231,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1969,
+                  "id": 2226,
                   "name": "feeRecipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1978,
+                  "scope": 2235,
                   "src": "119:20:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -119,7 +119,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1968,
+                    "id": 2225,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "119:7:12",
@@ -134,10 +134,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1971,
+                  "id": 2228,
                   "name": "target",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1978,
+                  "scope": 2235,
                   "src": "141:14:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -146,7 +146,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1970,
+                    "id": 2227,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "141:7:12",
@@ -161,10 +161,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1973,
+                  "id": 2230,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1978,
+                  "scope": 2235,
                   "src": "157:17:12",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -173,7 +173,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1972,
+                    "id": 2229,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "157:5:12",
@@ -189,15 +189,15 @@
               "src": "118:57:12"
             },
             "returnParameters": {
-              "id": 1977,
+              "id": 2234,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1976,
+                  "id": 2233,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1978,
+                  "scope": 2235,
                   "src": "192:4:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -206,7 +206,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1975,
+                    "id": 2232,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "192:4:12",
@@ -221,7 +221,7 @@
               ],
               "src": "191:6:12"
             },
-            "scope": 1984,
+            "scope": 2241,
             "src": "86:112:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -230,28 +230,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1983,
+            "id": 2240,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "proposalFee",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1979,
+              "id": 2236,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "223:2:12"
             },
             "returnParameters": {
-              "id": 1982,
+              "id": 2239,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1981,
+                  "id": 2238,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1983,
+                  "scope": 2240,
                   "src": "247:4:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -260,7 +260,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1980,
+                    "id": 2237,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "247:4:12",
@@ -275,14 +275,14 @@
               ],
               "src": "246:6:12"
             },
-            "scope": 1984,
+            "scope": 2241,
             "src": "203:50:12",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1985,
+        "scope": 2242,
         "src": "59:196:12"
       }
     ],
@@ -292,14 +292,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IGovernance.sol",
     "exportedSymbols": {
       "IGovernance": [
-        1984
+        2241
       ]
     },
-    "id": 1985,
+    "id": 2242,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1966,
+        "id": 2223,
         "literals": [
           "solidity",
           "0.5",
@@ -309,7 +309,7 @@
         "src": "0:22:12"
       },
       {
-        "id": 1967,
+        "id": 2224,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -323,9 +323,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 1984,
+        "id": 2241,
         "linearizedBaseContracts": [
-          1984
+          2241
         ],
         "name": "IGovernance",
         "nodeType": "ContractDefinition",
@@ -333,22 +333,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1978,
+            "id": 2235,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "proposeWithFeeRecipient",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1974,
+              "id": 2231,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1969,
+                  "id": 2226,
                   "name": "feeRecipient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1978,
+                  "scope": 2235,
                   "src": "119:20:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -357,7 +357,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1968,
+                    "id": 2225,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "119:7:12",
@@ -372,10 +372,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1971,
+                  "id": 2228,
                   "name": "target",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1978,
+                  "scope": 2235,
                   "src": "141:14:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -384,7 +384,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1970,
+                    "id": 2227,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "141:7:12",
@@ -399,10 +399,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1973,
+                  "id": 2230,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1978,
+                  "scope": 2235,
                   "src": "157:17:12",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -411,7 +411,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1972,
+                    "id": 2229,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "157:5:12",
@@ -427,15 +427,15 @@
               "src": "118:57:12"
             },
             "returnParameters": {
-              "id": 1977,
+              "id": 2234,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1976,
+                  "id": 2233,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1978,
+                  "scope": 2235,
                   "src": "192:4:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -444,7 +444,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1975,
+                    "id": 2232,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "192:4:12",
@@ -459,7 +459,7 @@
               ],
               "src": "191:6:12"
             },
-            "scope": 1984,
+            "scope": 2241,
             "src": "86:112:12",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -468,28 +468,28 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1983,
+            "id": 2240,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "proposalFee",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1979,
+              "id": 2236,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "223:2:12"
             },
             "returnParameters": {
-              "id": 1982,
+              "id": 2239,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1981,
+                  "id": 2238,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1983,
+                  "scope": 2240,
                   "src": "247:4:12",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -498,7 +498,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1980,
+                    "id": 2237,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "247:4:12",
@@ -513,14 +513,14 @@
               ],
               "src": "246:6:12"
             },
-            "scope": 1984,
+            "scope": 2241,
             "src": "203:50:12",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1985,
+        "scope": 2242,
         "src": "59:196:12"
       }
     ],
@@ -532,7 +532,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-06-01T13:06:25.406Z",
+  "updatedAt": "2019-06-15T13:06:42.103Z",
   "devdoc": {
     "methods": {}
   },

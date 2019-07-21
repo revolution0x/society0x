@@ -885,14 +885,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IUniswapExchange.sol",
     "exportedSymbols": {
       "IUniswapExchange": [
-        2022
+        2279
       ]
     },
-    "id": 2023,
+    "id": 2280,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2011,
+        "id": 2268,
         "literals": [
           "solidity",
           "0.5",
@@ -902,7 +902,7 @@
         "src": "0:22:15"
       },
       {
-        "id": 2012,
+        "id": 2269,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -916,9 +916,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2022,
+        "id": 2279,
         "linearizedBaseContracts": [
-          2022
+          2279
         ],
         "name": "IUniswapExchange",
         "nodeType": "ContractDefinition",
@@ -926,22 +926,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2021,
+            "id": 2278,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "ethToTokenSwapOutput",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2017,
+              "id": 2274,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2014,
+                  "id": 2271,
                   "name": "tokens_bought",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2021,
+                  "scope": 2278,
                   "src": "121:21:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -950,7 +950,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2013,
+                    "id": 2270,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "121:7:15",
@@ -964,10 +964,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2016,
+                  "id": 2273,
                   "name": "timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2021,
+                  "scope": 2278,
                   "src": "144:17:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -976,7 +976,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2015,
+                    "id": 2272,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "144:7:15",
@@ -992,15 +992,15 @@
               "src": "120:42:15"
             },
             "returnParameters": {
-              "id": 2020,
+              "id": 2277,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2019,
+                  "id": 2276,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2021,
+                  "scope": 2278,
                   "src": "187:7:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1009,7 +1009,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2018,
+                    "id": 2275,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "187:7:15",
@@ -1025,7 +1025,7 @@
               ],
               "src": "186:9:15"
             },
-            "scope": 2022,
+            "scope": 2279,
             "src": "91:105:15",
             "stateMutability": "payable",
             "superFunction": null,
@@ -5122,7 +5122,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 2023,
+        "scope": 2280,
         "src": "59:139:15"
       }
     ],
@@ -5132,14 +5132,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IUniswapExchange.sol",
     "exportedSymbols": {
       "IUniswapExchange": [
-        2022
+        2279
       ]
     },
-    "id": 2023,
+    "id": 2280,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2011,
+        "id": 2268,
         "literals": [
           "solidity",
           "0.5",
@@ -5149,7 +5149,7 @@
         "src": "0:22:15"
       },
       {
-        "id": 2012,
+        "id": 2269,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -5163,9 +5163,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2022,
+        "id": 2279,
         "linearizedBaseContracts": [
-          2022
+          2279
         ],
         "name": "IUniswapExchange",
         "nodeType": "ContractDefinition",
@@ -5173,22 +5173,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2021,
+            "id": 2278,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "ethToTokenSwapOutput",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2017,
+              "id": 2274,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2014,
+                  "id": 2271,
                   "name": "tokens_bought",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2021,
+                  "scope": 2278,
                   "src": "121:21:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5197,7 +5197,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2013,
+                    "id": 2270,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "121:7:15",
@@ -5211,10 +5211,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2016,
+                  "id": 2273,
                   "name": "timestamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2021,
+                  "scope": 2278,
                   "src": "144:17:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5223,7 +5223,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2015,
+                    "id": 2272,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "144:7:15",
@@ -5239,15 +5239,15 @@
               "src": "120:42:15"
             },
             "returnParameters": {
-              "id": 2020,
+              "id": 2277,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2019,
+                  "id": 2276,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2021,
+                  "scope": 2278,
                   "src": "187:7:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5256,7 +5256,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2018,
+                    "id": 2275,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "187:7:15",
@@ -5272,7 +5272,7 @@
               ],
               "src": "186:9:15"
             },
-            "scope": 2022,
+            "scope": 2279,
             "src": "91:105:15",
             "stateMutability": "payable",
             "superFunction": null,
@@ -9369,7 +9369,7 @@
             "visibility": "external"
           }
         ],
-        "scope": 2023,
+        "scope": 2280,
         "src": "59:139:15"
       }
     ],
@@ -9381,7 +9381,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-06-01T13:06:25.413Z",
+  "updatedAt": "2019-06-15T13:06:42.110Z",
   "devdoc": {
     "methods": {}
   },

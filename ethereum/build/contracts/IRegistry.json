@@ -27,14 +27,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol",
     "exportedSymbols": {
       "IRegistry": [
-        2009
+        2266
       ]
     },
-    "id": 2010,
+    "id": 2267,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2002,
+        "id": 2259,
         "literals": [
           "solidity",
           "0.5",
@@ -44,7 +44,7 @@
         "src": "0:22:14"
       },
       {
-        "id": 2003,
+        "id": 2260,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -58,9 +58,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2009,
+        "id": 2266,
         "linearizedBaseContracts": [
-          2009
+          2266
         ],
         "name": "IRegistry",
         "nodeType": "ContractDefinition",
@@ -68,22 +68,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2008,
+            "id": 2265,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "add",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2006,
+              "id": 2263,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2005,
+                  "id": 2262,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2008,
+                  "scope": 2265,
                   "src": "97:11:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -92,7 +92,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2004,
+                    "id": 2261,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "97:7:14",
@@ -109,19 +109,19 @@
               "src": "96:13:14"
             },
             "returnParameters": {
-              "id": 2007,
+              "id": 2264,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "116:0:14"
             },
-            "scope": 2009,
+            "scope": 2266,
             "src": "84:33:14",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2010,
+        "scope": 2267,
         "src": "59:60:14"
       }
     ],
@@ -131,14 +131,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/IRegistry.sol",
     "exportedSymbols": {
       "IRegistry": [
-        2009
+        2266
       ]
     },
-    "id": 2010,
+    "id": 2267,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2002,
+        "id": 2259,
         "literals": [
           "solidity",
           "0.5",
@@ -148,7 +148,7 @@
         "src": "0:22:14"
       },
       {
-        "id": 2003,
+        "id": 2260,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -162,9 +162,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2009,
+        "id": 2266,
         "linearizedBaseContracts": [
-          2009
+          2266
         ],
         "name": "IRegistry",
         "nodeType": "ContractDefinition",
@@ -172,22 +172,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2008,
+            "id": 2265,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "add",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2006,
+              "id": 2263,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2005,
+                  "id": 2262,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2008,
+                  "scope": 2265,
                   "src": "97:11:14",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -196,7 +196,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2004,
+                    "id": 2261,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "97:7:14",
@@ -213,19 +213,19 @@
               "src": "96:13:14"
             },
             "returnParameters": {
-              "id": 2007,
+              "id": 2264,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "116:0:14"
             },
-            "scope": 2009,
+            "scope": 2266,
             "src": "84:33:14",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2010,
+        "scope": 2267,
         "src": "59:60:14"
       }
     ],
@@ -237,7 +237,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-06-01T13:06:25.408Z",
+  "updatedAt": "2019-06-15T13:06:42.105Z",
   "devdoc": {
     "methods": {}
   },

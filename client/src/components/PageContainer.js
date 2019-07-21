@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import ElementPage from "./pages/ElementPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProfilePage from "./pages/ProfilePage";
+// import CreationPage from "./pages/CreationPage";
+import SettingsPage from "./pages/SettingsPage";
 import { connect } from "react-redux";
 import {store} from "../state";
 
@@ -39,15 +41,18 @@ class PageContainer extends Component {
                         <Switch>
                             <Route path="/" exact render={(props) => homeRoute(props)} />
                             <Route path="/register" exact render={(props) => registerRoute(props)} />
+                            {/* <Route path="/creation" exact render={(props) => creationRoute(props)} />
+                            <Route path="/creation/:creationType" exact render={(props) => creationRoute(props)} /> */}
                             <Route path="/element/:elementName" exact render={(props) => elementRoute(props)} />
-                            <Route path="/:memberName" exact render={(props) => profileRoute(props)} />
+                            <Route path="/settings" exact render={(props) => settingsRoute(props)} />
+                            <Route path="/settings/:setting" exact render={(props) => settingsRoute(props)} />
+                            <Route path="/:requestedPersona" exact render={(props) => profileRoute(props)} />
                         </Switch>
                     </div>
             </React.Fragment>
         )
     }   
 }
-
 
 const homeRoute = (props) => {
     return <HomePage/>
@@ -56,6 +61,15 @@ const homeRoute = (props) => {
 const registerRoute = (props) => {
     return <RegisterPage/>
 }
+
+// const creationRoute = ({match}, props) => {
+//     if(match && match.params && match.params.creationType) {
+//         const { creationType } = match.params;
+//         return <CreationPage creationType={creationType}/>
+//     }else{
+//         return <CreationPage/>
+//     }
+// }
 
 const elementRoute = ({match}, props) => {
     if(match && match.params && match.params.elementName) {
@@ -67,11 +81,20 @@ const elementRoute = ({match}, props) => {
 }
 
 const profileRoute = ({match}, props) => {
-    if(match && match.params && match.params.memberName) {
-        const memberName = match.params.memberName;
-        return <ProfilePage memberName={memberName}/>
+    if(match && match.params && match.params.requestedPersona) {
+        const requestedPersona = match.params.requestedPersona;
+        return <ProfilePage requestedPersona={requestedPersona}/>
     }else{
         return <ProfilePage/>
+    }
+}
+
+const settingsRoute = ({match}, props) => {
+    if(match && match.params && match.params.setting) {
+        const setting = match.params.setting;
+        return <SettingsPage setting={setting}/>
+    }else{
+        return <SettingsPage/>
     }
 }
 

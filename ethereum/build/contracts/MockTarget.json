@@ -50,14 +50,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockTarget.sol",
     "exportedSymbols": {
       "MockTarget": [
-        2135
+        2392
       ]
     },
-    "id": 2136,
+    "id": 2393,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2110,
+        "id": 2367,
         "literals": [
           "solidity",
           "0.5",
@@ -67,7 +67,7 @@
         "src": "0:22:19"
       },
       {
-        "id": 2111,
+        "id": 2368,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -81,19 +81,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2135,
+        "id": 2392,
         "linearizedBaseContracts": [
-          2135
+          2392
         ],
         "name": "MockTarget",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 2113,
+            "id": 2370,
             "name": "value",
             "nodeType": "VariableDeclaration",
-            "scope": 2135,
+            "scope": 2392,
             "src": "140:17:19",
             "stateVariable": true,
             "storageLocation": "default",
@@ -102,7 +102,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2112,
+              "id": 2369,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "140:4:19",
@@ -116,25 +116,25 @@
           },
           {
             "body": {
-              "id": 2120,
+              "id": 2377,
               "nodeType": "Block",
               "src": "191:26:19",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2118,
+                    "id": 2375,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2116,
+                      "id": 2373,
                       "name": "value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2113,
+                      "referencedDeclaration": 2370,
                       "src": "201:5:19",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -146,7 +146,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "34",
-                      "id": 2117,
+                      "id": 2374,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -167,32 +167,32 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2119,
+                  "id": 2376,
                   "nodeType": "ExpressionStatement",
                   "src": "201:9:19"
                 }
               ]
             },
             "documentation": null,
-            "id": 2121,
+            "id": 2378,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setValue",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2114,
+              "id": 2371,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "181:2:19"
             },
             "returnParameters": {
-              "id": 2115,
+              "id": 2372,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "191:0:19"
             },
-            "scope": 2135,
+            "scope": 2392,
             "src": "164:53:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -200,7 +200,7 @@
           },
           {
             "body": {
-              "id": 2133,
+              "id": 2390,
               "nodeType": "Block",
               "src": "274:70:19",
               "statements": [
@@ -214,32 +214,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 2128,
+                            "id": 2385,
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2916,
+                            "referencedDeclaration": 3173,
                             "src": "314:4:19",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_MockTarget_$2135",
+                              "typeIdentifier": "t_contract$_MockTarget_$2392",
                               "typeString": "contract MockTarget"
                             }
                           },
-                          "id": 2129,
+                          "id": 2386,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "setValue",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 2121,
+                          "referencedDeclaration": 2378,
                           "src": "314:13:19",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                             "typeString": "function () external"
                           }
                         },
-                        "id": 2130,
+                        "id": 2387,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -263,18 +263,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 2126,
+                        "id": 2383,
                         "name": "abi",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2845,
+                        "referencedDeclaration": 3102,
                         "src": "291:3:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_abi",
                           "typeString": "abi"
                         }
                       },
-                      "id": 2127,
+                      "id": 2384,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -288,7 +288,7 @@
                         "typeString": "function (bytes4) pure returns (bytes memory)"
                       }
                     },
-                    "id": 2131,
+                    "id": 2388,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -302,36 +302,36 @@
                       "typeString": "bytes memory"
                     }
                   },
-                  "functionReturnParameters": 2125,
-                  "id": 2132,
+                  "functionReturnParameters": 2382,
+                  "id": 2389,
                   "nodeType": "Return",
                   "src": "284:53:19"
                 }
               ]
             },
             "documentation": null,
-            "id": 2134,
+            "id": 2391,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "data",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2122,
+              "id": 2379,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "236:2:19"
             },
             "returnParameters": {
-              "id": 2125,
+              "id": 2382,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2124,
+                  "id": 2381,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2134,
+                  "scope": 2391,
                   "src": "260:12:19",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -340,7 +340,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 2123,
+                    "id": 2380,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "260:5:19",
@@ -355,14 +355,14 @@
               ],
               "src": "259:14:19"
             },
-            "scope": 2135,
+            "scope": 2392,
             "src": "223:121:19",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2136,
+        "scope": 2393,
         "src": "113:234:19"
       }
     ],
@@ -372,14 +372,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockTarget.sol",
     "exportedSymbols": {
       "MockTarget": [
-        2135
+        2392
       ]
     },
-    "id": 2136,
+    "id": 2393,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2110,
+        "id": 2367,
         "literals": [
           "solidity",
           "0.5",
@@ -389,7 +389,7 @@
         "src": "0:22:19"
       },
       {
-        "id": 2111,
+        "id": 2368,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -403,19 +403,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2135,
+        "id": 2392,
         "linearizedBaseContracts": [
-          2135
+          2392
         ],
         "name": "MockTarget",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 2113,
+            "id": 2370,
             "name": "value",
             "nodeType": "VariableDeclaration",
-            "scope": 2135,
+            "scope": 2392,
             "src": "140:17:19",
             "stateVariable": true,
             "storageLocation": "default",
@@ -424,7 +424,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2112,
+              "id": 2369,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "140:4:19",
@@ -438,25 +438,25 @@
           },
           {
             "body": {
-              "id": 2120,
+              "id": 2377,
               "nodeType": "Block",
               "src": "191:26:19",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2118,
+                    "id": 2375,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2116,
+                      "id": 2373,
                       "name": "value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2113,
+                      "referencedDeclaration": 2370,
                       "src": "201:5:19",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -468,7 +468,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "34",
-                      "id": 2117,
+                      "id": 2374,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -489,32 +489,32 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2119,
+                  "id": 2376,
                   "nodeType": "ExpressionStatement",
                   "src": "201:9:19"
                 }
               ]
             },
             "documentation": null,
-            "id": 2121,
+            "id": 2378,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setValue",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2114,
+              "id": 2371,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "181:2:19"
             },
             "returnParameters": {
-              "id": 2115,
+              "id": 2372,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "191:0:19"
             },
-            "scope": 2135,
+            "scope": 2392,
             "src": "164:53:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -522,7 +522,7 @@
           },
           {
             "body": {
-              "id": 2133,
+              "id": 2390,
               "nodeType": "Block",
               "src": "274:70:19",
               "statements": [
@@ -536,32 +536,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 2128,
+                            "id": 2385,
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2916,
+                            "referencedDeclaration": 3173,
                             "src": "314:4:19",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_MockTarget_$2135",
+                              "typeIdentifier": "t_contract$_MockTarget_$2392",
                               "typeString": "contract MockTarget"
                             }
                           },
-                          "id": 2129,
+                          "id": 2386,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "setValue",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 2121,
+                          "referencedDeclaration": 2378,
                           "src": "314:13:19",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                             "typeString": "function () external"
                           }
                         },
-                        "id": 2130,
+                        "id": 2387,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -585,18 +585,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 2126,
+                        "id": 2383,
                         "name": "abi",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2845,
+                        "referencedDeclaration": 3102,
                         "src": "291:3:19",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_abi",
                           "typeString": "abi"
                         }
                       },
-                      "id": 2127,
+                      "id": 2384,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -610,7 +610,7 @@
                         "typeString": "function (bytes4) pure returns (bytes memory)"
                       }
                     },
-                    "id": 2131,
+                    "id": 2388,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -624,36 +624,36 @@
                       "typeString": "bytes memory"
                     }
                   },
-                  "functionReturnParameters": 2125,
-                  "id": 2132,
+                  "functionReturnParameters": 2382,
+                  "id": 2389,
                   "nodeType": "Return",
                   "src": "284:53:19"
                 }
               ]
             },
             "documentation": null,
-            "id": 2134,
+            "id": 2391,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "data",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2122,
+              "id": 2379,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "236:2:19"
             },
             "returnParameters": {
-              "id": 2125,
+              "id": 2382,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2124,
+                  "id": 2381,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2134,
+                  "scope": 2391,
                   "src": "260:12:19",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -662,7 +662,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 2123,
+                    "id": 2380,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "260:5:19",
@@ -677,14 +677,14 @@
               ],
               "src": "259:14:19"
             },
-            "scope": 2135,
+            "scope": 2392,
             "src": "223:121:19",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2136,
+        "scope": 2393,
         "src": "113:234:19"
       }
     ],
@@ -696,7 +696,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-06-01T13:06:25.422Z",
+  "updatedAt": "2019-06-15T13:06:42.119Z",
   "devdoc": {
     "methods": {}
   },

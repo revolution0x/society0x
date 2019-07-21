@@ -17,3 +17,12 @@ export const showNavigationWrapper = show => ({
     type: "SHOW_NAVIGATION_WRAPPER",
     show
 })
+
+export const setMyProfileMetaData = profileMetaData => ({
+    type: "SET_MY_PROFILE_META_DATA",
+    profileMetaData
+})
+
+export const clearMyProfileMetaData = () => ({
+    type: "CLEAR_MY_PROFILE_META_DATA",
+})

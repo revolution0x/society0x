@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.0.2",
     "@material-ui/icons": "^3.0.2",
+    "blockies-identicon": "^0.1.0",
     "buffer": "^5.2.1",
     "classnames": "^2.2.6",
     "formik": "^1.5.2",
@@ -16,7 +17,9 @@
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-app-rewired": "^2.1.0",
+    "react-cropper": "^1.2.0",
     "react-dom": "^16.7.0",
+    "react-lottie": "^1.2.3",
     "react-redux": "^6.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
@@ -24,7 +27,7 @@
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
     "rimble-ui": "^0.2.0",
-    "styled-components": "^4.1.3",
+    "styled-components": "^4.3.2",
     "web3": "^1.0.0-beta.54",
     "yup": "^0.27.0",
     "zeppelin-solidity-hot-loader": "^1.0.0"

@@ -1,0 +1,795 @@
+{
+  "contractName": "IRapport",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_communityTaxPoolAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setCommunityTaxPoolAddress",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_developmentTaxPoolAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setDevelopmentTaxPoolAddress",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_taxRate",
+          "type": "uint256"
+        }
+      ],
+      "name": "setTaxRate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.7+commit.6da8b019\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_developmentTaxPoolAddress\",\"type\":\"address\"}],\"name\":\"setDevelopmentTaxPoolAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_communityTaxPoolAddress\",\"type\":\"address\"}],\"name\":\"setCommunityTaxPoolAddress\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_taxRate\",\"type\":\"uint256\"}],\"name\":\"setTaxRate\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/ISignal.sol\":\"IRapport\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/ISignal.sol\":{\"keccak256\":\"0xcaa325f7c578f64bdf2cdfc87782902dd6a127a42170018eccc1d9596f8e5e0e\",\"urls\":[\"bzzr://a492ff0fb2aa1e6d83521671d6a9035084263316773a32b3b891149ff81afcd2\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.7;\npragma experimental ABIEncoderV2;\n\n\ncontract IRapport {\n    function mint(address account, uint256 value) public;\n    function totalSupply() public view returns (uint256);\n    function setCommunityTaxPoolAddress(address _communityTaxPoolAddress) public;\n    function setDevelopmentTaxPoolAddress(address _developmentTaxPoolAddress) public;\n    function setTaxRate(uint _taxRate) public;\n}",
+  "sourcePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/ISignal.sol",
+  "ast": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/ISignal.sol",
+    "exportedSymbols": {
+      "IRapport": [
+        2777
+      ]
+    },
+    "id": 2778,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2748,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:15"
+      },
+      {
+        "id": 2749,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:15"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2777,
+        "linearizedBaseContracts": [
+          2777
+        ],
+        "name": "IRapport",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2756,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2754,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2751,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2756,
+                  "src": "97:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2750,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "97:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2753,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2756,
+                  "src": "114:13:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2752,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "114:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "96:32:15"
+            },
+            "returnParameters": {
+              "id": 2755,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "135:0:15"
+            },
+            "scope": 2777,
+            "src": "83:53:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2761,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2757,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "161:2:15"
+            },
+            "returnParameters": {
+              "id": 2760,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2759,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2761,
+                  "src": "185:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2758,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "184:9:15"
+            },
+            "scope": 2777,
+            "src": "141:53:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2766,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCommunityTaxPoolAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2764,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2763,
+                  "name": "_communityTaxPoolAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2766,
+                  "src": "235:32:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2762,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "235:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "234:34:15"
+            },
+            "returnParameters": {
+              "id": 2765,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "275:0:15"
+            },
+            "scope": 2777,
+            "src": "199:77:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2771,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDevelopmentTaxPoolAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2769,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2768,
+                  "name": "_developmentTaxPoolAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2771,
+                  "src": "319:34:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2767,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "319:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "318:36:15"
+            },
+            "returnParameters": {
+              "id": 2770,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "361:0:15"
+            },
+            "scope": 2777,
+            "src": "281:81:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2776,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTaxRate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2774,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2773,
+                  "name": "_taxRate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2776,
+                  "src": "387:13:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2772,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "387:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "386:15:15"
+            },
+            "returnParameters": {
+              "id": 2775,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "408:0:15"
+            },
+            "scope": 2777,
+            "src": "367:42:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2778,
+        "src": "59:352:15"
+      }
+    ],
+    "src": "0:411:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/ISignal.sol",
+    "exportedSymbols": {
+      "IRapport": [
+        2777
+      ]
+    },
+    "id": 2778,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2748,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:15"
+      },
+      {
+        "id": 2749,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:15"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2777,
+        "linearizedBaseContracts": [
+          2777
+        ],
+        "name": "IRapport",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2756,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2754,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2751,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2756,
+                  "src": "97:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2750,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "97:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2753,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2756,
+                  "src": "114:13:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2752,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "114:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "96:32:15"
+            },
+            "returnParameters": {
+              "id": 2755,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "135:0:15"
+            },
+            "scope": 2777,
+            "src": "83:53:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2761,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2757,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "161:2:15"
+            },
+            "returnParameters": {
+              "id": 2760,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2759,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2761,
+                  "src": "185:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2758,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "184:9:15"
+            },
+            "scope": 2777,
+            "src": "141:53:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2766,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCommunityTaxPoolAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2764,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2763,
+                  "name": "_communityTaxPoolAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2766,
+                  "src": "235:32:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2762,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "235:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "234:34:15"
+            },
+            "returnParameters": {
+              "id": 2765,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "275:0:15"
+            },
+            "scope": 2777,
+            "src": "199:77:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2771,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDevelopmentTaxPoolAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2769,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2768,
+                  "name": "_developmentTaxPoolAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2771,
+                  "src": "319:34:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2767,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "319:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "318:36:15"
+            },
+            "returnParameters": {
+              "id": 2770,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "361:0:15"
+            },
+            "scope": 2777,
+            "src": "281:81:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 2776,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTaxRate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2774,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2773,
+                  "name": "_taxRate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2776,
+                  "src": "387:13:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2772,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "387:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "386:15:15"
+            },
+            "returnParameters": {
+              "id": 2775,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "408:0:15"
+            },
+            "scope": 2777,
+            "src": "367:42:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2778,
+        "src": "59:352:15"
+      }
+    ],
+    "src": "0:411:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.7+commit.6da8b019.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-06-22T11:14:14.370Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -60,14 +60,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityRegistry.sol",
     "exportedSymbols": {
       "MockHumanityRegistry": [
-        2108
+        2365
       ]
     },
-    "id": 2109,
+    "id": 2366,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2083,
+        "id": 2340,
         "literals": [
           "solidity",
           "0.5",
@@ -77,7 +77,7 @@
         "src": "0:22:18"
       },
       {
-        "id": 2084,
+        "id": 2341,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -91,19 +91,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2108,
+        "id": 2365,
         "linearizedBaseContracts": [
-          2108
+          2365
         ],
         "name": "MockHumanityRegistry",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 2087,
+            "id": 2344,
             "name": "result",
             "nodeType": "VariableDeclaration",
-            "scope": 2108,
+            "scope": 2365,
             "src": "96:25:18",
             "stateVariable": true,
             "storageLocation": "default",
@@ -112,7 +112,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2085,
+              "id": 2342,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "96:4:18",
@@ -124,7 +124,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "74727565",
-              "id": 2086,
+              "id": 2343,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -143,48 +143,48 @@
           },
           {
             "body": {
-              "id": 2096,
+              "id": 2353,
               "nodeType": "Block",
               "src": "185:30:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2094,
+                    "id": 2351,
                     "name": "result",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2087,
+                    "referencedDeclaration": 2344,
                     "src": "202:6:18",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2093,
-                  "id": 2095,
+                  "functionReturnParameters": 2350,
+                  "id": 2352,
                   "nodeType": "Return",
                   "src": "195:13:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 2097,
+            "id": 2354,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isHuman",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2090,
+              "id": 2347,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2089,
+                  "id": 2346,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2097,
+                  "scope": 2354,
                   "src": "145:11:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -193,7 +193,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2088,
+                    "id": 2345,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "145:7:18",
@@ -210,15 +210,15 @@
               "src": "144:13:18"
             },
             "returnParameters": {
-              "id": 2093,
+              "id": 2350,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2092,
+                  "id": 2349,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2097,
+                  "scope": 2354,
                   "src": "179:4:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -227,7 +227,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2091,
+                    "id": 2348,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "179:4:18",
@@ -242,7 +242,7 @@
               ],
               "src": "178:6:18"
             },
-            "scope": 2108,
+            "scope": 2365,
             "src": "128:87:18",
             "stateMutability": "view",
             "superFunction": null,
@@ -250,25 +250,25 @@
           },
           {
             "body": {
-              "id": 2106,
+              "id": 2363,
               "nodeType": "Block",
               "src": "261:33:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2104,
+                    "id": 2361,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2102,
+                      "id": 2359,
                       "name": "result",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2087,
+                      "referencedDeclaration": 2344,
                       "src": "271:6:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -279,11 +279,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 2103,
+                      "id": 2360,
                       "name": "_result",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2099,
+                      "referencedDeclaration": 2356,
                       "src": "280:7:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -296,29 +296,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 2105,
+                  "id": 2362,
                   "nodeType": "ExpressionStatement",
                   "src": "271:16:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 2107,
+            "id": 2364,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setResult",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2100,
+              "id": 2357,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2099,
+                  "id": 2356,
                   "name": "_result",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2107,
+                  "scope": 2364,
                   "src": "240:12:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -327,7 +327,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2098,
+                    "id": 2355,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "240:4:18",
@@ -343,19 +343,19 @@
               "src": "239:14:18"
             },
             "returnParameters": {
-              "id": 2101,
+              "id": 2358,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "261:0:18"
             },
-            "scope": 2108,
+            "scope": 2365,
             "src": "221:73:18",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2109,
+        "scope": 2366,
         "src": "59:238:18"
       }
     ],
@@ -365,14 +365,14 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/mock/MockHumanityRegistry.sol",
     "exportedSymbols": {
       "MockHumanityRegistry": [
-        2108
+        2365
       ]
     },
-    "id": 2109,
+    "id": 2366,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2083,
+        "id": 2340,
         "literals": [
           "solidity",
           "0.5",
@@ -382,7 +382,7 @@
         "src": "0:22:18"
       },
       {
-        "id": 2084,
+        "id": 2341,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -396,19 +396,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2108,
+        "id": 2365,
         "linearizedBaseContracts": [
-          2108
+          2365
         ],
         "name": "MockHumanityRegistry",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 2087,
+            "id": 2344,
             "name": "result",
             "nodeType": "VariableDeclaration",
-            "scope": 2108,
+            "scope": 2365,
             "src": "96:25:18",
             "stateVariable": true,
             "storageLocation": "default",
@@ -417,7 +417,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 2085,
+              "id": 2342,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "96:4:18",
@@ -429,7 +429,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "74727565",
-              "id": 2086,
+              "id": 2343,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -448,48 +448,48 @@
           },
           {
             "body": {
-              "id": 2096,
+              "id": 2353,
               "nodeType": "Block",
               "src": "185:30:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2094,
+                    "id": 2351,
                     "name": "result",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 2087,
+                    "referencedDeclaration": 2344,
                     "src": "202:6:18",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 2093,
-                  "id": 2095,
+                  "functionReturnParameters": 2350,
+                  "id": 2352,
                   "nodeType": "Return",
                   "src": "195:13:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 2097,
+            "id": 2354,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isHuman",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2090,
+              "id": 2347,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2089,
+                  "id": 2346,
                   "name": "who",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2097,
+                  "scope": 2354,
                   "src": "145:11:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -498,7 +498,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2088,
+                    "id": 2345,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "145:7:18",
@@ -515,15 +515,15 @@
               "src": "144:13:18"
             },
             "returnParameters": {
-              "id": 2093,
+              "id": 2350,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2092,
+                  "id": 2349,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2097,
+                  "scope": 2354,
                   "src": "179:4:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -532,7 +532,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2091,
+                    "id": 2348,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "179:4:18",
@@ -547,7 +547,7 @@
               ],
               "src": "178:6:18"
             },
-            "scope": 2108,
+            "scope": 2365,
             "src": "128:87:18",
             "stateMutability": "view",
             "superFunction": null,
@@ -555,25 +555,25 @@
           },
           {
             "body": {
-              "id": 2106,
+              "id": 2363,
               "nodeType": "Block",
               "src": "261:33:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 2104,
+                    "id": 2361,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 2102,
+                      "id": 2359,
                       "name": "result",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2087,
+                      "referencedDeclaration": 2344,
                       "src": "271:6:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -584,11 +584,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 2103,
+                      "id": 2360,
                       "name": "_result",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2099,
+                      "referencedDeclaration": 2356,
                       "src": "280:7:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -601,29 +601,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 2105,
+                  "id": 2362,
                   "nodeType": "ExpressionStatement",
                   "src": "271:16:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 2107,
+            "id": 2364,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setResult",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2100,
+              "id": 2357,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2099,
+                  "id": 2356,
                   "name": "_result",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2107,
+                  "scope": 2364,
                   "src": "240:12:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -632,7 +632,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2098,
+                    "id": 2355,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "240:4:18",
@@ -648,19 +648,19 @@
               "src": "239:14:18"
             },
             "returnParameters": {
-              "id": 2101,
+              "id": 2358,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "261:0:18"
             },
-            "scope": 2108,
+            "scope": 2365,
             "src": "221:73:18",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2109,
+        "scope": 2366,
         "src": "59:238:18"
       }
     ],
@@ -672,7 +672,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-06-01T13:06:25.421Z",
+  "updatedAt": "2019-06-15T13:06:42.117Z",
   "devdoc": {
     "methods": {}
   },

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {withStyles} from "@material-ui/core/styles";
 import Card from '@material-ui/core/Card';
-import RegisterMemberForm from "../RegisterMemberForm";
+import RegisterPersonaForm from "../RegisterPersonaForm";
 
 const styles = theme => ({
     cardPadding: {
@@ -21,8 +21,8 @@ class RegisterPage extends Component {
             <React.Fragment>
                 <div className="text-align-center">
                     <Card className={"max-page-width auto-margins " + classes.cardPadding}>
-                        <h1>Register as a Member</h1>
-                        <RegisterMemberForm/>
+                        <h1>Persona Generator</h1>
+                        <RegisterPersonaForm/>
                     </Card>
                 </div>
             </React.Fragment>
