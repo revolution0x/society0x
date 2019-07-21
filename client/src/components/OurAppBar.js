@@ -112,9 +112,10 @@ class OurAppBar extends React.Component {
                   className={classes.appBarProfilePicContainer}
                   style={{borderRadius: '20px', padding:'0px', marginLeft:'25px', marginRight:'5px'}}
                 >
-                  
-                {activeAccountProfilePic && <Link className={"no-decorate"} to={"/" + activeAccountPseudonym}><img className={classes.appBarProfilePic} src={IPFS_DATA_GATEWAY + activeAccountProfilePic} alt="Profile"></img></Link>}
-                {!activeAccountProfilePic && <Link className={"no-decorate"} to={"/register"}><Blockie seed={activeAccountAddress}></Blockie></Link>}
+                <Link className={"no-decorate"} to={`/${activeAccountPseudonym ? activeAccountPseudonym : `register`}`}>
+                  {activeAccountProfilePic && <img className={classes.appBarProfilePic} src={IPFS_DATA_GATEWAY + activeAccountProfilePic} alt="Profile"></img>}
+                  {!activeAccountProfilePic && <Blockie seed={activeAccountAddress}></Blockie>}
+                </Link>
                 </IconButton>
               </div>
             )}
