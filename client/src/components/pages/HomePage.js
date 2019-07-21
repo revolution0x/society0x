@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import {withStyles} from "@material-ui/core/styles";
 import Card from '@material-ui/core/Card';
 import OurCard from '../OurCard';
+import ProfilePage from "./ProfilePage";
+import {Link} from "react-router-dom";
 
 const styles = theme => ({
-    cardPadding: {
-        padding: theme.spacing.unit * 2,
+    segmentContainer: {
+        paddingBottom: theme.spacing.unit * 4,
     }
 })
 
+const demoAccounts = ["Anonymous", "Aesop", "Pseudonymous", "Animus"]
 
 class HomePage extends Component {
     constructor(props) {
@@ -20,9 +23,7 @@ class HomePage extends Component {
         const {classes} = this.props;
         return (
             <React.Fragment>
-                <div className="text-align-center our-flex-wrap">
-                    
-                </div>
+                {demoAccounts.map((item) => <div className={classes.segmentContainer}><Link to={`/${item}`}><ProfilePage requestedPersona={item} hideButtons={true}></ProfilePage></Link></div>)}
             </React.Fragment>
         )
     }

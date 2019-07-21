@@ -5,8 +5,6 @@ import Card from '@material-ui/core/Card';
 import DemoImg0 from '../../images/demo-img-0.jpg';
 import Fab from "@material-ui/core/Fab";
 import RegisterIcon from "@material-ui/icons/LeakAdd";
-import SubscribeIcon from "@material-ui/icons/AddAlert";
-import BroadcastIcon from "@material-ui/icons/SettingsInputAntenna";
 import EditProfileIcon from "@material-ui/icons/AssignmentInd";
 import Button from "@material-ui/core/Button";
 import {withRouter} from "react-router";
@@ -87,7 +85,7 @@ class ProfilePage extends Component {
         super(props);
         this.state = {
             minCoverHeight: null,
-            profileName: "Loading..."
+            profileName: "Loading...",
         };
         this.profileIntroUpperLayer = React.createRef();
         this.coverImage = React.createRef();
@@ -197,7 +195,7 @@ class ProfilePage extends Component {
     }
 
     render() {
-        const {classes} = this.props;
+        const {classes, hideButtons} = this.props;
         const {minCoverHeight, profileEthereumAddress, profilePictureIpfsHash, coverPictureIpfsHash, coverImageStyleOverride, profileName, myProfileEthereumAddress} = this.state;
         let minCoverHeightStyle = {};
         if(minCoverHeight > 0){
@@ -209,49 +207,41 @@ class ProfilePage extends Component {
             <React.Fragment>
                 <div className={"text-align-center"}>
                     <div className={["max-page-width auto-margins",classes.profileContainer].join(" ")}>
-                        <Card className={[classes.profileIntroUpperLayer].join(" ")} ref={this.profileIntroContainer}>
-                            <Card ref={this.profileIntroUpperLayer} raised className={["max-page-width auto-margins", classes.cardPadding, classes.profilePicCard].join(" ")}>
-                                {profilePictureIpfsHash &&
-                                    <div className={classes.profileImgContainer}>
-                                        <img className={classes.profileImg} ref={this.profileImage} src={IPFS_DATA_GATEWAY + profilePictureIpfsHash} alt="Profile"></img>
+                            <Card className={[classes.profileIntroUpperLayer].join(" ")} ref={this.profileIntroContainer}>
+                                <Card ref={this.profileIntroUpperLayer} raised className={["max-page-width auto-margins", classes.cardPadding, classes.profilePicCard].join(" ")}>
+                                    {profilePictureIpfsHash &&
+                                        <div className={classes.profileImgContainer}>
+                                            <img className={classes.profileImg} ref={this.profileImage} src={IPFS_DATA_GATEWAY + profilePictureIpfsHash} alt="Profile"></img>
+                                        </div>
+                                    }
+                                    {!profilePictureIpfsHash &&
+                                        <div className={classes.profileImgContainer}>
+                                            <Blockie seed={profileEthereumAddress} size={15} scale={19}></Blockie>
+                                        </div>
+                                    }
+                                    <Typography variant="h4" gutterBottom component="h2">
+                                        {profileName}
+                                    </Typography>
+                                    <div>
+                                    {(!hideButtons && profileEthereumAddress && (myProfileEthereumAddress === profileEthereumAddress)) && <Button onClick={() => this.props.history.push('/settings/persona')} variant="contained" color="primary" size="large" className={classes.button}>
+                                        <EditProfileIcon className={classes.extendedIcon} />
+                                        Edit Profile
+                                    </Button>}
+                                    {(!hideButtons && profileEthereumAddress && (myProfileEthereumAddress !== profileEthereumAddress)) && 
+                                    <Fragment>
+                                        <Button variant="contained" color="primary" size="large" className={classes.button}>
+                                            <RegisterIcon className={classes.extendedIcon} />
+                                            Connect
+                                        </Button>
+                                    </Fragment>}
                                     </div>
-                                }
-                                {!profilePictureIpfsHash &&
-                                    <div className={classes.profileImgContainer}>
-                                        <Blockie seed={profileEthereumAddress} size={15} scale={19}></Blockie>
-                                    </div>
-                                }
-                                <Typography variant="h4" gutterBottom component="h2">
-                                    {profileName}
-                                </Typography>
-                                <div>
-                                {(profileEthereumAddress && (myProfileEthereumAddress === profileEthereumAddress)) && <Button onClick={() => this.props.history.push('/settings/persona')} variant="contained" color="primary" size="large" className={classes.button}>
-                                    <EditProfileIcon className={classes.extendedIcon} />
-                                    Edit Profile
-                                </Button>}
-                                {(profileEthereumAddress && (myProfileEthereumAddress !== profileEthereumAddress)) && 
-                                <Fragment>
-                                    <Button variant="contained" color="primary" size="large" className={classes.button}>
-                                        <RegisterIcon className={classes.extendedIcon} />
-                                        Connect
-                                    </Button>
-                                    <Button variant="contained" color="primary" size="large" className={classes.button}>
-                                        <SubscribeIcon className={classes.extendedIcon} />
-                                        <span>Subscribe</span>
-                                    </Button>
-                                    <Button variant="contained" color="primary" size="large" className={classes.button}>
-                                        <BroadcastIcon className={classes.extendedIcon} />
-                                        <span>Broadcast</span>
-                                    </Button>
-                                </Fragment>}
+                                </Card>
+                                <div className={classes.coverImgContainer} style={minCoverHeightStyle}>
+                                    {coverPictureIpfsHash && 
+                                        <img onLoad={(e) => this.coverHasLoaded(e)} ref={this.coverImage} style={coverImageStyleOverride} className={classes.coverImg} src={IPFS_DATA_GATEWAY + coverPictureIpfsHash} alt="Cover"></img>
+                                    }
                                 </div>
                             </Card>
-                            <div className={classes.coverImgContainer} style={minCoverHeightStyle}>
-                                {coverPictureIpfsHash && 
-                                    <img onLoad={(e) => this.coverHasLoaded(e)} ref={this.coverImage} style={coverImageStyleOverride} className={classes.coverImg} src={IPFS_DATA_GATEWAY + coverPictureIpfsHash} alt="Cover"></img>
-                                }
-                            </div>
-                        </Card>
                         {/* <Card className={classes.profileLowerLayer}>
                             <p>
                                 <br/>
