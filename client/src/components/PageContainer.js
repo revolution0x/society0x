@@ -58,8 +58,6 @@ class PageContainer extends Component {
         if(setConsideredMobile) {
             mobilePagePaddingOverride = { padding: 0 };
         }
-        console.log('AcceptedEthNetIds.indexOf(clientProvidedEthNet)',AcceptedEthNetIds.indexOf(clientProvidedEthNet));
-        console.log({clientProvidedEthNet});
 
         return (
             <React.Fragment>
