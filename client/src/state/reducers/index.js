@@ -3,8 +3,9 @@ import showLeftMenu from "./showLeftMenu";
 import setActiveAccount from "./setActiveAccount";
 import setWeb3 from "./setWeb3";
 import showNavigationWrapper from "./showNavigationWrapper";
-import isConsideredMobile from './isConsideredMobile';
+import setConsideredMobile from './setConsideredMobile';
 import setMyProfileMetaData from './setMyProfileMetaData';
+import setClientProvidedEthNetId from './setClientProvidedEthNetId';
 //import otherProfileMetaData from './otherProfileMetaData';
 
 export default combineReducers({
@@ -12,6 +13,7 @@ export default combineReducers({
     setActiveAccount,
     setWeb3,
     showNavigationWrapper,
-    isConsideredMobile,
+    setConsideredMobile,
+    setClientProvidedEthNetId,
     setMyProfileMetaData,
 })

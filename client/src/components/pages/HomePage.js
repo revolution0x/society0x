@@ -11,7 +11,7 @@ const styles = theme => ({
     }
 })
 
-const demoAccounts = ["Anonymous", "Aesop", "Pseudonymous", "Animus"]
+const demoAccounts = ["Anonymous", "Aesop", "Pseudonymous", "Animus", "GaiaPariah"]
 
 class HomePage extends Component {
     constructor(props) {
@@ -23,7 +23,7 @@ class HomePage extends Component {
         const {classes} = this.props;
         return (
             <React.Fragment>
-                {demoAccounts.map((item) => <div className={classes.segmentContainer}><Link to={`/${item}`}><ProfilePage requestedPersona={item} hideButtons={true}></ProfilePage></Link></div>)}
+                {demoAccounts.map((item) => <div className={classes.segmentContainer}><ProfilePage requestedPersona={item} hideButtons={true} isLinkToProfile={true}></ProfilePage></div>)}
             </React.Fragment>
         )
     }

@@ -130,7 +130,7 @@ class RegisterPersonaForm extends Component {
                             <Field className={"fullwidth " + classes.inputMargin} type="text" setFieldValue={setFieldValue} name="pseudonym" placeholder="Persona Pseudonym" component={TextField}/>
                             <Fab color="primary" variant="extended" type="submit" disabled={isSubmitting} aria-label="Submit" className={classes.fab}>
                                 <RegisterIcon className={classes.extendedIcon} />
-                                Register
+                                Generate Persona
                             </Fab>
                             {/* <pre>{JSON.stringify({name: values.file.name, type: values.file.type, size: values.file.size})}</pre> */}
                         </Form>

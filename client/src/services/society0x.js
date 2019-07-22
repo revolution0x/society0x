@@ -2,8 +2,8 @@ import contract from 'truffle-contract';
 import society0x from '../../../ethereum/build/contracts/Society0x.json';
 import Web3 from 'web3';
 import {store} from "../state";
-import { setMyProfileMetaData, setWeb3 } from '../state/actions';
-import { DefaultProfileMetaData } from '../utils/constants';
+import { setMyProfileMetaData, setWeb3, setClientProvidedEthNetId } from '../state/actions';
+import { DefaultProfileMetaData, AcceptedEthNetIds } from '../utils/constants';
 import getWeb3 from '../utils/getWeb3';
 import { ethToBrowserFormatProfileMetaData } from "../utils";
 
@@ -29,16 +29,22 @@ if(window.ethereum) {
 
 async function initialiseProfileMetaData() {
     const web3 = await getWeb3();
-    // Use web3 to get the user's accounts.
-    const accounts = await web3.eth.getAccounts();
-    let profileEthFormat = await getProfileFromAddress(accounts[0]);
-    let profileBrowserFormat = ethToBrowserFormatProfileMetaData(profileEthFormat);
-    await store.dispatch(setWeb3(web3));
-    if(profileBrowserFormat){
-        await store.dispatch(setMyProfileMetaData(profileBrowserFormat));
-    }else{
-        await store.dispatch(setMyProfileMetaData(Object.assign(DefaultProfileMetaData, {id: accounts[0]})))
-    }
+    
+    web3.eth.net.getNetworkType().then(async (netId) => {
+        store.dispatch(setClientProvidedEthNetId(netId));
+        if (AcceptedEthNetIds.indexOf(netId) > -1) {
+            // Use web3 to get the user's accounts.
+            const accounts = await web3.eth.getAccounts();
+            let profileEthFormat = await getProfileFromAddress(accounts[0]);
+            let profileBrowserFormat = ethToBrowserFormatProfileMetaData(profileEthFormat);
+            await store.dispatch(setWeb3(web3));
+            if (profileBrowserFormat) {
+                await store.dispatch(setMyProfileMetaData(profileBrowserFormat));
+            } else {
+                await store.dispatch(setMyProfileMetaData(Object.assign(DefaultProfileMetaData, { id: accounts[0] })))
+            }
+        }
+    });
 }
 
 const society0xContract = contract(society0x);

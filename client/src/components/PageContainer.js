@@ -5,10 +5,14 @@ import HomePage from "./pages/HomePage";
 import ElementPage from "./pages/ElementPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProfilePage from "./pages/ProfilePage";
+import IncorrectEthNetPage from "./pages/IncorrectEthNetPage";
 // import CreationPage from "./pages/CreationPage";
 import SettingsPage from "./pages/SettingsPage";
 import { connect } from "react-redux";
 import {store} from "../state";
+import {debounce, isConsideredMobile} from "../utils";
+import { AcceptedEthNetIds } from "../utils/constants";
+import { setConsideredMobile } from "../state/actions";
 
 const styles = theme => ({
     pageContainer: {
@@ -24,34 +28,67 @@ class PageContainer extends Component {
         super(props);
         this.state = {
             showNavigationWrapperState: store.getState().showNavigationWrapper,
+            clientProvidedEthNet: false,
         };
         store.subscribe(() => {
             this.setState({
+                setConsideredMobile: store.getState().setConsideredMobile,
                 showNavigationWrapperState: store.getState().showNavigationWrapper,
+                clientProvidedEthNet: store.getState().setClientProvidedEthNetId,
             });
         });
     }
 
+    resize = () => {
+        this.props.dispatch(setConsideredMobile(isConsideredMobile()));
+    }
+    
+    componentDidMount = async () => {
+        window.addEventListener('resize', debounce(this.resize, 250));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resize);
+    }
+
     render() {
         const {classes} = this.props;
-        const { showNavigationWrapperState } = this.state;
+        const { showNavigationWrapperState, setConsideredMobile, clientProvidedEthNet } = this.state;
+        let mobilePagePaddingOverride = {};
+        if(setConsideredMobile) {
+            mobilePagePaddingOverride = { padding: 0 };
+        }
+        console.log('AcceptedEthNetIds.indexOf(clientProvidedEthNet)',AcceptedEthNetIds.indexOf(clientProvidedEthNet));
+        console.log({clientProvidedEthNet});
+
         return (
             <React.Fragment>
-                    <div className={showNavigationWrapperState ? classes.pageContainer : classes.fullScreen}>
-                        <Switch>
-                            <Route path="/" exact render={(props) => homeRoute(props)} />
-                            <Route path="/register" exact render={(props) => registerRoute(props)} />
-                            {/* <Route path="/creation" exact render={(props) => creationRoute(props)} />
-                            <Route path="/creation/:creationType" exact render={(props) => creationRoute(props)} /> */}
-                            <Route path="/element/:elementName" exact render={(props) => elementRoute(props)} />
-                            <Route path="/settings" exact render={(props) => settingsRoute(props)} />
-                            <Route path="/settings/:setting" exact render={(props) => settingsRoute(props)} />
-                            <Route path="/:requestedPersona" exact render={(props) => profileRoute(props)} />
-                        </Switch>
+                    <div style={mobilePagePaddingOverride} className={showNavigationWrapperState ? classes.pageContainer : classes.fullScreen}>
+                        {(AcceptedEthNetIds.indexOf(clientProvidedEthNet) === -1) &&
+                            <Switch>
+                                <Route path="*" exact render={(props) => incorrectEthNetRoute(props)} />
+                            </Switch>
+                        }
+                        {(AcceptedEthNetIds.indexOf(clientProvidedEthNet) > -1) &&
+                            <Switch>
+                                <Route path="/" exact render={(props) => homeRoute(props)} />
+                                <Route path="/register" exact render={(props) => registerRoute(props)} />
+                                {/* <Route path="/creation" exact render={(props) => creationRoute(props)} />
+                                <Route path="/creation/:creationType" exact render={(props) => creationRoute(props)} /> */}
+                                <Route path="/element/:elementName" exact render={(props) => elementRoute(props)} />
+                                <Route path="/settings" exact render={(props) => settingsRoute(props)} />
+                                <Route path="/settings/:setting" exact render={(props) => settingsRoute(props)} />
+                                <Route path="/:requestedPersona" exact render={(props) => profileRoute(props)} />
+                            </Switch>
+                        }
                     </div>
             </React.Fragment>
         )
     }   
+}
+
+const incorrectEthNetRoute = (props) => {
+    return <IncorrectEthNetPage/>
 }
 
 const homeRoute = (props) => {

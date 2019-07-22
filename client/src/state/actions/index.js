@@ -18,9 +18,19 @@ export const showNavigationWrapper = show => ({
     show
 })
 
+export const setConsideredMobile = isConsideredMobile => ({
+    type: "SET_CONSIDERED_MOBILE",
+    isConsideredMobile
+})
+
 export const setMyProfileMetaData = profileMetaData => ({
     type: "SET_MY_PROFILE_META_DATA",
     profileMetaData
+})
+
+export const setClientProvidedEthNetId = id => ({
+    type: "SET_CLIENT_PROVIDED_ETH_NET_ID",
+    id
 })
 
 export const clearMyProfileMetaData = () => ({

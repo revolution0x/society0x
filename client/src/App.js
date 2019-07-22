@@ -93,7 +93,6 @@ class App extends Component {
                 <OurDrawers/>
                 <OurAppBar {...this.state}/>
                 <PageContainer />
-                {/* <Web3Info {...this.state} /> */}
               </React.Fragment>
             </MuiThemeProvider>
           </PersistGate>

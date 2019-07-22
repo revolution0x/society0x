@@ -21,7 +21,7 @@ class RegisterPage extends Component {
             <React.Fragment>
                 <div className="text-align-center">
                     <Card className={"max-page-width auto-margins " + classes.cardPadding}>
-                        <h1>Persona Generator</h1>
+                        <h1>Generate Persona</h1>
                         <RegisterPersonaForm/>
                     </Card>
                 </div>

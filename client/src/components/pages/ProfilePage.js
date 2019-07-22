@@ -14,6 +14,7 @@ import {debounce} from "../../utils";
 import Blockie from '../BlockiesIdenticon';
 import {store} from "../../state";
 import {IPFS_DATA_GATEWAY} from "../../utils/constants";
+import { WrapConditionalLink } from "../WrapConditionalLink"
 
 const styles = theme => ({
     fab: {
@@ -92,8 +93,9 @@ class ProfilePage extends Component {
         this.profileImage = React.createRef();
         this.profileIntroContainer = React.createRef();
         store.subscribe(() => {
-            if (store.getState().setMyProfileMetaData) {
-                let myProfileEthereumAddress = store.getState().setMyProfileMetaData.id
+            const reduxState = store.getState();
+            if (reduxState.setMyProfileMetaData) {
+                const myProfileEthereumAddress = reduxState.setMyProfileMetaData.id
                 this.setState({
                     myProfileEthereumAddress
                 })
@@ -126,7 +128,7 @@ class ProfilePage extends Component {
     componentDidMount = async () => {
         window.addEventListener('resize', debounce(this.resize, 250));
         try {
-            const {requestedPersona} = this.props;
+            const { requestedPersona } = this.props;
             let memberProfile = await getProfileFromName(requestedPersona);
             let profileEthereumAddress = memberProfile[0];
             let profileName = memberProfile[1];
@@ -195,7 +197,7 @@ class ProfilePage extends Component {
     }
 
     render() {
-        const {classes, hideButtons} = this.props;
+        const {classes, hideButtons, isLinkToProfile, requestedPersona} = this.props;
         const {minCoverHeight, profileEthereumAddress, profilePictureIpfsHash, coverPictureIpfsHash, coverImageStyleOverride, profileName, myProfileEthereumAddress} = this.state;
         let minCoverHeightStyle = {};
         if(minCoverHeight > 0){
@@ -207,41 +209,43 @@ class ProfilePage extends Component {
             <React.Fragment>
                 <div className={"text-align-center"}>
                     <div className={["max-page-width auto-margins",classes.profileContainer].join(" ")}>
-                            <Card className={[classes.profileIntroUpperLayer].join(" ")} ref={this.profileIntroContainer}>
-                                <Card ref={this.profileIntroUpperLayer} raised className={["max-page-width auto-margins", classes.cardPadding, classes.profilePicCard].join(" ")}>
-                                    {profilePictureIpfsHash &&
-                                        <div className={classes.profileImgContainer}>
-                                            <img className={classes.profileImg} ref={this.profileImage} src={IPFS_DATA_GATEWAY + profilePictureIpfsHash} alt="Profile"></img>
+                            <WrapConditionalLink condition={isLinkToProfile} to={`/${requestedPersona}`}>
+                                <Card className={[classes.profileIntroUpperLayer].join(" ")} ref={this.profileIntroContainer}>
+                                    <Card ref={this.profileIntroUpperLayer} raised className={["max-page-width auto-margins", classes.cardPadding, classes.profilePicCard].join(" ")}>
+                                        {profilePictureIpfsHash &&
+                                            <div className={classes.profileImgContainer}>
+                                                <img className={classes.profileImg} ref={this.profileImage} src={IPFS_DATA_GATEWAY + profilePictureIpfsHash} alt="Profile"></img>
+                                            </div>
+                                        }
+                                        {!profilePictureIpfsHash &&
+                                            <div className={classes.profileImgContainer}>
+                                                <Blockie seed={profileEthereumAddress} size={15} scale={19}></Blockie>
+                                            </div>
+                                        }
+                                        <Typography variant="h4" gutterBottom component="h2">
+                                            {profileName}
+                                        </Typography>
+                                        <div>
+                                        {(!hideButtons && profileEthereumAddress && (myProfileEthereumAddress === profileEthereumAddress)) && <Button onClick={() => this.props.history.push('/settings/persona')} variant="contained" color="primary" size="large" className={classes.button}>
+                                            <EditProfileIcon className={classes.extendedIcon} />
+                                            Edit Profile
+                                        </Button>}
+                                        {(!hideButtons && profileEthereumAddress && (myProfileEthereumAddress !== profileEthereumAddress)) && 
+                                        <Fragment>
+                                            <Button variant="contained" color="primary" size="large" className={classes.button}>
+                                                <RegisterIcon className={classes.extendedIcon} />
+                                                Connect
+                                            </Button>
+                                        </Fragment>}
                                         </div>
-                                    }
-                                    {!profilePictureIpfsHash &&
-                                        <div className={classes.profileImgContainer}>
-                                            <Blockie seed={profileEthereumAddress} size={15} scale={19}></Blockie>
-                                        </div>
-                                    }
-                                    <Typography variant="h4" gutterBottom component="h2">
-                                        {profileName}
-                                    </Typography>
-                                    <div>
-                                    {(!hideButtons && profileEthereumAddress && (myProfileEthereumAddress === profileEthereumAddress)) && <Button onClick={() => this.props.history.push('/settings/persona')} variant="contained" color="primary" size="large" className={classes.button}>
-                                        <EditProfileIcon className={classes.extendedIcon} />
-                                        Edit Profile
-                                    </Button>}
-                                    {(!hideButtons && profileEthereumAddress && (myProfileEthereumAddress !== profileEthereumAddress)) && 
-                                    <Fragment>
-                                        <Button variant="contained" color="primary" size="large" className={classes.button}>
-                                            <RegisterIcon className={classes.extendedIcon} />
-                                            Connect
-                                        </Button>
-                                    </Fragment>}
+                                    </Card>
+                                    <div className={[classes.coverImgContainer].join(" ")} style={minCoverHeightStyle}>
+                                        {coverPictureIpfsHash && 
+                                            <img onLoad={(e) => this.coverHasLoaded(e)} ref={this.coverImage} style={coverImageStyleOverride} className={classes.coverImg} src={IPFS_DATA_GATEWAY + coverPictureIpfsHash} alt="Cover"></img>
+                                        }
                                     </div>
                                 </Card>
-                                <div className={classes.coverImgContainer} style={minCoverHeightStyle}>
-                                    {coverPictureIpfsHash && 
-                                        <img onLoad={(e) => this.coverHasLoaded(e)} ref={this.coverImage} style={coverImageStyleOverride} className={classes.coverImg} src={IPFS_DATA_GATEWAY + coverPictureIpfsHash} alt="Cover"></img>
-                                    }
-                                </div>
-                            </Card>
+                            </WrapConditionalLink>
                         {/* <Card className={classes.profileLowerLayer}>
                             <p>
                                 <br/>

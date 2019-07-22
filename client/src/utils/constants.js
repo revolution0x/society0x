@@ -24,5 +24,7 @@ export const ProfileMetaDataTypes = {
     createdTimestamp: "number",
 }
 
+export const AcceptedEthNetIds = ['rinkeby']
+
 export const IPFS_DATA_GATEWAY = "https://gateway.pinata.cloud/ipfs/";
 export const IPFS_PINNING_ENDPOINT = process.env.NODE_ENV === 'development' ? "http://localhost:3001/ipfs/pin" : "https://ipfs.society0x.org/ipfs/pin";
