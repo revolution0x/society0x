@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import {withStyles} from "@material-ui/core/styles";
 import ProfilePage from "./ProfilePage";
-import { getDiscoveryIndex, joinDiscoveryIndex, isInDiscoveryIndex, leaveDiscoveryIndex } from '../../services/society0x';
+import {
+    getDiscoveryIndex,
+    joinDiscoveryIndex,
+    isInDiscoveryIndex,
+    leaveDiscoveryIndex,
+    isRegisteredAddress
+} from '../../services/society0x';
 import { Button } from "@material-ui/core";
 import {store} from "../../state";
 
@@ -31,21 +37,23 @@ class HomePage extends Component {
         const {account} = this.state;
         let discoveryIndex = await getDiscoveryIndex();
         let hasJoinedIndex = await isInDiscoveryIndex(account);
+        let isRegistered = await isRegisteredAddress(account);
         this.setState({
             discoveryIndex: discoveryIndex,
-            hasJoinedIndex: hasJoinedIndex
+            hasJoinedIndex: hasJoinedIndex,
+            isRegistered: isRegistered,
         })
     }
 
     render() {
         const {classes} = this.props;
-        const {account, discoveryIndex, hasJoinedIndex} = this.state;
+        const {account, discoveryIndex, hasJoinedIndex, isRegistered} = this.state;
         return (
             <React.Fragment>
-                <div style={{width: '100%', textAlign: 'center', marginBottom: '30px'}}>
+                {isRegistered && <div style={{width: '100%', textAlign: 'center', marginBottom: '30px'}}>
                     {hasJoinedIndex && <Button onClick={(e) => leaveDiscoveryIndex(account)}>Leave Home Page</Button>}
                     {!hasJoinedIndex && <Button onClick={(e) => joinDiscoveryIndex(account)}>Join Home Page</Button>}
-                </div>
+                </div>}
                 {discoveryIndex.map((item) => <div className={classes.segmentContainer}><ProfilePage requestedPersona={item} hideButtons={true} isLinkToProfile={true}></ProfilePage></div>)}
             </React.Fragment>
         )
