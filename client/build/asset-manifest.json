@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.b5f63b60.chunk.css",
-    "main.js": "/static/js/main.96ccd039.chunk.js",
+    "main.js": "/static/js/main.b6900d3c.chunk.js",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "static/js/2.38608b6e.chunk.js": "/static/js/2.38608b6e.chunk.js",
+    "static/js/2.62fc49ba.chunk.js": "/static/js/2.62fc49ba.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.f2f43dda348f3ca406bc5564858e053d.js": "/precache-manifest.f2f43dda348f3ca406bc5564858e053d.js",
+    "precache-manifest.ac0dc3a45112073c920200540fff94af.js": "/precache-manifest.ac0dc3a45112073c920200540fff94af.js",
     "service-worker.js": "/service-worker.js",
     "static/media/ethereum_metamask_chrome.png": "/static/media/ethereum_metamask_chrome.79226bac.png",
     "static/media/rinkeby_network_metamask.png": "/static/media/rinkeby_network_metamask.7c4e9411.png",
