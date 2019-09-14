@@ -116,8 +116,7 @@ class RegisterPersonaForm extends Component {
                         let profileMetaDataBuffer = Buffer.from(JSON.stringify(profileMetaData));
                         uploadToIPFS(profileMetaDataBuffer).then(async (IpfsMetaDataUploadResponse) => {
                             try{
-                                const registerResponse = await registerProfile(currentId, pseudonym, IpfsMetaDataUploadResponse[0].hash);
-                                console.log('registerResponse', registerResponse);
+                                await registerProfile(currentId, pseudonym, IpfsMetaDataUploadResponse[0].hash);
                                 store.dispatch(setMyProfileMetaData(Object.assign(profileMetaData)))
                                 thisPersist.setRedirect(`/${pseudonym}`);
                                 setSubmitting(false);

@@ -6,6 +6,7 @@ import showNavigationWrapper from "./showNavigationWrapper";
 import setConsideredMobile from './setConsideredMobile';
 import setMyProfileMetaData from './setMyProfileMetaData';
 import setClientProvidedEthNetId from './setClientProvidedEthNetId';
+import discoveryIndex from './discoveryIndex';
 //import otherProfileMetaData from './otherProfileMetaData';
 
 export default combineReducers({
@@ -16,4 +17,5 @@ export default combineReducers({
     setConsideredMobile,
     setClientProvidedEthNetId,
     setMyProfileMetaData,
+    discoveryIndex
 })

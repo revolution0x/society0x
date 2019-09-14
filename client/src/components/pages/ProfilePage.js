@@ -159,7 +159,6 @@ class ProfilePage extends Component {
         window.addEventListener('resize', debounce(this.resize, 250));
         try {
             const { requestedPersona } = this.props;
-            console.log({requestedPersona})
             let memberProfile = await getProfileFromNameOrAddress(requestedPersona);
             let profileEthereumAddress = memberProfile[0];
             let profileName = memberProfile[1];
@@ -175,8 +174,6 @@ class ProfilePage extends Component {
                 myProfilePseudonym = await store.getState().setMyProfileMetaData.pseudonym;
             }
             if (myProfilePseudonym) {
-                console.log({profileEthereumAddress})
-                console.log({myProfileEthereumAddress})
                 isEstablishedConnectionState = await isEstablishedConnection(myProfileEthereumAddress, profileEthereumAddress);    
                 if (!isEstablishedConnectionState) {
                     if (myProfileEthereumAddress.toLowerCase() !== profileEthereumAddress.toLowerCase()) {
@@ -275,7 +272,6 @@ class ProfilePage extends Component {
             isPendingIncomingConnectionState,
             isPendingOutgoingConnectionState,
         } = this.state;
-        console.log(this.state);
         let minCoverHeightStyle = {};
         if(minCoverHeight > 0){
             minCoverHeightStyle = {

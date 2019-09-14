@@ -82,8 +82,6 @@ export const registerProfile = async (account, pseudonym, profileMetaIpfsHash) =
 }
 
 export const isEstablishedConnection = async (account = false, targetAddress = false) => {
-    console.log({account});
-    console.log({targetAddress})
     if((account && targetAddress) && (account !== targetAddress)) {
         const instance = await getSociety0xInstance();
         const item = await instance.isEstablishedConnection(targetAddress, {
@@ -108,8 +106,6 @@ export const isPendingIncomingConnection = async (account, targetAddress) => {
 }
 
 export const isPendingOutgoingConnection = async (account, targetAddress) => {
-    console.log({account});
-    console.log({targetAddress})
     if((account && targetAddress) && (account !== targetAddress)) {
         const instance = await getSociety0xInstance();
         const item = await instance.isPendingOutgoingConnection(targetAddress, {

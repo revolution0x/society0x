@@ -169,7 +169,6 @@ class SignalExchange extends Component {
 
     getExchangeButtonText = () => {
         const {input} = this.props;
-        console.log({input});
         switch(input) {
             case "DAI":
                 return "Convert DAI into Signal";
@@ -228,7 +227,6 @@ class SignalExchange extends Component {
         let setStateConfig = {
             sliderErrorEnum: false,
         }
-        console.log('initiatedValues',initiatedValues);
         if(initiatedValues) {
             switch(input) {
                 case "DAI": {
@@ -296,7 +294,6 @@ class SignalExchange extends Component {
         const {setExchangeValue, signalBalance, daiBalance, daiAllowance, sliderErrorEnum, redirect, isInteractionReady} = this.state;
         const sliderMaxValue = this.getSliderMaxValue();
         const exchangeButtonText = this.getExchangeButtonText();
-        console.log('setExchangeValue, signalBalance, daiBalance, daiAllowance, sliderErrorEnum',setExchangeValue, signalBalance, daiBalance, daiAllowance, sliderErrorEnum);
         return(
             <div className={classes.contentContainer}>
                 

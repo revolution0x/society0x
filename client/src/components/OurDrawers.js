@@ -59,7 +59,6 @@ class OurDrawers extends React.Component {
   render() {
     const { classes } = this.props;
     const {showNavigationWrapper, activeAccountPseudonym} = this.state;
-    console.log({activeAccountPseudonym});
     const sideList = (
       <div className={classes.list}>
         <List>

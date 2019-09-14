@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {withStyles} from "@material-ui/core/styles";
+import {connect} from 'react-redux';
 import ProfilePage from "./ProfilePage";
 import {
     getDiscoveryIndex,
@@ -10,6 +11,8 @@ import {
 } from '../../services/society0x';
 import { Button } from "@material-ui/core";
 import {store} from "../../state";
+import {setDiscoveryIndex} from '../../state/actions';
+import {areEqualArrays} from "../../utils";
 
 const styles = theme => ({
     segmentContainer: {
@@ -22,12 +25,13 @@ class HomePage extends Component {
         super(props);
         this.state = {
             account: store.getState().setMyProfileMetaData.id,
-            discoveryIndex: [],
+            discoveryIndex: store.getState().discoveryIndex,
         };
         store.subscribe(() => {
             if (store.getState().setMyProfileMetaData) {
               this.setState({
-                account: store.getState().setMyProfileMetaData.id
+                account: store.getState().setMyProfileMetaData.id,
+                discoveryIndex: store.getState().discoveryIndex
               });
             }
         });
@@ -38,6 +42,10 @@ class HomePage extends Component {
         let discoveryIndex = await getDiscoveryIndex();
         let hasJoinedIndex = await isInDiscoveryIndex(account);
         let isRegistered = await isRegisteredAddress(account);
+        const shouldDiscoveryIndexReduxUpdate = !areEqualArrays(discoveryIndex, store.getState().discoveryIndex);
+        if(shouldDiscoveryIndexReduxUpdate) {
+            this.props.dispatch(setDiscoveryIndex(discoveryIndex));
+        }
         this.setState({
             discoveryIndex: discoveryIndex,
             hasJoinedIndex: hasJoinedIndex,
@@ -54,10 +62,10 @@ class HomePage extends Component {
                     {hasJoinedIndex && <Button onClick={(e) => leaveDiscoveryIndex(account)}>Leave Home Page</Button>}
                     {!hasJoinedIndex && <Button onClick={(e) => joinDiscoveryIndex(account)}>Join Home Page</Button>}
                 </div>}
-                {discoveryIndex.map((item) => <div className={classes.segmentContainer}><ProfilePage requestedPersona={item} hideButtons={true} isLinkToProfile={true}></ProfilePage></div>)}
+                {discoveryIndex.map((item) => <div key={item} className={classes.segmentContainer}><ProfilePage requestedPersona={item} hideButtons={true} isLinkToProfile={true}></ProfilePage></div>)}
             </React.Fragment>
         )
     }
 }
 
-export default withStyles(styles, { withTheme: true })(HomePage);
+export default withStyles(styles, { withTheme: true })(connect()(HomePage));

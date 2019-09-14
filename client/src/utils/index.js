@@ -99,7 +99,6 @@ export const weiToEther = (wei) => {
 }
 
 export const etherToWei = (ether) => {
-    console.log(BigNumber(ether).multipliedBy('1e+18').toString());
     if(typeof ether === "string"){
         return BigNumber(ether).multipliedBy('1e+18').toString();
     }else{
@@ -135,3 +134,16 @@ export const tokenValueFormat = (value, decimals = 2) => {
 export const toNumber = (value) => {
     return BigNumber(value).toNumber();
 }
+
+export const areEqualArrays = (arrayOne, arrayTwo) => { 
+    if(arrayOne.length !== arrayTwo.length) {
+        return false; 
+    }else{ 
+        for(let i=0; i< arrayOne.length; i++) {
+            if(arrayOne[i] !== arrayTwo[i]) {
+                return false; 
+            }
+        }
+        return true;
+    }
+} 

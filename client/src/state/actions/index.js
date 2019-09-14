@@ -36,3 +36,8 @@ export const setClientProvidedEthNetId = id => ({
 export const clearMyProfileMetaData = () => ({
     type: "CLEAR_MY_PROFILE_META_DATA",
 })
+
+export const setDiscoveryIndex = (discoveryIndex) => ({
+    type: "SET_DISCOVERY_INDEX",
+    discoveryIndex
+})
