@@ -7,7 +7,7 @@ import {configureHistory, ethToBrowserFormatProfileMetaData} from "./utils";
 import { DefaultProfileMetaData } from './utils/constants';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import OurAppBar from "./components/OurAppBar";
-import OurDrawers from "./components/OurDrawers";
+import OurSidebar from "./components/OurSidebar";
 import { Provider } from "react-redux";
 import {setActiveAccount, setWeb3, setMyProfileMetaData} from './state/actions';
 import { PersistGate } from 'redux-persist/lib/integration/react';
@@ -90,7 +90,7 @@ class App extends Component {
           <PersistGate persistor={persistor}>
             <MuiThemeProvider theme={theme}>
               <React.Fragment>
-                <OurDrawers/>
+                <OurSidebar/>
                 <OurAppBar {...this.state}/>
                 <PageContainer />
               </React.Fragment>

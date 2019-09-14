@@ -206,6 +206,13 @@ export const setDaiAllowance = async (account, etherValue) => {
     return item;
 }
 
+export const getTestDai = async (account) => {
+    const daiInstance = await getDaiInstance();
+    daiInstance.mint(account, etherToWei(100), {
+        from: account
+    });
+}
+
 export const withdrawDaiForSignal = async (account, etherValue) => {
     const signalInstance = await getSignalInstance();
     const weiValue = etherToWei(etherValue);

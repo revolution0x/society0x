@@ -16,7 +16,7 @@ import {showLeftMenu} from '../state/actions';
 import {Link} from 'react-router-dom';
 import AllowanceIcon from '@material-ui/icons/SignalCellularAlt';
 import ExchangeIcon from '@material-ui/icons/SettingsEthernet';
-
+import FaucetIcon from '@material-ui/icons/EvStation';
 
 const styles = {
   list: {
@@ -30,7 +30,7 @@ const styles = {
   }
 };
 
-class OurDrawers extends React.Component {
+class OurSidebar extends React.Component {
 
     constructor(props) {
         super(props);
@@ -106,6 +106,12 @@ class OurDrawers extends React.Component {
                 <ListItemText primary={"Allowance"} />
               </ListItem>
             </Link>
+            <Link to={'/faucet'} className={["no-decorate", classes.link].join(" ")}>
+              <ListItem button key={"Faucet"}>
+                <ListItemIcon><FaucetIcon /></ListItemIcon>
+                <ListItemText primary={"Faucet"} />
+              </ListItem>
+            </Link>
         </List>
       </div>
     );
@@ -127,8 +133,8 @@ class OurDrawers extends React.Component {
   }
 }
 
-OurDrawers.propTypes = {
+OurSidebar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(connect()(OurDrawers));
+export default withStyles(styles)(connect()(OurSidebar));
