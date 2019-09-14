@@ -1,9 +1,12 @@
-import { createStore, compose } from 'redux'
+import { createStore, compose, applyMiddleware } from 'redux'
 import rootReducer from './reducers'
-import {loadState, saveState} from './localStorage'
 import { persistStore, persistReducer } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import storage from 'redux-persist/lib/storage';
+import createSagaMiddleware from 'redux-saga';
+//import rootSaga from './sagas'
+
+//const sagaMiddleware = createSagaMiddleware();
 
 const persistConfig = {
     key: 'root',
@@ -17,9 +20,12 @@ const pReducer = persistReducer(persistConfig, rootReducer);
 const storeExport = createStore(
     pReducer,
     compose(
+        //applyMiddleware(sagaMiddleware),
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
 );
+
+//sagaMiddleware.run(rootSaga);
 
 export const store = storeExport;
 export const persistor = persistStore(storeExport);

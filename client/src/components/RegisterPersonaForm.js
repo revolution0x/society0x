@@ -14,6 +14,7 @@ import RegisterIcon from "@material-ui/icons/VerifiedUser";
 import Typography from '@material-ui/core/Typography';
 import { DefaultProfileMetaData } from "../utils/constants";
 import LottieRender from "./LottieRender";
+import {RequiresInteractionFee} from "./RequiresInteractionFee";
 const fingerprintLottieJSON = require("../lottie/fingerprint.json");
 
 var Buffer = require('buffer/').Buffer
@@ -114,26 +115,39 @@ class RegisterPersonaForm extends Component {
                         const profileMetaData = Object.assign(DefaultProfileMetaData, {id: currentId, pseudonym});
                         let profileMetaDataBuffer = Buffer.from(JSON.stringify(profileMetaData));
                         uploadToIPFS(profileMetaDataBuffer).then(async (IpfsMetaDataUploadResponse) => {
-                            const registerResponse = await registerProfile(currentId, pseudonym, IpfsMetaDataUploadResponse[0].hash);
-                            console.log('registerResponse', registerResponse);
-                            store.dispatch(setMyProfileMetaData(Object.assign(profileMetaData)))
-                            thisPersist.setRedirect(`/${pseudonym}`);
-                            setSubmitting(false);
+                            try{
+                                const registerResponse = await registerProfile(currentId, pseudonym, IpfsMetaDataUploadResponse[0].hash);
+                                console.log('registerResponse', registerResponse);
+                                store.dispatch(setMyProfileMetaData(Object.assign(profileMetaData)))
+                                thisPersist.setRedirect(`/${pseudonym}`);
+                                setSubmitting(false);
+                            } catch(e) {
+                                let firstErrorLine = e.message.split("\n")[0]
+                                let scanString = "Reason given: ";
+                                let indexOfScanString = firstErrorLine.indexOf(scanString);
+                                if(indexOfScanString > -1){
+                                    let reasonGiven = firstErrorLine.substr(indexOfScanString + scanString.length);
+                                    console.log({reasonGiven});
+                                }
+                                setSubmitting(false);
+                            }
                         })
                     }}
                     >
-                    {({ isSubmitting, setFieldValue }) => (
-                        <Form>
-                            <Typography align="left" variant="h6" component="h2">
-                                Claim your pseudonym:
-                            </Typography>
-                            <Field className={"fullwidth " + classes.inputMargin} type="text" setFieldValue={setFieldValue} name="pseudonym" placeholder="Persona Pseudonym" component={TextField}/>
-                            <Fab color="primary" variant="extended" type="submit" disabled={isSubmitting} aria-label="Submit" className={classes.fab}>
-                                <RegisterIcon className={classes.extendedIcon} />
-                                Generate Persona
-                            </Fab>
-                            {/* <pre>{JSON.stringify({name: values.file.name, type: values.file.type, size: values.file.size})}</pre> */}
-                        </Form>
+                    {({ isSubmitting }) => (
+                        <RequiresInteractionFee>
+                            <Form>
+                                <Typography align="left" variant="h6" component="h2">
+                                    Claim your pseudonym:
+                                </Typography>
+                                <Field className={"fullwidth " + classes.inputMargin} type="text" name="pseudonym" placeholder="Persona Pseudonym" component={TextField}/>
+                                <Fab color="primary" variant="extended" type="submit" disabled={isSubmitting} aria-label="Submit" className={classes.fab}>
+                                    <RegisterIcon className={classes.extendedIcon} />
+                                    Generate Persona
+                                </Fab>
+                                {/* <pre>{JSON.stringify({name: values.file.name, type: values.file.type, size: values.file.size})}</pre> */}
+                            </Form>
+                        </RequiresInteractionFee>
                     )}
                     </Formik>
                 }

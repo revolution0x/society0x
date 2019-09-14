@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import ElementPage from "./pages/ElementPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProfilePage from "./pages/ProfilePage";
+import AllowancePage from "./pages/AllowancePage";
+import ExchangePage from "./pages/ExchangePage";
 import IncorrectEthNetPage from "./pages/IncorrectEthNetPage";
 // import CreationPage from "./pages/CreationPage";
 import SettingsPage from "./pages/SettingsPage";
@@ -73,6 +75,8 @@ class PageContainer extends Component {
                                 <Route path="/register" exact render={(props) => registerRoute(props)} />
                                 {/* <Route path="/creation" exact render={(props) => creationRoute(props)} />
                                 <Route path="/creation/:creationType" exact render={(props) => creationRoute(props)} /> */}
+                                <Route path="/allowance" exact render={(props) => allowanceRoute(props)} />
+                                <Route path="/exchange" exact render={(props) => exchangeRoute(props)} />
                                 <Route path="/element/:elementName" exact render={(props) => elementRoute(props)} />
                                 <Route path="/settings" exact render={(props) => settingsRoute(props)} />
                                 <Route path="/settings/:setting" exact render={(props) => settingsRoute(props)} />
@@ -95,6 +99,14 @@ const homeRoute = (props) => {
 
 const registerRoute = (props) => {
     return <RegisterPage/>
+}
+
+const allowanceRoute = (props) => {
+    return <AllowancePage/>
+}
+
+const exchangeRoute = (props) => {
+    return <ExchangePage/>
 }
 
 // const creationRoute = ({match}, props) => {

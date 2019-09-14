@@ -87,30 +87,30 @@
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/ISignal.sol",
     "exportedSymbols": {
       "ISignal": [
-        3305
+        4155
       ]
     },
-    "id": 3306,
+    "id": 4156,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3276,
+        "id": 4126,
         "literals": [
           "solidity",
           "0.5",
           ".7"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:22:18"
+        "src": "0:22:19"
       },
       {
-        "id": 3277,
+        "id": 4127,
         "literals": [
           "experimental",
           "ABIEncoderV2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "23:33:18"
+        "src": "23:33:19"
       },
       {
         "baseContracts": [],
@@ -118,9 +118,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3305,
+        "id": 4155,
         "linearizedBaseContracts": [
-          3305
+          4155
         ],
         "name": "ISignal",
         "nodeType": "ContractDefinition",
@@ -128,23 +128,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3284,
+            "id": 4134,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3282,
+              "id": 4132,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3279,
+                  "id": 4129,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3284,
-                  "src": "95:15:18",
+                  "scope": 4134,
+                  "src": "95:15:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -152,10 +152,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3278,
+                    "id": 4128,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "95:7:18",
+                    "src": "95:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -167,11 +167,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 3281,
+                  "id": 4131,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3284,
-                  "src": "112:13:18",
+                  "scope": 4134,
+                  "src": "112:13:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -179,10 +179,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3280,
+                    "id": 4130,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "112:7:18",
+                    "src": "112:7:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -192,16 +192,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "94:32:18"
+              "src": "94:32:19"
             },
             "returnParameters": {
-              "id": 3283,
+              "id": 4133,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "133:0:18"
+              "src": "133:0:19"
             },
-            "scope": 3305,
-            "src": "81:53:18",
+            "scope": 4155,
+            "src": "81:53:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -209,29 +209,29 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3289,
+            "id": 4139,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "totalSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3285,
+              "id": 4135,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "159:2:18"
+              "src": "159:2:19"
             },
             "returnParameters": {
-              "id": 3288,
+              "id": 4138,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3287,
+                  "id": 4137,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3289,
-                  "src": "183:7:18",
+                  "scope": 4139,
+                  "src": "183:7:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -239,10 +239,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3286,
+                    "id": 4136,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "183:7:18",
+                    "src": "183:7:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -252,10 +252,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "182:9:18"
+              "src": "182:9:19"
             },
-            "scope": 3305,
-            "src": "139:53:18",
+            "scope": 4155,
+            "src": "139:53:19",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
@@ -263,23 +263,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3294,
+            "id": 4144,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setCommunityTaxPoolAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3292,
+              "id": 4142,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3291,
+                  "id": 4141,
                   "name": "_communityTaxPoolAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3294,
-                  "src": "233:32:18",
+                  "scope": 4144,
+                  "src": "233:32:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -287,10 +287,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3290,
+                    "id": 4140,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "233:7:18",
+                    "src": "233:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -301,16 +301,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "232:34:18"
+              "src": "232:34:19"
             },
             "returnParameters": {
-              "id": 3293,
+              "id": 4143,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "273:0:18"
+              "src": "273:0:19"
             },
-            "scope": 3305,
-            "src": "197:77:18",
+            "scope": 4155,
+            "src": "197:77:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -318,23 +318,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3299,
+            "id": 4149,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setDevelopmentTaxPoolAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3297,
+              "id": 4147,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3296,
+                  "id": 4146,
                   "name": "_developmentTaxPoolAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3299,
-                  "src": "317:34:18",
+                  "scope": 4149,
+                  "src": "317:34:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -342,10 +342,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3295,
+                    "id": 4145,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "317:7:18",
+                    "src": "317:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -356,16 +356,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "316:36:18"
+              "src": "316:36:19"
             },
             "returnParameters": {
-              "id": 3298,
+              "id": 4148,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "359:0:18"
+              "src": "359:0:19"
             },
-            "scope": 3305,
-            "src": "279:81:18",
+            "scope": 4155,
+            "src": "279:81:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -373,23 +373,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3304,
+            "id": 4154,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setTaxRate",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3302,
+              "id": 4152,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3301,
+                  "id": 4151,
                   "name": "_taxRate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3304,
-                  "src": "385:13:18",
+                  "scope": 4154,
+                  "src": "385:13:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -397,10 +397,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3300,
+                    "id": 4150,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "385:4:18",
+                    "src": "385:4:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -410,55 +410,55 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "384:15:18"
+              "src": "384:15:19"
             },
             "returnParameters": {
-              "id": 3303,
+              "id": 4153,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "406:0:18"
+              "src": "406:0:19"
             },
-            "scope": 3305,
-            "src": "365:42:18",
+            "scope": 4155,
+            "src": "365:42:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 3306,
-        "src": "58:351:18"
+        "scope": 4156,
+        "src": "58:351:19"
       }
     ],
-    "src": "0:409:18"
+    "src": "0:409:19"
   },
   "legacyAST": {
     "absolutePath": "/Users/jaywelsh/GitHub/society0x/ethereum/contracts/interface/ISignal.sol",
     "exportedSymbols": {
       "ISignal": [
-        3305
+        4155
       ]
     },
-    "id": 3306,
+    "id": 4156,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3276,
+        "id": 4126,
         "literals": [
           "solidity",
           "0.5",
           ".7"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:22:18"
+        "src": "0:22:19"
       },
       {
-        "id": 3277,
+        "id": 4127,
         "literals": [
           "experimental",
           "ABIEncoderV2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "23:33:18"
+        "src": "23:33:19"
       },
       {
         "baseContracts": [],
@@ -466,9 +466,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3305,
+        "id": 4155,
         "linearizedBaseContracts": [
-          3305
+          4155
         ],
         "name": "ISignal",
         "nodeType": "ContractDefinition",
@@ -476,23 +476,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3284,
+            "id": 4134,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3282,
+              "id": 4132,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3279,
+                  "id": 4129,
                   "name": "account",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3284,
-                  "src": "95:15:18",
+                  "scope": 4134,
+                  "src": "95:15:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -500,10 +500,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3278,
+                    "id": 4128,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "95:7:18",
+                    "src": "95:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -515,11 +515,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 3281,
+                  "id": 4131,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3284,
-                  "src": "112:13:18",
+                  "scope": 4134,
+                  "src": "112:13:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -527,10 +527,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3280,
+                    "id": 4130,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "112:7:18",
+                    "src": "112:7:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -540,16 +540,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "94:32:18"
+              "src": "94:32:19"
             },
             "returnParameters": {
-              "id": 3283,
+              "id": 4133,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "133:0:18"
+              "src": "133:0:19"
             },
-            "scope": 3305,
-            "src": "81:53:18",
+            "scope": 4155,
+            "src": "81:53:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -557,29 +557,29 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3289,
+            "id": 4139,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "totalSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3285,
+              "id": 4135,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "159:2:18"
+              "src": "159:2:19"
             },
             "returnParameters": {
-              "id": 3288,
+              "id": 4138,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3287,
+                  "id": 4137,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3289,
-                  "src": "183:7:18",
+                  "scope": 4139,
+                  "src": "183:7:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -587,10 +587,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3286,
+                    "id": 4136,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "183:7:18",
+                    "src": "183:7:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -600,10 +600,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "182:9:18"
+              "src": "182:9:19"
             },
-            "scope": 3305,
-            "src": "139:53:18",
+            "scope": 4155,
+            "src": "139:53:19",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
@@ -611,23 +611,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3294,
+            "id": 4144,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setCommunityTaxPoolAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3292,
+              "id": 4142,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3291,
+                  "id": 4141,
                   "name": "_communityTaxPoolAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3294,
-                  "src": "233:32:18",
+                  "scope": 4144,
+                  "src": "233:32:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -635,10 +635,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3290,
+                    "id": 4140,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "233:7:18",
+                    "src": "233:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -649,16 +649,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "232:34:18"
+              "src": "232:34:19"
             },
             "returnParameters": {
-              "id": 3293,
+              "id": 4143,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "273:0:18"
+              "src": "273:0:19"
             },
-            "scope": 3305,
-            "src": "197:77:18",
+            "scope": 4155,
+            "src": "197:77:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -666,23 +666,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3299,
+            "id": 4149,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setDevelopmentTaxPoolAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3297,
+              "id": 4147,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3296,
+                  "id": 4146,
                   "name": "_developmentTaxPoolAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3299,
-                  "src": "317:34:18",
+                  "scope": 4149,
+                  "src": "317:34:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -690,10 +690,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3295,
+                    "id": 4145,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "317:7:18",
+                    "src": "317:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -704,16 +704,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "316:36:18"
+              "src": "316:36:19"
             },
             "returnParameters": {
-              "id": 3298,
+              "id": 4148,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "359:0:18"
+              "src": "359:0:19"
             },
-            "scope": 3305,
-            "src": "279:81:18",
+            "scope": 4155,
+            "src": "279:81:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -721,23 +721,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 3304,
+            "id": 4154,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setTaxRate",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3302,
+              "id": 4152,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3301,
+                  "id": 4151,
                   "name": "_taxRate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3304,
-                  "src": "385:13:18",
+                  "scope": 4154,
+                  "src": "385:13:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -745,10 +745,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3300,
+                    "id": 4150,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "385:4:18",
+                    "src": "385:4:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -758,26 +758,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "384:15:18"
+              "src": "384:15:19"
             },
             "returnParameters": {
-              "id": 3303,
+              "id": 4153,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "406:0:18"
+              "src": "406:0:19"
             },
-            "scope": 3305,
-            "src": "365:42:18",
+            "scope": 4155,
+            "src": "365:42:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 3306,
-        "src": "58:351:18"
+        "scope": 4156,
+        "src": "58:351:19"
       }
     ],
-    "src": "0:409:18"
+    "src": "0:409:19"
   },
   "compiler": {
     "name": "solc",
@@ -785,7 +785,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-07-21T12:26:10.852Z",
+  "updatedAt": "2019-09-14T08:05:53.798Z",
   "devdoc": {
     "methods": {}
   },

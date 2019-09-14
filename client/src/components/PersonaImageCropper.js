@@ -175,7 +175,7 @@ class PersonaImageSettings extends Component {
                                 }
                             }}
                         >
-                            {({ isSubmitting, setFieldValue, values }) => (
+                            {({ isSubmitting, values }) => (
                                 <Form>
                                     <div className={classes.titleElementContainer}>
                                         <Typography align="left" variant="h6" component="h2">

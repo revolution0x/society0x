@@ -8,12 +8,14 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import CreateIcon from '@material-ui/icons/LeakAdd';
-import LoveIcon from '@material-ui/icons/Favorite';
-import RegisterIcon from "@material-ui/icons/VerifiedUser";
+import RegisterIcon from '@material-ui/icons/VerifiedUser';
+import ProfileIcon from '@material-ui/icons/AccountCircle';
 import {store} from '../state';
 import {connect} from 'react-redux';
 import {showLeftMenu} from '../state/actions';
 import {Link} from 'react-router-dom';
+import AllowanceIcon from '@material-ui/icons/SignalCellularAlt';
+import ExchangeIcon from '@material-ui/icons/SettingsEthernet';
 
 
 const styles = {
@@ -23,6 +25,9 @@ const styles = {
   fullList: {
     width: 'auto',
   },
+  link: {
+    color: '#ffffff',
+  }
 };
 
 class OurDrawers extends React.Component {
@@ -39,7 +44,8 @@ class OurDrawers extends React.Component {
         store.subscribe(() => {
             this.setState({
                 left: store.getState().showLeftMenu,
-                showNavigationWrapper: store.getState().showNavigationWrapper
+                showNavigationWrapper: store.getState().showNavigationWrapper,
+                activeAccountPseudonym: store.getState().setMyProfileMetaData.pseudonym,
             });
         });
     }
@@ -52,18 +58,13 @@ class OurDrawers extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const {showNavigationWrapper} = this.state;
+    const {showNavigationWrapper, activeAccountPseudonym} = this.state;
+    console.log({activeAccountPseudonym});
     const sideList = (
       <div className={classes.list}>
         <List>
-            {(process.env["NODE_ENV"] === 'development') &&
+            {/* {(process.env["NODE_ENV"] === 'development') &&
               <Fragment>
-                <Link to={'/register'} className={"no-decorate"}>
-                  <ListItem button key={"Register"}>
-                    <ListItemIcon><RegisterIcon /></ListItemIcon>
-                    <ListItemText primary={"Register"} />
-                  </ListItem>
-                </Link>
                 <Link to={'/creation'} className={"no-decorate"}>
                   <ListItem button key={"Creation"}>
                     <ListItemIcon><CreateIcon /></ListItemIcon>
@@ -71,12 +72,40 @@ class OurDrawers extends React.Component {
                   </ListItem>
                 </Link>
               </Fragment>
-            }
-            <Link to={'/'} className={"no-decorate"}>
-                <ListItem button key={"⎊ With Love ⎊"}>
-                <ListItemIcon><LoveIcon /></ListItemIcon>
-                <ListItemText primary={"⎊ With Love ⎊"} />
+            } */}
+            <Link to={'/'} className={["no-decorate", classes.link].join(" ")}>
+                <ListItem button key={"Home"}>
+                <ListItemIcon><HomeIcon /></ListItemIcon>
+                <ListItemText primary={"Home"} />
                 </ListItem>
+            </Link>
+            {!activeAccountPseudonym && <Link to={'/register'} className={["no-decorate", classes.link].join(" ")}>
+              <ListItem button key={"Register"}>
+                <ListItemIcon><RegisterIcon /></ListItemIcon>
+                <ListItemText primary={"Register"} />
+              </ListItem>
+            </Link>}
+            {activeAccountPseudonym && 
+              <Fragment>
+                <Link to={`/${activeAccountPseudonym}`} className={["no-decorate", classes.link].join(" ")}>
+                  <ListItem button key={"Profile"}>
+                    <ListItemIcon><ProfileIcon /></ListItemIcon>
+                    <ListItemText primary={"Profile"} />
+                  </ListItem>
+                </Link>
+              </Fragment>
+            }
+            <Link to={'/exchange'} className={["no-decorate", classes.link].join(" ")}>
+              <ListItem button key={"Exchange"}>
+                <ListItemIcon><ExchangeIcon /></ListItemIcon>
+                <ListItemText primary={"Exchange"} />
+              </ListItem>
+            </Link>
+            <Link to={'/allowance'} className={["no-decorate", classes.link].join(" ")}>
+              <ListItem button key={"Allowance"}>
+                <ListItemIcon><AllowanceIcon /></ListItemIcon>
+                <ListItemText primary={"Allowance"} />
+              </ListItem>
             </Link>
         </List>
       </div>

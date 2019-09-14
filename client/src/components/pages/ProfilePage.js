@@ -2,14 +2,20 @@ import React, { Component, Fragment } from "react";
 import {withStyles} from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Card from '@material-ui/core/Card';
-import DemoImg0 from '../../images/demo-img-0.jpg';
-import Fab from "@material-ui/core/Fab";
 import RegisterIcon from "@material-ui/icons/LeakAdd";
 import EditProfileIcon from "@material-ui/icons/AssignmentInd";
 import Button from "@material-ui/core/Button";
 import {withRouter} from "react-router";
 //import PostCollection from "./../PostCollection";
-import {getProfileFromName} from "../../services/society0x";
+import {
+    getProfileFromNameOrAddress,
+    createConnectionRequest,
+    isEstablishedConnection,
+    isPendingIncomingConnection,
+    isPendingOutgoingConnection,
+    acceptConnectionRequest,
+    terminateConnection,
+} from "../../services/society0x";
 import {debounce} from "../../utils";
 import Blockie from '../BlockiesIdenticon';
 import {store} from "../../state";
@@ -107,17 +113,41 @@ class ProfilePage extends Component {
         if(this.props.requestedPersona !== prevProps.requestedPersona) {
             try {
                 const {requestedPersona} = this.props;
-                let memberProfile = await getProfileFromName(requestedPersona);
+                let memberProfile = await getProfileFromNameOrAddress(requestedPersona);
                 let profileEthereumAddress = memberProfile[0];
                 let profileName = memberProfile[1];
                 let profilePictureIpfsHash = memberProfile[2];
                 let coverPictureIpfsHash = memberProfile[3];
+                let myProfileEthereumAddress = null;
+                let myProfilePseudonym = null;
+                let isPendingIncomingConnectionState = false;
+                let isPendingOutgoingConnectionState = false;
+                let isEstablishedConnectionState = null;
+                if(store.getState().setMyProfileMetaData){
+                    myProfileEthereumAddress = await store.getState().setMyProfileMetaData.id;
+                    myProfilePseudonym = await store.getState().setMyProfileMetaData.pseudonym;
+                }
+                if (myProfilePseudonym) {
+                    isEstablishedConnectionState = await isEstablishedConnection(myProfileEthereumAddress, profileEthereumAddress);    
+                    if (!isEstablishedConnectionState) {
+                        if (myProfileEthereumAddress.toLowerCase() !== profileEthereumAddress.toLowerCase()) {
+                            [isPendingOutgoingConnectionState, isPendingIncomingConnectionState] = await Promise.all([
+                                isPendingOutgoingConnection(myProfileEthereumAddress, profileEthereumAddress),
+                                isPendingIncomingConnection(myProfileEthereumAddress, profileEthereumAddress)
+                            ]);
+                        }
+                    }
+                }
                 this.resize();
                 this.setState({
                     profileName,
                     profileEthereumAddress,
                     profilePictureIpfsHash,
                     coverPictureIpfsHash,
+                    myProfileEthereumAddress,
+                    isPendingIncomingConnectionState,
+                    isPendingOutgoingConnectionState,
+                    isEstablishedConnectionState,
                 })
             } catch (error) {
                 console.error(error);
@@ -129,21 +159,44 @@ class ProfilePage extends Component {
         window.addEventListener('resize', debounce(this.resize, 250));
         try {
             const { requestedPersona } = this.props;
-            let memberProfile = await getProfileFromName(requestedPersona);
+            console.log({requestedPersona})
+            let memberProfile = await getProfileFromNameOrAddress(requestedPersona);
             let profileEthereumAddress = memberProfile[0];
             let profileName = memberProfile[1];
             let profilePictureIpfsHash = memberProfile[2];
             let coverPictureIpfsHash = memberProfile[3];
             let myProfileEthereumAddress = null;
+            let myProfilePseudonym = null;
+            let isPendingIncomingConnectionState = false;
+            let isPendingOutgoingConnectionState = false;
+            let isEstablishedConnectionState = null;
             if(store.getState().setMyProfileMetaData){
-                myProfileEthereumAddress = store.getState().setMyProfileMetaData.id;
+                myProfileEthereumAddress = await store.getState().setMyProfileMetaData.id;
+                myProfilePseudonym = await store.getState().setMyProfileMetaData.pseudonym;
             }
+            if (myProfilePseudonym) {
+                console.log({profileEthereumAddress})
+                console.log({myProfileEthereumAddress})
+                isEstablishedConnectionState = await isEstablishedConnection(myProfileEthereumAddress, profileEthereumAddress);    
+                if (!isEstablishedConnectionState) {
+                    if (myProfileEthereumAddress.toLowerCase() !== profileEthereumAddress.toLowerCase()) {
+                        [isPendingOutgoingConnectionState, isPendingIncomingConnectionState] = await Promise.all([
+                            isPendingOutgoingConnection(myProfileEthereumAddress, profileEthereumAddress),
+                            isPendingIncomingConnection(myProfileEthereumAddress, profileEthereumAddress)
+                        ]);
+                    }
+                }
+            }
+            this.resize();
             this.setState({
                 profileName,
                 profilePictureIpfsHash,
                 coverPictureIpfsHash,
                 profileEthereumAddress,
                 myProfileEthereumAddress,
+                isPendingIncomingConnectionState,
+                isPendingOutgoingConnectionState,
+                isEstablishedConnectionState,
             })
             
         } catch (error) {
@@ -196,9 +249,33 @@ class ProfilePage extends Component {
         }
     }
 
+    processCreateConnectionRequest = async (myProfileEthereumAddress, profileEthereumAddress) => {
+        await createConnectionRequest(myProfileEthereumAddress, profileEthereumAddress);
+    }
+
+    processAcceptConnectionRequest = async (myProfileEthereumAddress, profileEthereumAddress) => {
+        await acceptConnectionRequest(myProfileEthereumAddress, profileEthereumAddress);
+    }
+
+    processTerminateConnection = async (myProfileEthereumAddress, profileEthereumAddress) => {
+        await terminateConnection(myProfileEthereumAddress, profileEthereumAddress);
+    }
+
     render() {
         const {classes, hideButtons, isLinkToProfile, requestedPersona} = this.props;
-        const {minCoverHeight, profileEthereumAddress, profilePictureIpfsHash, coverPictureIpfsHash, coverImageStyleOverride, profileName, myProfileEthereumAddress} = this.state;
+        const {
+            minCoverHeight,
+            profileEthereumAddress,
+            profilePictureIpfsHash,
+            coverPictureIpfsHash,
+            coverImageStyleOverride,
+            profileName,
+            myProfileEthereumAddress,
+            isEstablishedConnectionState,
+            isPendingIncomingConnectionState,
+            isPendingOutgoingConnectionState,
+        } = this.state;
+        console.log(this.state);
         let minCoverHeightStyle = {};
         if(minCoverHeight > 0){
             minCoverHeightStyle = {
@@ -232,10 +309,30 @@ class ProfilePage extends Component {
                                         </Button>}
                                         {(!hideButtons && profileEthereumAddress && (myProfileEthereumAddress !== profileEthereumAddress)) && 
                                         <Fragment>
-                                            <Button variant="contained" color="primary" size="large" className={classes.button}>
-                                                <RegisterIcon className={classes.extendedIcon} />
-                                                Connect
-                                            </Button>
+                                            {(!isPendingOutgoingConnectionState && !isPendingIncomingConnectionState && !isEstablishedConnectionState) &&
+                                                <Button onClick={() => this.processCreateConnectionRequest(myProfileEthereumAddress, profileEthereumAddress)} variant="contained" color="primary" size="large" className={classes.button}>
+                                                    <RegisterIcon className={classes.extendedIcon} />
+                                                    Connect
+                                                </Button>
+                                            }
+                                            {(isPendingOutgoingConnectionState && !isEstablishedConnectionState) &&
+                                                <Button onClick={() => this.cancelConnectionRequest(myProfileEthereumAddress, profileEthereumAddress)} variant="contained" color="primary" size="large" className={classes.button}>
+                                                    <RegisterIcon className={classes.extendedIcon} />
+                                                    Connection Pending
+                                                </Button>
+                                            }
+                                            {(isPendingIncomingConnectionState && !isEstablishedConnectionState) &&
+                                                <Button onClick={() => this.processAcceptConnectionRequest(myProfileEthereumAddress, profileEthereumAddress)} variant="contained" color="primary" size="large" className={classes.button}>
+                                                    <RegisterIcon className={classes.extendedIcon} />
+                                                    Accept Connection
+                                                </Button>
+                                            }
+                                            {(isEstablishedConnectionState) &&
+                                                <Button onClick={() => this.processTerminateConnection(myProfileEthereumAddress, profileEthereumAddress)} variant="contained" color="primary" size="large" className={classes.button}>
+                                                    <RegisterIcon className={classes.extendedIcon} />
+                                                    Connected
+                                                </Button>
+                                            }
                                         </Fragment>}
                                         </div>
                                     </Card>

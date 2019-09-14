@@ -59,6 +59,14 @@ html, body {
   max-width: 960px;
 }
 
+.max-page-width-medium {
+  max-width: 550px;
+}
+
+.error-red-dark-theme {
+  color: red;
+}
+
 .auto-margins {
   margin-left: auto;
   margin-right: auto;
@@ -73,4 +81,9 @@ html, body {
 
 .transition-all {
   transition: all 50ms ease-in-out
+}
+
+.disabled-zone {
+  opacity: 0.2;
+  pointer-events: none;
 }

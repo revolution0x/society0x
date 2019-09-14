@@ -110,7 +110,7 @@ class OurAppBar extends React.Component {
                   onClick={this.handleMenu}
                   color="inherit"
                   className={classes.appBarProfilePicContainer}
-                  style={{borderRadius: '20px', padding:'0px', marginLeft:'25px', marginRight:'5px'}}
+                  style={{borderRadius: '20px', padding:'0px', marginLeft:'25px', marginRight:'5px', fontSize: '0px'}}
                 >
                 <Link className={"no-decorate"} to={`/${activeAccountPseudonym ? activeAccountPseudonym : `register`}`}>
                   {activeAccountProfilePic && <img className={classes.appBarProfilePic} src={IPFS_DATA_GATEWAY + activeAccountProfilePic} alt="Profile"></img>}
