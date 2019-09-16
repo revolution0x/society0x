@@ -267,10 +267,19 @@ export const getProfileFromAddress = async (address) => {
     return false;
 }
 
+export const isAddress = async (nameOrAddress) => {
+    if(typeof nameOrAddress === "string") {
+        const isAnAddress = await new Web3Library().utils.isAddress(nameOrAddress);
+        return isAnAddress
+    }else{
+        return false;
+    }
+};
+
 export const getProfileFromNameOrAddress = async (nameOrAddress) => {
     const instance = await getSociety0xInstance();
-    const isAddress = new Web3Library().utils.isAddress(nameOrAddress);
-    if(isAddress) {
+    const fetchAddressProfile = await isAddress(nameOrAddress);
+    if(fetchAddressProfile) {
         const doesProfileWithAddressExist = await instance.isRegisteredAddress(nameOrAddress);
         if(doesProfileWithAddressExist){
             const item = await instance.fetchProfileFromAddress(nameOrAddress);

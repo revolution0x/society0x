@@ -51,6 +51,11 @@ html, body {
   justify-content: center;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .text-align-center {
   text-align: center;
 }
@@ -86,4 +91,17 @@ html, body {
 .disabled-zone {
   opacity: 0.2;
   pointer-events: none;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.opacity-hover {
+  transition: all 200ms ease-in-out;
+  opacity: 0.1;
+}
+
+.opacity-hover:hover {
+  opacity: 1;
 }

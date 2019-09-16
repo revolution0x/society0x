@@ -15,6 +15,7 @@ import {
     isPendingOutgoingConnection,
     acceptConnectionRequest,
     terminateConnection,
+    isAddress
 } from "../../services/society0x";
 import {debounce} from "../../utils";
 import Blockie from '../BlockiesIdenticon';
@@ -93,6 +94,7 @@ class ProfilePage extends Component {
         this.state = {
             minCoverHeight: null,
             profileName: "Loading...",
+            requestedPersonaLink: props.requestedPersona,
         };
         this.profileIntroUpperLayer = React.createRef();
         this.coverImage = React.createRef();
@@ -112,10 +114,14 @@ class ProfilePage extends Component {
     componentDidUpdate = async (prevProps) => {
         if(this.props.requestedPersona !== prevProps.requestedPersona) {
             try {
+                let { requestedPersonaLink } = this.state;
                 const {requestedPersona} = this.props;
                 let memberProfile = await getProfileFromNameOrAddress(requestedPersona);
                 let profileEthereumAddress = memberProfile[0];
                 let profileName = memberProfile[1];
+                if(isAddress(requestedPersona)){
+                    requestedPersonaLink = profileName;
+                }
                 let profilePictureIpfsHash = memberProfile[2];
                 let coverPictureIpfsHash = memberProfile[3];
                 let myProfileEthereumAddress = null;
@@ -148,6 +154,7 @@ class ProfilePage extends Component {
                     isPendingIncomingConnectionState,
                     isPendingOutgoingConnectionState,
                     isEstablishedConnectionState,
+                    requestedPersonaLink,
                 })
             } catch (error) {
                 console.error(error);
@@ -158,10 +165,14 @@ class ProfilePage extends Component {
     componentDidMount = async () => {
         window.addEventListener('resize', debounce(this.resize, 250));
         try {
+            let { requestedPersonaLink } = this.state;
             const { requestedPersona } = this.props;
             let memberProfile = await getProfileFromNameOrAddress(requestedPersona);
             let profileEthereumAddress = memberProfile[0];
             let profileName = memberProfile[1];
+            if(isAddress(requestedPersona)){
+                requestedPersonaLink = profileName;
+            }
             let profilePictureIpfsHash = memberProfile[2];
             let coverPictureIpfsHash = memberProfile[3];
             let myProfileEthereumAddress = null;
@@ -194,6 +205,7 @@ class ProfilePage extends Component {
                 isPendingIncomingConnectionState,
                 isPendingOutgoingConnectionState,
                 isEstablishedConnectionState,
+                requestedPersonaLink,
             })
             
         } catch (error) {
@@ -259,7 +271,7 @@ class ProfilePage extends Component {
     }
 
     render() {
-        const {classes, hideButtons, isLinkToProfile, requestedPersona} = this.props;
+        const {classes, hideButtons, isLinkToProfile} = this.props;
         const {
             minCoverHeight,
             profileEthereumAddress,
@@ -271,6 +283,7 @@ class ProfilePage extends Component {
             isEstablishedConnectionState,
             isPendingIncomingConnectionState,
             isPendingOutgoingConnectionState,
+            requestedPersonaLink
         } = this.state;
         let minCoverHeightStyle = {};
         if(minCoverHeight > 0){
@@ -282,7 +295,7 @@ class ProfilePage extends Component {
             <React.Fragment>
                 <div className={"text-align-center"}>
                     <div className={["max-page-width auto-margins",classes.profileContainer].join(" ")}>
-                            <WrapConditionalLink condition={isLinkToProfile} to={`/${requestedPersona}`}>
+                            <WrapConditionalLink condition={isLinkToProfile} to={`/${requestedPersonaLink}`}>
                                 <Card className={[classes.profileIntroUpperLayer].join(" ")} ref={this.profileIntroContainer}>
                                     <Card ref={this.profileIntroUpperLayer} raised className={["max-page-width auto-margins", classes.cardPadding, classes.profilePicCard].join(" ")}>
                                         {profilePictureIpfsHash &&
