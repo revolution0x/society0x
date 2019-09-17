@@ -3,7 +3,7 @@ import { REHYDRATE } from 'redux-persist';
 const discoveryIndex = (state = [], action) => {
     switch (action.type) {
         case REHYDRATE:
-            if(action.payload.discoveryIndex){
+            if(action.payload && action.payload.discoveryIndex){
                 return action.payload.discoveryIndex
             }
             return [...state];

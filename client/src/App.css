@@ -105,3 +105,8 @@ html, body {
 .opacity-hover:hover {
   opacity: 1;
 }
+
+.opacity-hover:active > p {
+  transition: all 100ms ease-out;
+  opacity: 0.2;
+}
