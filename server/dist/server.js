@@ -24,6 +24,8 @@ var society0xDonationInstanceRinkeby = new web3Rinkeby.eth.Contract(society0xDon
 app.use(cors());
 app.options('*', cors());
 app.use(bodyParser.raw({ limit: '3mb' }));
+app.use(bodyParser.json({ limit: '3mb' }));
+app.use(bodyParser.urlencoded({ limit: '3mb', extended: true }));
 app.use(express.static(path.join(__dirname, '../../client/build')));
 app.post('/ipfs/pin', function (req, res) {
     try {

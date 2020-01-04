@@ -29,6 +29,8 @@ app.use(cors());
 app.options('*', cors());
 
 app.use(bodyParser.raw({limit: '3mb'}));
+app.use(bodyParser.json({limit: '3mb'}));
+app.use(bodyParser.urlencoded({limit: '3mb', extended: true}));
 
 app.use(express.static(path.join(__dirname, '../../client/build')));
 
