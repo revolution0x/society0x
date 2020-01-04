@@ -1,14 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.e935706f.chunk.css",
-    "main.js": "/static/js/main.f0b2565d.chunk.js",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "static/js/2.1ead9a2b.chunk.js": "/static/js/2.1ead9a2b.chunk.js",
+    "main.css": "/static/css/main.cc699b99.chunk.css",
+    "main.js": "/static/js/main.db8dae0e.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.9aa64bde.js",
+    "static/js/2.39b0519a.chunk.js": "/static/js/2.39b0519a.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.338067bab9ce507ef79d4bca87d1a9e8.js": "/precache-manifest.338067bab9ce507ef79d4bca87d1a9e8.js",
+    "precache-manifest.248ee6cd1dd9384fb92694c6c82a56b0.js": "/precache-manifest.248ee6cd1dd9384fb92694c6c82a56b0.js",
     "service-worker.js": "/service-worker.js",
     "static/media/ethereum_metamask_chrome.png": "/static/media/ethereum_metamask_chrome.79226bac.png",
+    "static/media/main_network_metamask.png": "/static/media/main_network_metamask.06a0bce6.png",
     "static/media/rinkeby_network_metamask.png": "/static/media/rinkeby_network_metamask.7c4e9411.png",
     "static/media/society0x_transparent_white_thicker.png": "/static/media/society0x_transparent_white_thicker.dd51ea69.png"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9aa64bde.js",
+    "static/js/2.39b0519a.chunk.js",
+    "static/css/main.cc699b99.chunk.css",
+    "static/js/main.db8dae0e.chunk.js"
+  ]
 }
