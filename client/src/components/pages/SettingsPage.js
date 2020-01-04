@@ -10,10 +10,10 @@ import { capitaliseFirstLetter } from '../../utils';
 
 const styles = theme => ({
     cardPadding: {
-        padding: theme.spacing.unit * 2,
+        padding: theme.spacing(2),
     },
     settingsZone: {
-        marginTop: theme.spacing.unit,
+        marginTop: theme.spacing(1),
     }
 })
 

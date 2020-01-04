@@ -5,7 +5,7 @@ import PersonaSettingsTabs from './PersonaSettingsTabs';
 
 const styles = theme => ({
     titleContainer: {
-        padding: theme.spacing.unit * 2,
+        padding: theme.spacing(2),
         paddingBottom: '0px',
     }
 })

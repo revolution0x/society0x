@@ -3,13 +3,9 @@ import { Form } from 'formik';
 import Fab from '@material-ui/core/Fab';
 import {withStyles} from '@material-ui/core/styles';
 import {
-    getInteractionFee,
-    getSignalBalance,
-    getSignalAllowance,
     setSignalAllowance,
-    getDaiBalance,
-    getDaiAllowance,
     setDaiAllowance,
+    refreshBalancesAndAllowances,
 } from "../services/society0x";
 import {store} from '../state';
 import {Redirect} from 'react-router-dom';
@@ -20,21 +16,22 @@ import Slider from '@material-ui/core/Slider';
 import Input from '@material-ui/core/Input';
 import AllowanceIcon from '@material-ui/icons/SignalCellularAlt';
 import {tokenValueFormat} from '../utils';
+import {Link} from 'react-router-dom';
 
 const styles = theme => ({
     fab: {
         width: '100%',
-        marginTop: theme.spacing.unit * 2,
-        marginBottom: theme.spacing.unit * 2,
+        marginTop: theme.spacing(2),
+        marginBottom: theme.spacing(2),
     },
     extendedIcon: {
-        marginRight: theme.spacing.unit,
+        marginRight: theme.spacing(1),
     },
     inputMargin: {
-        marginBottom: theme.spacing.unit * 2,
+        marginBottom: theme.spacing(2),
     },
     signalValue: {
-        marginLeft: theme.spacing.unit * 4,
+        marginLeft: theme.spacing(4),
         float: 'right',
     },
     contentContainer:{
@@ -44,7 +41,7 @@ const styles = theme => ({
     },
     LottieRender: {
         width: '100%',
-        marginBottom: theme.spacing.unit * 2,
+        marginBottom: theme.spacing(2),
     },
     form: {
         minWidth: '350px',
@@ -57,19 +54,35 @@ class AdjustAllowance extends Component {
         this.state = {
             input: props.input,
             setAllowanceValue: 0,
-            interactionFee: "Loading...",
+            interactionFee: store.getState().interactionFee || "Loading...",
             allocatableAllowanceLimit: 0,
-            signalBalance: "Loading...",
-            signalAllowance: "Loading...",
-            daiBalance: "Loading...",
-            daiAllowance: "Loading...",
+            signalBalance: store.getState().selfSignalBalance || "Loading...",
+            signalAllowance: store.getState().selfSignalAllowance || "Loading...",
+            daiBalance: store.getState().selfDaiBalance || "Loading...",
+            daiAllowance: store.getState().selfDaiAllowance || "Loading...",
             isInteractionReady: false,
+            helperTextEnum: false,
         }
         store.subscribe(() => {
-            const storeInteractionFee = store.getState().interactionFee;
-            if (storeInteractionFee && (storeInteractionFee !== this.state.interactionFee)) {
+            const storeState = store.getState();
+            const storeInteractionFee = storeState.interactionFee;
+            const storeSignalBalance = storeState.selfSignalBalance;
+            const storeSignalAllowance = storeState.selfSignalAllowance;
+            const storeDaiBalance = storeState.selfDaiBalance;
+            const storeDaiAllowance = storeState.selfDaiAllowance;
+            if (
+                (storeSignalBalance && storeSignalBalance !== this.state.signalBalance) ||
+                (storeSignalAllowance && storeSignalAllowance !== this.state.signalAllowance) ||
+                (storeDaiBalance && storeDaiBalance !== this.state.daiBalance) ||
+                (storeDaiAllowance && storeDaiAllowance !== this.state.daiAllowance) ||
+                (storeInteractionFee && storeInteractionFee !== this.state.interactionFee)
+                ){
                 this.setState({
-                    interactionFee: storeInteractionFee
+                    signalBalance: storeSignalBalance,
+                    signalAllowance: storeSignalAllowance,
+                    daiBalance: storeDaiBalance,
+                    daiAllowance: storeDaiAllowance,
+                    interactionFee: storeInteractionFee,
                 })
             }
         });
@@ -96,9 +109,9 @@ class AdjustAllowance extends Component {
     
     handleBlur = () => {
         const {setAllowanceValue, allocatableAllowanceLimit} = this.state;
-        if (setAllowanceValue < 0) {
+        if (setAllowanceValue * 1 < 0) {
             this.setState({setAllowanceValue: tokenValueFormat(0)});
-        } else if (setAllowanceValue >= allocatableAllowanceLimit) {
+        } else if (setAllowanceValue * 1 >= allocatableAllowanceLimit) {
             this.setState({setAllowanceValue: tokenValueFormat(allocatableAllowanceLimit)});
         }
     };
@@ -110,14 +123,13 @@ class AdjustAllowance extends Component {
     triggerSetAllowance = async () => {
         const {setAllowanceValue} = this.state;
         const {input} = this.props;
-        const account = store.getState().setMyProfileMetaData.id;
+        const account = store.getState().myProfileMetaData.id;
         try{
             if(input === "DAI") {
                 await setDaiAllowance(account, setAllowanceValue);
-                this.setState({daiAllowance: setAllowanceValue});
+                this.setState({helperTextEnum: 'link_dai_exchange'});
             }else if (input === "dB"){
                 await setSignalAllowance(account, setAllowanceValue);
-                this.setState({signalAllowance: setAllowanceValue});
             }
         }catch(e){
             let firstErrorLine = e.message.split("\n")[0]
@@ -130,14 +142,28 @@ class AdjustAllowance extends Component {
         }
     }
 
+    getHelperText = (helperTextEnum) => {
+        switch(helperTextEnum){
+            case "link_dai_exchange":
+                return (
+                    <Typography align="center" variant="body1" component="p" gutterBottom>
+                        DAI Allowance Set | <Link to={'/exchange'}>{`Exchange DAI <-> Signal`}</Link>
+                    </Typography>
+                );
+            default:
+                return null;
+        }
+    }
+
     componentDidMount = async () => {
         const { input } = this.props;
-        const account = store.getState().setMyProfileMetaData.id;
-        const interactionFee = await getInteractionFee() * 1;
-        const signalBalance = await getSignalBalance(account) * 1;
-        const signalAllowance = await getSignalAllowance(account) * 1;
-        const daiBalance = await getDaiBalance(account) * 1;
-        const daiAllowance = await getDaiAllowance(account) * 1;
+        await refreshBalancesAndAllowances();
+        const storeState = await store.getState();
+        const interactionFee = storeState.interactionFee;
+        const signalBalance = storeState.selfSignalBalance * 1;
+        const signalAllowance = storeState.selfSignalAllowance * 1;
+        const daiBalance = storeState.selfDaiBalance * 1;
+        const daiAllowance = storeState.selfDaiAllowance * 1;
         let allocatableAllowanceLimit = 0;
         let setAllowanceValue = 0;
         if(input === "DAI") {
@@ -152,17 +178,13 @@ class AdjustAllowance extends Component {
             allocatableAllowanceLimit: tokenValueFormat(allocatableAllowanceLimit),
             setAllowanceValue: tokenValueFormat(setAllowanceValue),
             interactionFee: tokenValueFormat(interactionFee),
-            signalBalance: tokenValueFormat(signalBalance),
-            signalAllowance: tokenValueFormat(signalAllowance),
-            daiBalance: tokenValueFormat(daiBalance),
-            daiAllowance: tokenValueFormat(daiAllowance),
             isInteractionReady: true,
         })
     }
     
     render(){
         const {classes, input} = this.props;
-        const {setAllowanceValue, interactionFee, allocatableAllowanceLimit, signalBalance, signalAllowance, daiBalance, daiAllowance, isInteractionReady, redirect} = this.state;
+        const {setAllowanceValue, interactionFee, allocatableAllowanceLimit, signalBalance, signalAllowance, daiBalance, daiAllowance, isInteractionReady, redirect, helperTextEnum} = this.state;
         let isUpdateDisabled = (setAllowanceValue === signalAllowance) || !isInteractionReady;
         if(input === "DAI"){
             isUpdateDisabled = (setAllowanceValue === daiAllowance) || !isInteractionReady;
@@ -179,7 +201,7 @@ class AdjustAllowance extends Component {
                             {input === "dB" && 
                                 <Fragment>
                                     <Typography align="left" variant="h6" component="h2" gutterBottom>
-                                            Current Interaction Fee: <span className={classes.signalValue}>{interactionFee} dB</span>
+                                            Interaction Fee: <span className={classes.signalValue}>{interactionFee} dB</span>
                                     </Typography>
                                     <Typography align="left" variant="h6" component="h2" gutterBottom>
                                             Current Signal Balance: <span className={classes.signalValue}>{signalBalance} dB</span>
@@ -206,13 +228,15 @@ class AdjustAllowance extends Component {
                                 <Grid item xs>
                                 <Slider
                                     disabled={isInteractionReady ? false : true}
-                                    max={allocatableAllowanceLimit}
+                                    valueLabelDisplay="auto"
+                                    max={allocatableAllowanceLimit > 0 ? allocatableAllowanceLimit : 0}
                                     value={setAllowanceValue * 1}
                                     onChange={this.handleSliderChange}
                                 />
                                 </Grid>
                                 <Grid item>
                                 <Input
+                                    disabled={isInteractionReady ? false : true}
                                     className={classes.input}
                                     value={setAllowanceValue}
                                     margin="dense"
@@ -234,6 +258,7 @@ class AdjustAllowance extends Component {
                                     </Typography>
                                 </Grid>
                             </Grid>
+                            {helperTextEnum && this.getHelperText(helperTextEnum)}
                             <Fab onClick={() => this.triggerSetAllowance()} color="primary" variant="extended" disabled={isUpdateDisabled} className={classes.fab}>
                                 <RegisterIcon className={classes.extendedIcon} />
                                 Update Allowance

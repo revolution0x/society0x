@@ -4,10 +4,28 @@ import setActiveAccount from "./setActiveAccount";
 import setWeb3 from "./setWeb3";
 import showNavigationWrapper from "./showNavigationWrapper";
 import setConsideredMobile from './setConsideredMobile';
-import setMyProfileMetaData from './setMyProfileMetaData';
+import myProfileMetaData from './myProfileMetaData';
 import setClientProvidedEthNetId from './setClientProvidedEthNetId';
 import discoveryIndex from './discoveryIndex';
-//import otherProfileMetaData from './otherProfileMetaData';
+import fundBalances from './fundBalances';
+import fundTimeseries from './fundTimeseries';
+import fundMilestones from './fundMilestones';
+import fundOverLatestMilestone from './fundOverLatestMilestone';
+import selfSignalBalance from './selfSignalBalance';
+import selfSignalAllowance from './selfSignalAllowance';
+import selfDaiBalance from './selfDaiBalance';
+import selfDaiAllowance from './selfDaiAllowance';
+import interactionFee from './interactionFee';
+import deploymentTimestamp from './deploymentTimestamp';
+import society0xDonationsBalance from './society0xDonationsBalance';
+import society0xDonationsTimeseries from './society0xDonationsTimeseries';
+import modalConfig from './modalConfig';
+import currentDonationProgressViaServer from './currentDonationProgressViaServer';
+import fundWithdrawable from './fundWithdrawable';
+import fundForwardableToBeneficiary from './fundForwardableToBeneficiary';
+import personaConnectionsEstablished from './personaConnectionsEstablished';
+import personaConnectionsOutgoing from './personaConnectionsOutgoing';
+import personaConnectionsIncoming from './personaConnectionsIncoming';
 
 export default combineReducers({
     showLeftMenu,
@@ -16,6 +34,25 @@ export default combineReducers({
     showNavigationWrapper,
     setConsideredMobile,
     setClientProvidedEthNetId,
-    setMyProfileMetaData,
-    discoveryIndex
+    myProfileMetaData,
+    discoveryIndex,
+    fundBalances,
+    fundTimeseries,
+    fundMilestones,
+    fundOverLatestMilestone,
+    selfSignalBalance,
+    selfSignalAllowance,
+    selfDaiBalance,
+    selfDaiAllowance,
+    interactionFee,
+    deploymentTimestamp,
+    society0xDonationsBalance,
+    society0xDonationsTimeseries,
+    modalConfig,
+    currentDonationProgressViaServer,
+    fundWithdrawable,
+    fundForwardableToBeneficiary,
+    personaConnectionsEstablished,
+    personaConnectionsOutgoing,
+    personaConnectionsIncoming,
 })

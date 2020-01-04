@@ -36,16 +36,20 @@ contract ERC20Taxable is IERC20 {
 
     uint256 private _totalSupply;
 
+    IERC20 public dai;
     address public governance;
     address public taxCommunityPool;
     address public taxDevelopmentPool;
     uint8 public taxRatePercent;
+    uint8 public signalPerDai;
 
-    constructor(address _governance, uint8 _taxRatePercent, address _taxCommunityPool, address _taxDevelopmentPool) public {
+    constructor(address _governance, uint8 _taxRatePercent, address _taxCommunityPool, address _taxDevelopmentPool, IERC20 _dai, uint8 _signalPerDai) public {
         governance = _governance;
         taxRatePercent = _taxRatePercent;
         taxCommunityPool = _taxCommunityPool;
         taxDevelopmentPool = _taxDevelopmentPool;
+        dai = _dai;
+        signalPerDai = _signalPerDai;
     }
 
     /**
@@ -188,11 +192,20 @@ contract ERC20Taxable is IERC20 {
      */
     function _tax(address sender, uint256 amount) internal returns(uint256) {
         // Taxation System Start
-        uint256 taxAmountPerPool = (amount * taxRatePercent) / 200; // Half of total taxable amount
+        require(
+            amount.mod(10000) == 0,
+            "ERC20::_tax: amount must contain zero in the last 4 units of the wei unit (prevents Signal undercollatoralisation risk)."
+        );
+        uint256 taxAmountPerPool = amount.mul(taxRatePercent).div(200); // Half of total taxable amount
         require(taxAmountPerPool > 0, "_tax: averted");
-        uint256 totalTaxAmount = taxAmountPerPool * 2; // Defining this because we use it in the event that we emit, too
-        uint256 amountMinusTax = amount - totalTaxAmount; // Total transfer minus tax
+        uint256 totalTaxAmount = taxAmountPerPool.mul(2); // Defining this because we use it in the event that we emit, too
+        uint256 amountMinusTax = amount.sub(totalTaxAmount); // Total transfer minus tax
         require(amountMinusTax > 0, "_tax: pointless transaction");
+        require(
+            totalTaxAmount.mul(100).div(taxRatePercent) == amount,
+            "ERC20::_tax: transaction value would cause collatoralisation leak"
+        );
+        require((amountMinusTax + totalTaxAmount) == amount, "_tax: transaction too small to preserve integer integrity");
         _transfer(sender, taxCommunityPool, taxAmountPerPool); // Forwards half of taxation to Community Pool
         _transfer(sender, taxDevelopmentPool, taxAmountPerPool); // Forwards half of taxation to Development Pool
         emit Tax(sender, totalTaxAmount);
@@ -210,11 +223,44 @@ contract ERC20Taxable is IERC20 {
      * - `to` cannot be the zero address.
      */
     function _mint(address account, uint256 amount) internal {
+        require(
+            amount.mod(10000) == 0,
+            "ERC20::_mint: amount must contain zero in the last 4 units of the wei unit (prevents Signal undercollatoralisation risk)."
+        );
         require(account != address(0), "ERC20: mint to the zero address");
 
         _totalSupply = _totalSupply.add(amount);
         _balances[account] = _balances[account].add(amount);
         emit Transfer(address(0), account, amount);
+    }
+
+    /** @dev Withdraws equivalent value of DAI from this contract in exchange for Signal.
+     * Signal is burned when DAI is withdrawn from reserve.
+     * 
+     * Emits a `Withdraw` event with `to` set to the DAI receiving address
+     */
+    function _withdraw(address account, uint256 daiValue, uint256 signalValue) internal {
+        require(
+            dai.transfer(account, daiValue),
+            "ERC20::_withdraw: withdraw DAI transferFrom failed"
+        );
+        _burn(msg.sender, signalValue);
+        require(
+            dai.balanceOf(address(this)).mul(signalPerDai) == totalSupply(),
+            "ERC20:_withdraw: withdraw would cause Signal undercollatoralisation leak"
+        );
+    }
+
+    /** @dev Returns the resultant hypothetical value after tax */
+    function _valueMinusTax(uint256 value) internal returns(uint256) {
+        uint256 taxableAmount = value.mul(taxRatePercent).div(100);
+        require(
+            value.mod(10000) == 0,
+            "ERC20::_valueMinusTax: value must contain zero in the last 4 units of the wei unit (prevents Signal undercollatoralisation risk)."
+        );
+        require(taxableAmount > 0, "ERC20::_valueMinusTax: taxable value would not be more than zero");
+        uint256 amountMinusTax = value.sub(taxableAmount); // Total Signal minus taxable amount
+        return amountMinusTax;
     }
 
      /**
@@ -229,6 +275,10 @@ contract ERC20Taxable is IERC20 {
      * - `account` must have at least `amount` tokens.
      */
     function _burn(address account, uint256 value) internal {
+        require(
+            value.mod(10000) == 0,
+            "ERC20: value must contain zero in the last 4 units of the wei unit (precautionary safeguard for Signal under-collatoralisation)."
+        );
         require(account != address(0), "ERC20: burn from the zero address");
 
         _totalSupply = _totalSupply.sub(value);

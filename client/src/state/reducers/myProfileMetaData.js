@@ -1,16 +1,16 @@
 import { DefaultProfileMetaData } from '../../utils/constants';
 
-const setMyProfileMetaData = (state = DefaultProfileMetaData, action) => {
+const myProfileMetaData = (state = DefaultProfileMetaData, action) => {
     switch (action.type) {
         case 'SET_MY_PROFILE_META_DATA':
-            const { id, pseudonym, profilePictureIpfsHash, coverPictureIpfsHash, profileMetaIpfsHash, signalReceived, signalGiven, accountMode } = action.profileMetaData;
-            if(profileMetaIpfsHash) {
+            const { id, pseudonym, profilePictureIpfsHash, coverPictureIpfsHash, profileMetaData, signalReceived, signalGiven, accountMode } = action.profileMetaData;
+            if(profileMetaData) {
                 return {
                     id: id,
                     pseudonym: pseudonym,
                     profilePictureIpfsHash: profilePictureIpfsHash,
                     coverPictureIpfsHash: coverPictureIpfsHash,
-                    profileMetaIpfsHash: profileMetaIpfsHash,
+                    profileMetaData: profileMetaData,
                     signalReceived: signalReceived,
                     signalGiven: signalGiven,
                     accountMode: accountMode,
@@ -30,4 +30,4 @@ const setMyProfileMetaData = (state = DefaultProfileMetaData, action) => {
     }
 }
 
-export default setMyProfileMetaData;
+export default myProfileMetaData;

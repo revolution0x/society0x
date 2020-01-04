@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { SimpleFileUpload, TextField } from 'formik-material-ui';
+import { Formik, Form, Field } from 'formik';
+import { TextField } from 'formik-material-ui';
 import Fab from '@material-ui/core/Fab';
 import {withStyles} from '@material-ui/core/styles';
-import CreateIcon from '@material-ui/icons/LeakAdd';
 import * as yup from "yup";
-import {uploadToIPFS} from "../utils/ipfs";
 import {registerProfile} from "../services/society0x";
 import {store} from '../state';
 import {setMyProfileMetaData} from "../state/actions";
@@ -17,19 +15,17 @@ import LottieRender from "./LottieRender";
 import {RequiresInteractionFee} from "./RequiresInteractionFee";
 const fingerprintLottieJSON = require("../lottie/fingerprint.json");
 
-var Buffer = require('buffer/').Buffer
-
 const styles = theme => ({
     fab: {
         width: '100%',
-        marginTop: theme.spacing.unit * 2,
-        marginBottom: theme.spacing.unit * 2,
+        marginTop: theme.spacing(2),
+        marginBottom: theme.spacing(2),
     },
     extendedIcon: {
-        marginRight: theme.spacing.unit,
+        marginRight: theme.spacing(1),
     },
     inputMargin: {
-        marginBottom: theme.spacing.unit * 2,
+        marginBottom: theme.spacing(2),
     },
     contentContainer:{
         display: 'flex',
@@ -38,7 +34,7 @@ const styles = theme => ({
     },
     LottieRender: {
         width: '100%',
-        marginBottom: theme.spacing.unit * 2,
+        marginBottom: theme.spacing(2),
     }
 });
 
@@ -56,41 +52,8 @@ class RegisterPersonaForm extends Component {
         const {redirect} = this.state;
         const {classes} = this.props;
         const thisPersist = this;
-        const FILE_SIZE = 3 * 1000 * 1000; //3 MB
-        const SUPPORTED_FORMATS = [
-            "image/jpg",
-            "image/jpeg",
-            "image/png",
-            "image/gif",
-        ];
         const validationSchema = yup.object().shape({
         recaptcha: yup.array(),
-        // profilePicture: yup
-        //     .mixed()
-        //     .required("A profile picture is required")
-        //     .test(
-        //     "fileSize",
-        //     "File too large (Limit is " + FILE_SIZE/1000/1000 + " MB)",
-        //     value => value && value.size <= FILE_SIZE
-        //     )
-        //     .test(
-        //     "fileFormat",
-        //     "Unsupported Format",
-        //     value => value && SUPPORTED_FORMATS.includes(value.type)
-        //     ),
-        // coverPicture: yup
-        //     .mixed()
-        //     .required("A profile picture is required")
-        //     .test(
-        //     "fileSize",
-        //     "File too large (Limit is " + FILE_SIZE/1000/1000 + " MB)",
-        //     value => value && value.size <= FILE_SIZE
-        //     )
-        //     .test(
-        //     "fileFormat",
-        //     "Unsupported Format",
-        //     value => value && SUPPORTED_FORMATS.includes(value.type)
-        //     ),
         pseudonym: yup
             .string()
             .required("A pseudonym is required")
@@ -106,31 +69,31 @@ class RegisterPersonaForm extends Component {
                 }
                 {!redirect && 
                     <Formik
-                    initialValues={{ file: "", pseudonym: "" }}
+                    initialValues={{ pseudonym: "" }}
                     validationSchema={validationSchema}
                     validateOnBlur={true}
                     onSubmit={async (values, { setSubmitting }) => {
-                        const currentId = store.getState().setMyProfileMetaData.id;
+                        const currentId = store.getState().myProfileMetaData.id;
                         const pseudonym = values.pseudonym;
                         const profileMetaData = Object.assign(DefaultProfileMetaData, {id: currentId, pseudonym});
-                        let profileMetaDataBuffer = Buffer.from(JSON.stringify(profileMetaData));
-                        uploadToIPFS(profileMetaDataBuffer).then(async (IpfsMetaDataUploadResponse) => {
-                            try{
-                                await registerProfile(currentId, pseudonym, IpfsMetaDataUploadResponse[0].hash);
-                                store.dispatch(setMyProfileMetaData(Object.assign(profileMetaData)))
+                        try{
+                            let personaRegistrationResponse = await registerProfile(currentId, pseudonym);
+                            if(personaRegistrationResponse){
+                                store.dispatch(setMyProfileMetaData(Object.assign(profileMetaData)));
                                 thisPersist.setRedirect(`/${pseudonym}`);
-                                setSubmitting(false);
-                            } catch(e) {
-                                let firstErrorLine = e.message.split("\n")[0]
-                                let scanString = "Reason given: ";
-                                let indexOfScanString = firstErrorLine.indexOf(scanString);
-                                if(indexOfScanString > -1){
-                                    let reasonGiven = firstErrorLine.substr(indexOfScanString + scanString.length);
-                                    console.log({reasonGiven});
-                                }
+                            }else{
                                 setSubmitting(false);
                             }
-                        })
+                        } catch(e) {
+                            let firstErrorLine = e.message.split("\n")[0]
+                            let scanString = "Reason given: ";
+                            let indexOfScanString = firstErrorLine.indexOf(scanString);
+                            if(indexOfScanString > -1){
+                                let reasonGiven = firstErrorLine.substr(indexOfScanString + scanString.length);
+                                console.log({reasonGiven});
+                            }
+                            setSubmitting(false);
+                        }
                     }}
                     >
                     {({ isSubmitting }) => (
@@ -144,7 +107,6 @@ class RegisterPersonaForm extends Component {
                                     <RegisterIcon className={classes.extendedIcon} />
                                     Generate Persona
                                 </Fab>
-                                {/* <pre>{JSON.stringify({name: values.file.name, type: values.file.type, size: values.file.size})}</pre> */}
                             </Form>
                         </RequiresInteractionFee>
                     )}

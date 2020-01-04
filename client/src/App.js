@@ -1,18 +1,15 @@
 import React, { Component } from "react";
-import getWeb3, { getGanacheWeb3 } from "./utils/getWeb3";
+import { getGanacheWeb3 } from "./utils/getWeb3";
 import { Loader } from 'rimble-ui';
 import PageContainer from "./components/PageContainer";
-import { Router, Link } from 'react-router-dom';
-import {configureHistory, ethToBrowserFormatProfileMetaData} from "./utils";
-import { DefaultProfileMetaData } from './utils/constants';
+import { Router} from 'react-router-dom';
+import {configureHistory} from "./utils";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import OurAppBar from "./components/OurAppBar";
+import OurTopAppBar from "./components/OurTopAppBar";
 import OurSidebar from "./components/OurSidebar";
+import OurModal from './components/OurModal';
 import { Provider } from "react-redux";
-import {setActiveAccount, setWeb3, setMyProfileMetaData} from './state/actions';
 import { PersistGate } from 'redux-persist/lib/integration/react';
-import {getProfileFromAddress} from "./services/society0x";
-import {connect} from 'react-redux';
 import {store, persistor} from "./state";
 import "./App.css";
 
@@ -43,11 +40,11 @@ class App extends Component {
     super(props);
     this.state = {};
     store.subscribe(() => {
-      if (store.getState().setMyProfileMetaData) {
+      if (store.getState().myProfileMetaData) {
         this.setState({
-          activeAccountAddress: store.getState().setMyProfileMetaData.id,
-          activeAccountProfilePic: store.getState().setMyProfileMetaData.profilePicIpfsHash,
-          activeAccountCoverPic: store.getState().setMyProfileMetaData.profilePicIpfsHash,
+          activeAccountAddress: store.getState().myProfileMetaData.id,
+          activeAccountProfilePic: store.getState().myProfileMetaData.profilePicIpfsHash,
+          activeAccountCoverPic: store.getState().myProfileMetaData.profilePicIpfsHash,
           web3: store.getState().setWeb3
         });
       }
@@ -91,8 +88,9 @@ class App extends Component {
             <MuiThemeProvider theme={theme}>
               <React.Fragment>
                 <OurSidebar/>
-                <OurAppBar {...this.state}/>
+                <OurTopAppBar {...this.state}/>
                 <PageContainer />
+                <OurModal/>
               </React.Fragment>
             </MuiThemeProvider>
           </PersistGate>

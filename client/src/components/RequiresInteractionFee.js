@@ -1,42 +1,52 @@
-import React, {Fragment, Component} from "react";
-import {Link} from "react-router-dom";
+import React, {Component} from "react";
 import {store} from '../state';
-import {Redirect} from 'react-router-dom';
+import { setModalConfig } from '../state/actions';
 import {
     getInteractionFee,
     getSignalBalance,
     getSignalAllowance
 } from "../services/society0x";
 
+const requiresInteractionFee = async(e) => {
+    const account = store.getState().myProfileMetaData.id;
+    const interactionFee = await getInteractionFee() * 1;
+    const signalBalance = await getSignalBalance(account) * 1;
+    const signalAllowance = await getSignalAllowance(account) * 1;
+    if(signalBalance < interactionFee){
+        store.dispatch(setModalConfig({
+            stage: "insufficient_signal_balance",
+            substituteValue1: interactionFee,
+            disableBackdropClick: true,
+            show: true,
+        }));
+    }else if(signalAllowance < interactionFee){
+        store.dispatch(setModalConfig({
+            stage: "insufficient_signal_allowance",
+            substituteValue1: interactionFee,
+            disableBackdropClick: true,
+            show: true,
+        }));
+    }
+};
+
 export class RequiresInteractionFee extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
-
+            autoTrigger: props.autoTrigger || false,
         }
     }
 
     componentDidMount = async() => {
-        const account = store.getState().setMyProfileMetaData.id;
-        const interactionFee = await getInteractionFee() * 1;
-        const signalBalance = await getSignalBalance(account) * 1;
-        const signalAllowance = await getSignalAllowance(account) * 1;
-        this.setState({
-            signalAllowance,
-            signalBalance,
-            interactionFee,
-        })
+        const {autoTrigger} = this.state;
+        if(autoTrigger){
+            requiresInteractionFee();
+        }
     }
 
     render(){
-    const { signalAllowance, signalBalance, interactionFee } = this.state;
-    const { children } = this.props;
-    if((signalAllowance >= interactionFee) && (signalBalance >= interactionFee)){
-        return children
-    }else if (typeof interactionFee !== "undefined") {
-        return (<Redirect to={`/allowance`}/>)
-    } else {
-        return <div className={`disabled-zone`}>{children}</div>;
-    }
+        const { children } = this.props;
+        return <div onClick={(e) => requiresInteractionFee(e)}>{children}</div>;
     }
 };

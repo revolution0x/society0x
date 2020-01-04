@@ -1,0 +1,19 @@
+{
+  "name": "society0x-server",
+  "version": "0.0.1",
+  "description": "client helper",
+  "main": "./dist/server.js",
+  "scripts": {
+    "start": "nodemon dist/server.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revolution0x/society0x.git"
+  },
+  "author": "Jay Welsh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/revolution0x/society0x/issues"
+  },
+  "homepage": "https://github.com/revolution0x/society0x#readme"
+}

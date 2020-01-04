@@ -13,7 +13,7 @@ import {Redirect} from 'react-router-dom';
 const styles = theme => ({
   card: {
     width: 345,
-    marginBottom: theme.spacing.unit * 3,
+    marginBottom: theme.spacing(3),
   },
   media: {
     height: 240,

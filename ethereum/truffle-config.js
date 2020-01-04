@@ -68,6 +68,14 @@ module.exports = {
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     },
 
+    live: {
+      provider: () => new HDWalletProvider(mnemonic, `https://mainnet.infura.io/v3/${infuraKey}`),
+      network_id: 1,          // Mainnet's id
+      gasPrice: 10000000000,  // 10 Gwei
+      confirmations: 2,       // # of confs to wait between deployments. (default: 0)
+      skipDryRun: true,
+    },
+
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     // ropsten: {

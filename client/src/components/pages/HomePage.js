@@ -7,31 +7,53 @@ import {
     joinDiscoveryIndex,
     isInDiscoveryIndex,
     leaveDiscoveryIndex,
-    isRegisteredAddress
+    isRegisteredAddress,
+    refreshDiscoveryIndex,
 } from '../../services/society0x';
-import { Button } from "@material-ui/core";
 import {store} from "../../state";
-import {setDiscoveryIndex} from '../../state/actions';
 import {areEqualArrays} from "../../utils";
+import JoinHomePageIcon from '@material-ui/icons/FlightLand';
+import LeaveHomePageIcon from '@material-ui/icons/FlightTakeoff';
+import LoadingIcon from "@material-ui/icons/HourglassEmpty";
+import Fab from '@material-ui/core/Fab';
+import { RequiresInteractionFee } from "../RequiresInteractionFee";
 
 const styles = theme => ({
     segmentContainer: {
-        paddingBottom: theme.spacing.unit * 4,
-    }
+        paddingBottom: theme.spacing(4),
+    },
+    fab: {
+        width: '100%',
+        maxWidth: '300px',
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(5),
+    },
+    extendedIcon: {
+        marginRight: theme.spacing(1),
+    },
 })
 
 class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            account: store.getState().setMyProfileMetaData.id,
+            account: store.getState().myProfileMetaData.id,
             discoveryIndex: store.getState().discoveryIndex,
+            pseudonym: store.getState().myProfileMetaData.pseudonym,
+            isLoading: true,
         };
         store.subscribe(() => {
-            if (store.getState().setMyProfileMetaData) {
+            let reduxState = store.getState();
+            let discoveryIndexSet = this.state.discoveryIndex;
+            const shouldDiscoveryIndexReduxUpdate = !areEqualArrays(discoveryIndexSet, reduxState.discoveryIndex);
+            if(shouldDiscoveryIndexReduxUpdate) {
+                discoveryIndexSet = reduxState.discoveryIndex;
+            }
+            if (reduxState.myProfileMetaData) {
               this.setState({
-                account: store.getState().setMyProfileMetaData.id,
-                discoveryIndex: store.getState().discoveryIndex
+                account: store.getState().myProfileMetaData.id,
+                discoveryIndex: discoveryIndexSet,
+                pseudonym: store.getState().myProfileMetaData.pseudonym,
               });
             }
         });
@@ -39,30 +61,52 @@ class HomePage extends Component {
 
     componentDidMount = async () => {
         const {account} = this.state;
-        let discoveryIndex = await getDiscoveryIndex();
-        let hasJoinedIndex = await isInDiscoveryIndex(account);
         let isRegistered = await isRegisteredAddress(account);
-        const shouldDiscoveryIndexReduxUpdate = !areEqualArrays(discoveryIndex, store.getState().discoveryIndex);
-        if(shouldDiscoveryIndexReduxUpdate) {
-            this.props.dispatch(setDiscoveryIndex(discoveryIndex));
-        }
+        let hasJoinedIndex = await isInDiscoveryIndex(account);
         this.setState({
-            discoveryIndex: discoveryIndex,
             hasJoinedIndex: hasJoinedIndex,
             isRegistered: isRegistered,
-        })
+            isLoading: false,
+        });
+        let discoveryIndexLatest = await getDiscoveryIndex();
+        const shouldDiscoveryIndexReduxUpdate = !areEqualArrays(discoveryIndexLatest, store.getState().discoveryIndex);
+        if(shouldDiscoveryIndexReduxUpdate) {
+            refreshDiscoveryIndex(discoveryIndexLatest);
+        }
     }
 
     render() {
         const {classes} = this.props;
-        const {account, discoveryIndex, hasJoinedIndex, isRegistered} = this.state;
+        const {account, discoveryIndex, hasJoinedIndex, isRegistered, isLoading, pseudonym} = this.state;
         return (
             <React.Fragment>
-                {isRegistered && <div style={{width: '100%', textAlign: 'center', marginBottom: '30px'}}>
-                    {hasJoinedIndex && <Button onClick={(e) => leaveDiscoveryIndex(account)}>Leave Home Page</Button>}
-                    {!hasJoinedIndex && <Button onClick={(e) => joinDiscoveryIndex(account)}>Join Home Page</Button>}
-                </div>}
-                {discoveryIndex.map((item) => <div key={item} className={classes.segmentContainer}><ProfilePage requestedPersona={item} hideButtons={true} isLinkToProfile={true}></ProfilePage></div>)}
+                {isRegistered && 
+                    <div style={{width: '100%', textAlign: 'center'}}>
+                        <RequiresInteractionFee autoTrigger={false}>
+                            {hasJoinedIndex &&
+                                <Fab color="primary" onClick={(e) => leaveDiscoveryIndex(account)} variant="extended" className={classes.fab}>
+                                    <LeaveHomePageIcon className={classes.extendedIcon} />
+                                    Leave Home Page
+                                </Fab>
+                            }
+                            {!hasJoinedIndex &&
+                                <Fab color="primary" onClick={(e) => joinDiscoveryIndex(account)} variant="extended" className={classes.fab}>
+                                    <JoinHomePageIcon className={classes.extendedIcon} />
+                                    Join Home Page
+                                </Fab>
+                            }
+                        </RequiresInteractionFee>
+                    </div>
+                }
+                {(isLoading && pseudonym) &&
+                    <div style={{width: '100%', textAlign: 'center'}}>
+                        <Fab color="primary" variant="extended" className={classes.fab}>
+                            <LoadingIcon className={classes.extendedIcon} />
+                            Loading...
+                        </Fab>
+                    </div>
+                }
+                {discoveryIndex.map((item) => <div key={item} className={classes.segmentContainer}><ProfilePage requestedPersona={item} isPreview={true} hideButtons={true} isLinkToProfile={true}></ProfilePage></div>)}
             </React.Fragment>
         )
     }

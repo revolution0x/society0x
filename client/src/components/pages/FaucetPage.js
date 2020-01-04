@@ -8,16 +8,16 @@ import {getTestDai} from "../../services/society0x";
 
 const styles = theme => ({
     cardPadding: {
-        padding: theme.spacing.unit * 2,
+        padding: theme.spacing(2),
     },
     fab: {
         width: '100%',
         maxWidth: '300px',
-        marginTop: theme.spacing.unit * 1,
-        marginBottom: theme.spacing.unit * 2,
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(2),
     },
     extendedIcon: {
-        marginRight: theme.spacing.unit,
+        marginRight: theme.spacing(1),
     },
 })
 
@@ -25,13 +25,13 @@ class FaucetPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            account: store.getState().setMyProfileMetaData.id,
+            account: store.getState().myProfileMetaData.id,
             isGettingFaucetPayload: false,
         };
         store.subscribe(() => {
-            if (store.getState().setMyProfileMetaData) {
+            if (store.getState().myProfileMetaData) {
               this.setState({
-                account: store.getState().setMyProfileMetaData.id,
+                account: store.getState().myProfileMetaData.id,
                 isGettingFaucetPayload: false,
               });
             }
@@ -52,10 +52,10 @@ class FaucetPage extends Component {
             <React.Fragment>
                 <div className="text-align-center">
                     <Card className={"max-page-width auto-margins " + classes.cardPadding}>
-                        <h1>{currency} Faucet</h1>
+                        <h1>{currency} Faucet (Testnet)</h1>
                         <Fab onClick={() => this.triggerGetTestDai(account)} color="primary" variant="extended" className={classes.fab}>
                             <FaucetIcon className={classes.extendedIcon} />
-                            Withdraw 100 Test DAI
+                            Withdraw 100 DAI (Testnet)
                         </Fab>
                     </Card>
                 </div>

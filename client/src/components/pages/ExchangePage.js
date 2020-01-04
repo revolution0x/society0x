@@ -5,7 +5,7 @@ import ExchangeTabs from "../ExchangeTabs";
 
 const styles = theme => ({
     cardPadding: {
-        padding: theme.spacing.unit * 2,
+        padding: theme.spacing(2),
     }
 })
 

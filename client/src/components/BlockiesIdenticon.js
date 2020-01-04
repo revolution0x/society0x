@@ -31,7 +31,7 @@ export default class BlockiesIdenticon extends React.Component {
   render() {
     return (
         <React.Fragment>
-            <canvas ref={this.canvas}/>
+            <canvas className={this.props.className} ref={this.canvas}/>
         </React.Fragment>
     )
   }

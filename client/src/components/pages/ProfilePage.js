@@ -10,12 +10,11 @@ import {withRouter} from "react-router";
 import {
     getProfileFromNameOrAddress,
     createConnectionRequest,
-    isEstablishedConnection,
-    isPendingIncomingConnection,
-    isPendingOutgoingConnection,
     acceptConnectionRequest,
     terminateConnection,
-    isAddress
+    isAddress,
+    refreshConnectionStatus,
+    cancelOutgoingConnectionRequest
 } from "../../services/society0x";
 import {debounce} from "../../utils";
 import Blockie from '../BlockiesIdenticon';
@@ -26,14 +25,14 @@ import { WrapConditionalLink } from "../WrapConditionalLink"
 const styles = theme => ({
     fab: {
         width: '100%',
-        marginTop: theme.spacing.unit,
+        marginTop: theme.spacing(1),
     },
     button: {
-        marginTop: theme.spacing.unit,
+        marginTop: theme.spacing(1),
         width: '100%'
     },
     extendedIcon: {
-        marginRight: theme.spacing.unit,
+        marginRight: theme.spacing(1),
     },
     profileContainer: {
         position: "relative",
@@ -47,16 +46,16 @@ const styles = theme => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyCcontent: "center",
+        justifyContent: "center",
     },
     profileLowerLayer: {
-        marginTop: theme.spacing.unit * 2,
+        marginTop: theme.spacing(2),
         zIndex: 5,
         overflow: "inherit",
         position: "relative",
     },
     cardPadding: {
-        padding: theme.spacing.unit * 2,
+        padding: theme.spacing(2),
     },
     profilePicCard: {
         maxWidth: "315px",
@@ -65,13 +64,30 @@ const styles = theme => ({
         transform: "translateY(-50%)",
         zIndex: '1'
     },
-    coverImgContainer: {
+    coverImageContainer: {
         maxWidth: '100%',
         maxHeight: 'calc(100vh - 130px)',
         minHeight: 'calc(100vh - 130px)',
         minWidth: '100%',
         overflow: "hidden",
         borderRadius: theme.shape.borderRadius,
+        position: 'relative',
+    },
+    coverImageInner: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translateY(-50%)translateX(-50%)',
+        minWidth: '100%',
+    },
+    coverImageContainerPreview: {
+        maxWidth: '100%',
+        maxHeight: 'calc(50vh)',
+        minHeight: 'calc(500px)',
+        minWidth: '100%',
+        overflow: "hidden",
+        borderRadius: theme.shape.borderRadius,
+        position: 'relative',
     },
     coverImg: {
         minWidth: '100%',
@@ -86,6 +102,9 @@ const styles = theme => ({
         display: 'flex',
         alignItems: 'center',
     },
+    profileImgInner: {
+        display: 'flex'
+    }
 })
 
 class ProfilePage extends Component {
@@ -95,6 +114,10 @@ class ProfilePage extends Component {
             minCoverHeight: null,
             profileName: "Loading...",
             requestedPersonaLink: props.requestedPersona,
+            profileEthereumAddress: false,
+            isPendingIncomingConnectionState: false,
+            isPendingOutgoingConnectionState: false,
+            isEstablishedConnectionState: false,
         };
         this.profileIntroUpperLayer = React.createRef();
         this.coverImage = React.createRef();
@@ -102,10 +125,33 @@ class ProfilePage extends Component {
         this.profileIntroContainer = React.createRef();
         store.subscribe(() => {
             const reduxState = store.getState();
-            if (reduxState.setMyProfileMetaData) {
-                const myProfileEthereumAddress = reduxState.setMyProfileMetaData.id
+            const { profileEthereumAddress } = this.state;
+            let isPendingIncomingConnectionState = false;
+            let isPendingOutgoingConnectionState = false;
+            let isEstablishedConnectionState = null;
+            if (reduxState.myProfileMetaData && profileEthereumAddress) {
+                const myProfileEthereumAddress = reduxState.myProfileMetaData.id;
+                if(profileEthereumAddress.toLowerCase() !== myProfileEthereumAddress.toLowerCase()){
+                    if(reduxState.personaConnectionsEstablished.indexOf(profileEthereumAddress) > -1){
+                        isEstablishedConnectionState = true;
+                    }
+                    if(reduxState.personaConnectionsIncoming.indexOf(profileEthereumAddress) > -1){
+                        isPendingIncomingConnectionState = true;
+                    }
+                    if(reduxState.personaConnectionsOutgoing.indexOf(profileEthereumAddress) > -1){
+                        isPendingOutgoingConnectionState = true;
+                    }
+                }
                 this.setState({
-                    myProfileEthereumAddress
+                    myProfileEthereumAddress,
+                    isPendingIncomingConnectionState,
+                    isPendingOutgoingConnectionState,
+                    isEstablishedConnectionState,
+                })
+            } else if(reduxState.myProfileMetaData) {
+                const myProfileEthereumAddress = reduxState.myProfileMetaData.id;
+                this.setState({
+                    myProfileEthereumAddress,
                 })
             }
         });
@@ -114,6 +160,7 @@ class ProfilePage extends Component {
     componentDidUpdate = async (prevProps) => {
         if(this.props.requestedPersona !== prevProps.requestedPersona) {
             try {
+                this.resize();
                 let { requestedPersonaLink } = this.state;
                 const {requestedPersona} = this.props;
                 let memberProfile = await getProfileFromNameOrAddress(requestedPersona);
@@ -126,34 +173,19 @@ class ProfilePage extends Component {
                 let coverPictureIpfsHash = memberProfile[3];
                 let myProfileEthereumAddress = null;
                 let myProfilePseudonym = null;
-                let isPendingIncomingConnectionState = false;
-                let isPendingOutgoingConnectionState = false;
-                let isEstablishedConnectionState = null;
-                if(store.getState().setMyProfileMetaData){
-                    myProfileEthereumAddress = await store.getState().setMyProfileMetaData.id;
-                    myProfilePseudonym = await store.getState().setMyProfileMetaData.pseudonym;
+                if(store.getState().myProfileMetaData){
+                    myProfileEthereumAddress = await store.getState().myProfileMetaData.id;
+                    myProfilePseudonym = await store.getState().myProfileMetaData.pseudonym;
                 }
                 if (myProfilePseudonym) {
-                    isEstablishedConnectionState = await isEstablishedConnection(myProfileEthereumAddress, profileEthereumAddress);    
-                    if (!isEstablishedConnectionState) {
-                        if (myProfileEthereumAddress.toLowerCase() !== profileEthereumAddress.toLowerCase()) {
-                            [isPendingOutgoingConnectionState, isPendingIncomingConnectionState] = await Promise.all([
-                                isPendingOutgoingConnection(myProfileEthereumAddress, profileEthereumAddress),
-                                isPendingIncomingConnection(myProfileEthereumAddress, profileEthereumAddress)
-                            ]);
-                        }
-                    }
-                }
-                this.resize();
+                    refreshConnectionStatus(myProfileEthereumAddress, profileEthereumAddress);
+                };
                 this.setState({
                     profileName,
                     profileEthereumAddress,
                     profilePictureIpfsHash,
                     coverPictureIpfsHash,
                     myProfileEthereumAddress,
-                    isPendingIncomingConnectionState,
-                    isPendingOutgoingConnectionState,
-                    isEstablishedConnectionState,
                     requestedPersonaLink,
                 })
             } catch (error) {
@@ -163,7 +195,7 @@ class ProfilePage extends Component {
     }
 
     componentDidMount = async () => {
-        window.addEventListener('resize', debounce(this.resize, 250));
+        window.addEventListener('resize', debounce(this.resize, 100));
         try {
             let { requestedPersonaLink } = this.state;
             const { requestedPersona } = this.props;
@@ -177,24 +209,13 @@ class ProfilePage extends Component {
             let coverPictureIpfsHash = memberProfile[3];
             let myProfileEthereumAddress = null;
             let myProfilePseudonym = null;
-            let isPendingIncomingConnectionState = false;
-            let isPendingOutgoingConnectionState = false;
-            let isEstablishedConnectionState = null;
-            if(store.getState().setMyProfileMetaData){
-                myProfileEthereumAddress = await store.getState().setMyProfileMetaData.id;
-                myProfilePseudonym = await store.getState().setMyProfileMetaData.pseudonym;
+            if(store.getState().myProfileMetaData){
+                myProfileEthereumAddress = await store.getState().myProfileMetaData.id;
+                myProfilePseudonym = await store.getState().myProfileMetaData.pseudonym;
             }
             if (myProfilePseudonym) {
-                isEstablishedConnectionState = await isEstablishedConnection(myProfileEthereumAddress, profileEthereumAddress);    
-                if (!isEstablishedConnectionState) {
-                    if (myProfileEthereumAddress.toLowerCase() !== profileEthereumAddress.toLowerCase()) {
-                        [isPendingOutgoingConnectionState, isPendingIncomingConnectionState] = await Promise.all([
-                            isPendingOutgoingConnection(myProfileEthereumAddress, profileEthereumAddress),
-                            isPendingIncomingConnection(myProfileEthereumAddress, profileEthereumAddress)
-                        ]);
-                    }
-                }
-            }
+                refreshConnectionStatus(myProfileEthereumAddress, profileEthereumAddress);
+            };
             this.resize();
             this.setState({
                 profileName,
@@ -202,9 +223,6 @@ class ProfilePage extends Component {
                 coverPictureIpfsHash,
                 profileEthereumAddress,
                 myProfileEthereumAddress,
-                isPendingIncomingConnectionState,
-                isPendingOutgoingConnectionState,
-                isEstablishedConnectionState,
                 requestedPersonaLink,
             })
             
@@ -233,16 +251,18 @@ class ProfilePage extends Component {
             let naturalAspectRatio = (coverImageNaturalWidth / coverImageNaturalHeight).toFixed(2);
             let currentAspectRatio = (coverImageCurrentWidth / coverImageCurrentHeight).toFixed(2);
             let minCoverHeight = profileIntroUpperLayerHeight + 120;
-            if (((currentAspectRatio !== naturalAspectRatio) || (coverImageCurrentHeight < profileIntroContainerHeight)) && (!coverImageBreakPoint || profileIntroContainerWidth <= coverImageBreakPoint)) {
+            if (((currentAspectRatio !== naturalAspectRatio) || (coverImageCurrentHeight < profileIntroContainerHeight)) && (!coverImageBreakPoint || profileIntroContainerWidth <= coverImageBreakPoint) && (coverImageCurrentHeight < profileIntroContainerHeight)) {
                 let coverImageStyleOverride = { minHeight: minCoverHeight, maxWidth: naturalAspectRatio * minCoverHeight, left: '50%', position: 'relative', transform: 'translateX(-50%)' };
                 if (!this.state.coverImageBreakPoint) {
-                    this.setState({ coverImageStyleOverride })
+                    this.setState({ coverImageStyleOverride, maxCoverHeight: coverImageCurrentHeight })
                 } else {
-                    this.setState({ coverImageStyleOverride, coverImageBreakPoint: profileIntroContainerWidth })
+                    this.setState({ coverImageStyleOverride, maxCoverHeight: coverImageCurrentHeight, coverImageBreakPoint: profileIntroContainerWidth })
                 }
             } else if (coverImageCurrentWidth < profileIntroContainerWidth) {
                 let coverImageStyleOverride = { minHeight: minCoverHeight, minWidth: '100%' };
-                this.setState({ coverImageStyleOverride })
+                this.setState({ coverImageStyleOverride, maxCoverHeight: coverImageCurrentHeight})
+            } else if (coverImageCurrentHeight > profileIntroContainerHeight) {
+                this.setState({ maxCoverHeight: coverImageCurrentHeight})
             }
         }
     }
@@ -251,9 +271,9 @@ class ProfilePage extends Component {
         if(e.target && e.target.height > 0) {
             let profileIntroUpperLayerHeight = this.profileIntroUpperLayer.current.clientHeight;
             let minCoverHeight = profileIntroUpperLayerHeight + 120;
+            this.resize();
             if(minCoverHeight !== this.state.minCoverHeight) {
-                this.setState({minCoverHeight})
-                this.resize();
+                this.setState({minCoverHeight});
             }
         }
     }
@@ -270,10 +290,15 @@ class ProfilePage extends Component {
         await terminateConnection(myProfileEthereumAddress, profileEthereumAddress);
     }
 
+    processCancelConnectionRequest = async (myProfileEthereumAddress, profileEthereumAddress) => {
+        await cancelOutgoingConnectionRequest(myProfileEthereumAddress, profileEthereumAddress);
+    }
+
     render() {
-        const {classes, hideButtons, isLinkToProfile} = this.props;
+        const {classes, hideButtons, isPreview, isLinkToProfile} = this.props;
         const {
             minCoverHeight,
+            maxCoverHeight,
             profileEthereumAddress,
             profilePictureIpfsHash,
             coverPictureIpfsHash,
@@ -288,8 +313,13 @@ class ProfilePage extends Component {
         let minCoverHeightStyle = {};
         if(minCoverHeight > 0){
             minCoverHeightStyle = {
-                minHeight: minCoverHeight
+                minHeight: minCoverHeight,
+                height: maxCoverHeight,
             }
+        }
+        let coverImageContainerClass = classes.coverImageContainer;
+        if(isPreview) {
+            coverImageContainerClass = classes.coverImageContainerPreview;
         }
         return (
             <React.Fragment>
@@ -300,7 +330,9 @@ class ProfilePage extends Component {
                                     <Card ref={this.profileIntroUpperLayer} raised className={["max-page-width auto-margins", classes.cardPadding, classes.profilePicCard].join(" ")}>
                                         {profilePictureIpfsHash &&
                                             <div className={classes.profileImgContainer}>
-                                                <img className={classes.profileImg} ref={this.profileImage} src={IPFS_DATA_GATEWAY + profilePictureIpfsHash} alt="Profile"></img>
+                                                <div className={classes.profileImgInner}>
+                                                    <img className={classes.profileImg} ref={this.profileImage} src={IPFS_DATA_GATEWAY + profilePictureIpfsHash} alt="Profile"></img>
+                                                </div>
                                             </div>
                                         }
                                         {!profilePictureIpfsHash &&
@@ -325,7 +357,7 @@ class ProfilePage extends Component {
                                                 </Button>
                                             }
                                             {(isPendingOutgoingConnectionState && !isEstablishedConnectionState) &&
-                                                <Button onClick={() => this.cancelConnectionRequest(myProfileEthereumAddress, profileEthereumAddress)} variant="contained" color="primary" size="large" className={classes.button}>
+                                                <Button onClick={() => this.processCancelConnectionRequest(myProfileEthereumAddress, profileEthereumAddress)} variant="contained" color="primary" size="large" className={classes.button}>
                                                     <RegisterIcon className={classes.extendedIcon} />
                                                     Connection Pending
                                                 </Button>
@@ -345,10 +377,12 @@ class ProfilePage extends Component {
                                         </Fragment>}
                                         </div>
                                     </Card>
-                                    <div className={[classes.coverImgContainer].join(" ")} style={minCoverHeightStyle}>
-                                        {coverPictureIpfsHash && 
-                                            <img onLoad={(e) => this.coverHasLoaded(e)} ref={this.coverImage} style={coverImageStyleOverride} className={classes.coverImg} src={IPFS_DATA_GATEWAY + coverPictureIpfsHash} alt="Cover"></img>
-                                        }
+                                    <div className={[coverImageContainerClass].join(" ")} style={minCoverHeightStyle}>
+                                        <div className={classes.coverImageInner}>
+                                            {coverPictureIpfsHash && 
+                                                <img onLoad={(e) => this.coverHasLoaded(e)} ref={this.coverImage} style={coverImageStyleOverride} className={classes.coverImg} src={IPFS_DATA_GATEWAY + coverPictureIpfsHash} alt="Cover"></img>
+                                            }
+                                        </div>
                                     </div>
                                 </Card>
                             </WrapConditionalLink>
