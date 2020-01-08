@@ -26,6 +26,7 @@ import fundForwardableToBeneficiary from './fundForwardableToBeneficiary';
 import personaConnectionsEstablished from './personaConnectionsEstablished';
 import personaConnectionsOutgoing from './personaConnectionsOutgoing';
 import personaConnectionsIncoming from './personaConnectionsIncoming';
+import fundBeneficiaryWithdrawn from './fundBeneficiaryWithdrawn';
 
 export default combineReducers({
     showLeftMenu,
@@ -55,4 +56,5 @@ export default combineReducers({
     personaConnectionsEstablished,
     personaConnectionsOutgoing,
     personaConnectionsIncoming,
+    fundBeneficiaryWithdrawn,
 })

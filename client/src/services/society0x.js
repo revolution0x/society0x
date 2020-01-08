@@ -118,7 +118,7 @@ if(window.ethereum) {
             const changedToAccount = accounts[0].toLowerCase();
             await store.dispatch(setMyProfileMetaData(Object.assign(DefaultProfileMetaData, {id: accounts[0]})))
             const {myProfileMetaData} = storeState;
-            if(myProfileMetaData && myProfileMetaData.id && myProfileMetaData.id.toLowerCase() !== changedToAccount){
+            if(myProfileMetaData && changedToAccount && myProfileMetaData.id && myProfileMetaData.id.toLowerCase() !== changedToAccount){
                 window.location.reload();
             }
         }
@@ -1146,13 +1146,15 @@ export const getDeploymentTimestamp = async () => {
 }
 
 export const clearLocalStorageIfDeploymentTimestampChanged = async () => {
-    const currentTimestampOnChain = await getDeploymentTimestamp();
-    if(store.getState().deploymentTimestamp && store.getState().deploymentTimestamp !== currentTimestampOnChain) {
-        localStorage.clear();
-        await store.dispatch(setDeploymentTimestamp(currentTimestampOnChain));
-        window.location.reload();
-    } else {
-        await store.dispatch(setDeploymentTimestamp(currentTimestampOnChain));
+    try {
+        const currentTimestampOnChain = await getDeploymentTimestamp();
+        if(currentTimestampOnChain && store.getState().deploymentTimestamp && store.getState().deploymentTimestamp !== currentTimestampOnChain) {
+            localStorage.clear();
+            await store.dispatch(setDeploymentTimestamp(currentTimestampOnChain));
+            window.location.reload();
+        }
+    } catch (e) {
+        console.log({e})
     }
 }
 

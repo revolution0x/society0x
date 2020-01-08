@@ -21,6 +21,6 @@ export default class EthNetFilter extends Component {
     render() {
         const { clientProvidedEthNet } = this.state;
         const { requiredNetworks } = this.props;
-        return((!clientProvidedEthNet || requiredNetworks.indexOf(clientProvidedEthNet) > -1) ? this.props.children : redirect(requiredNetworks[0]))
+        return requiredNetworks.indexOf(clientProvidedEthNet) > -1 ? this.props.children : redirect(requiredNetworks[0])
     }
 }

@@ -30,7 +30,10 @@ import {
     toNumber,
 } from "../../utils";
 import { WrapConditionalLink } from "../WrapConditionalLink"
-import { setFundBalances } from "../../state/actions";
+import {
+    setFundBalances,
+    setFundBeneficiaryWithdrawn
+} from "../../state/actions";
 
 const styles = theme => ({
     fab: {
@@ -290,7 +293,9 @@ class FundPage extends Component {
                         lastTarget = fundMilestones[fundMilestones.length - 2];
                     }
                     let signalReceived = weiToEther(fund.signalReceived);
+                    let signalWithdrawn = weiToEther(fund.signalWithdrawn);
                     await store.dispatch(setFundBalances({fundId: fund.id, balance: signalReceived}));
+                    await store.dispatch(setFundBeneficiaryWithdrawn({fundId: fund.id, signalWithdrawn: signalWithdrawn}));
                     let coverPictureIpfsHash = fund.coverPictureIpfsHash;
                     const {fundTimeseries} = store.getState();
                     let useTimeseriesData = [];
@@ -302,7 +307,7 @@ class FundPage extends Component {
                         fundName: fund.fundName,
                         fundId: fund.id,
                         fundBeneficiary: fund.recipient,
-                        signalWithdrawn: toNumber(weiToEther(fund.signalWithdrawn)),
+                        signalWithdrawn: toNumber(signalWithdrawn),
                         nextTarget: nextTarget,
                         lastTarget: lastTarget,
                         coverPictureIpfsHash: coverPictureIpfsHash,
@@ -414,6 +419,7 @@ class FundPage extends Component {
             fundsWithdrawable,
             isFundOverLatestMilestone,
             isFundManager,
+            signalWithdrawn,
         } = this.state;
         let minCoverHeightStyle = {};
         if(minCoverHeight > 0){
@@ -427,12 +433,12 @@ class FundPage extends Component {
             bufferProgress = 95;
         }
         let completedProgressLinearBuffer = percentageOf(lastTarget, nextTarget);
-        for(let [index, item] of fundMilestones.entries()){
+        for(let [index] of fundMilestones.entries()){
             if((signalReceived * 1) >= (nextTarget * 1)) {
                 if(lastTarget === 0 && index === (fundMilestones.length - 1)) {
-                    completedProgressLinearBuffer = item * 95 / signalReceived * 1;
+                    completedProgressLinearBuffer = signalWithdrawn * 95 / signalReceived * 1;
                 } else if ((lastTarget !== 0) && (fundMilestones.length >= 2) && index === (fundMilestones.length - 2)) {
-                    completedProgressLinearBuffer = item * 95 / signalReceived * 1;
+                    completedProgressLinearBuffer = signalWithdrawn * 95 / signalReceived * 1;
                 }
             }
         };

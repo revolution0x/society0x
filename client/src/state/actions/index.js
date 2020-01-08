@@ -62,6 +62,11 @@ export const setFundOverLatestMilestone = (isFundOverLatestMilestoneResult) => (
     isFundOverLatestMilestoneResult
 })
 
+export const setFundBeneficiaryWithdrawn = (signalWithdrawalObj) => ({
+    type: "SET_FUND_BENEFICIARY_WITHDRAWN",
+    signalWithdrawalObj
+})
+
 export const setSelfSignalBalance = (signalBalance) => ({
     type: "SET_SELF_SIGNAL_BALANCE",
     signalBalance
