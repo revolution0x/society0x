@@ -97,7 +97,11 @@ class PageContainer extends Component {
 const incorrectEthNetRoute = ({match}, props) => {
     if(match && match.params && match.params.ethnet) {
         const requestNetwork = match.params.ethnet;
-        return <IncorrectEthNetPage requestNetwork={requestNetwork}/>
+        let redirectOnSuccess = "/";
+        if(window.location.search.length > 0){
+            redirectOnSuccess = window.location.search.split("?").slice(1).join("").split("=").slice(1).join("")
+        }
+        return <IncorrectEthNetPage requestNetwork={requestNetwork} redirectOnSuccess={redirectOnSuccess}/>
     }else{
         return <IncorrectEthNetPage requestNetwork={"rinkeby"}/>
     }

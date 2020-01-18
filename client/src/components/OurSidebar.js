@@ -63,6 +63,7 @@ const styles = theme => ({
   },
   sidebarProfilePictureContainer: {
     marginBottom: theme.spacing(1),
+    minHeight: '156px',
   },
   sidebarProfileContainer: {
     display: 'flex',

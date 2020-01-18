@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
+import {Redirect} from 'react-router-dom';
+import {store} from "../../state";
 import RinkebyNetworkMetamask from '../../images/rinkeby_network_metamask.png';
 import MainNetworkMetamask from '../../images/main_network_metamask.png';
 import InstallMetaMask from '../../images/ethereum_metamask_chrome.png';
@@ -19,13 +21,20 @@ class IncorrectEthNetPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            requestNetwork: props.requestNetwork || false
+            requestNetwork: props.requestNetwork || false,
+            redirectOnSuccess: props.redirectOnSuccess || "/",
+            clientProvidedEthNet: store.getState().setClientProvidedEthNetId || false,
         };
+        store.subscribe(() => {
+            this.setState({
+                clientProvidedEthNet: store.getState().setClientProvidedEthNetId,
+            });
+        });
     }
 
     render() {
         const {classes} = this.props;
-        const {requestNetwork} = this.state;
+        const {requestNetwork, clientProvidedEthNet, redirectOnSuccess} = this.state;
         let isMetaMask = false;
         if(typeof window.web3 !== "undefined" && window.web3.currentProvider.isMetaMask === true){
             isMetaMask = true;
@@ -38,6 +47,9 @@ class IncorrectEthNetPage extends Component {
                             <Fragment>
                                 {requestNetwork === "rinkeby" && 
                                     <Fragment>
+                                        {clientProvidedEthNet === requestNetwork && redirectOnSuccess &&
+                                            <Redirect to={redirectOnSuccess}/>
+                                        }
                                         <h1>Ethereum Network Mismatch</h1>
                                         <p>Please switch to the Rinkeby Network via MetaMask:</p>
                                         <img alt={"Rinkeby Network Requested"} src={RinkebyNetworkMetamask} className={classes.helperImage}></img>
@@ -45,6 +57,9 @@ class IncorrectEthNetPage extends Component {
                                 }
                                 {requestNetwork === "main" && 
                                     <Fragment>
+                                        {clientProvidedEthNet === requestNetwork && redirectOnSuccess &&
+                                            <Redirect to={redirectOnSuccess}/>
+                                        }
                                         <h1>Ethereum Network Mismatch</h1>
                                         <p>Please switch to the Main Ethereum Network via MetaMask:</p>
                                         <img alt={"Mainnet Requested"} src={MainNetworkMetamask} className={classes.helperImage}></img>

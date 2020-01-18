@@ -29,6 +29,7 @@ import {
     setPersonaConnectionsEstablished,
     setPersonaConnectionsOutgoing,
     setPersonaConnectionsIncoming,
+    setFundBeneficiaryWithdrawn,
 } from '../state/actions';
 import { 
     DefaultProfileMetaData,
@@ -1059,6 +1060,16 @@ export const unpledgeSignalFromFund = async (fundId, signalValue, account) => {
     }
 }
 
+export const updateValueForwardedToBeneficiary = async (fundId) => {
+    try {
+        const instance = await getSociety0xFundsInstance();
+        const fundsForwardedToBeneficiary = await instance.valueForwardedToBeneficiary(fundId);
+        store.dispatch(setFundBeneficiaryWithdrawn({fundId, signalWithdrawn: weiToEther(fundsForwardedToBeneficiary)}));
+    } catch(error) {
+        console.log({error});
+    }
+}
+
 export const getPledgerFundsWithdrawable = async (fundId, pledgerAddress) => {
     try{
         const instance = await getSociety0xFundsInstance();
@@ -1210,7 +1221,7 @@ export const updateFundIdTimeseries = async (fundId = false, createdBlockTimesta
         await store.dispatch(setFundForwardableToBeneficiary({fundId, valueForwardableToBeneficiary}));
         await store.dispatch(setFundWithdrawable({fundId, signalValueWithdrawable}));
         await store.dispatch(setFundOverLatestMilestone({fundId, isOverLatestMilestone: isFundOverLatestMilestoneResult}));
-        await updateFundIdMilestones(fundId);
+        await Promise.all([updateFundIdMilestones(fundId), updateValueForwardedToBeneficiary(fundId)]);
     }
     if(timeseriesData.length > 0) {
         runningTotal = timeseriesData[timeseriesData.length - 1].yAxisValue;

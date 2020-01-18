@@ -199,6 +199,7 @@ class FundPage extends Component {
                 const mostRecentMilestones = reduxState.fundMilestones[fundId];
                 const { recipient } = this.state;
                 const signalReceived = reduxState.fundBalances[fundId];
+                const signalWithdrawn = reduxState.fundBeneficiaryWithdrawn[fundId];
                 let nextTarget = mostRecentMilestones && mostRecentMilestones.length > 0 ? mostRecentMilestones[mostRecentMilestones.length - 1] : 0;
                 let lastTarget = 0;
                 if (mostRecentMilestones.length > 2) {
@@ -212,6 +213,7 @@ class FundPage extends Component {
                     nextTarget: nextTarget,
                     lastTarget: lastTarget,
                     signalReceived: signalReceived,
+                    signalWithdrawn: signalWithdrawn,
                     isFundOverLatestMilestone: reduxState.fundOverLatestMilestone[fundId] || false,
                     fundsWithdrawable: reduxState.fundWithdrawable[fundId],
                     valueForwardableToBeneficiary: reduxState.fundForwardableToBeneficiary[fundId],
