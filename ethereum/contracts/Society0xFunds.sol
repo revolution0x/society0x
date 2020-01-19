@@ -326,14 +326,26 @@ contract Society0xFunds {
         }
     }
 
-    function isFundOverLatestMilestone(uint256 _fundId) public view returns (bool) {
+    function valueForwardedToBeneficiary(uint256 _fundId) public view returns(uint256) {
         require(
             (funds.length > 0),
-            "Society0xFunds::fetchFundFromFundId: No Funds Exist"
+            "Society0xFunds::valueForwardedToBeneficiary: No Funds Exist"
         );
         require(
             (funds[_fundId].recipient != 0x0000000000000000000000000000000000000000),
-            "Society0xFunds::fetchFundFromFundId: Fund With Provided ID Does Not Exist"
+            "Society0xFunds::valueForwardedToBeneficiary: Fund With Provided ID Does Not Exist"
+        );
+        return funds[_fundId].signalWithdrawn;
+    }
+
+    function isFundOverLatestMilestone(uint256 _fundId) public view returns (bool) {
+        require(
+            (funds.length > 0),
+            "Society0xFunds::isFundOverLatestMilestone: No Funds Exist"
+        );
+        require(
+            (funds[_fundId].recipient != 0x0000000000000000000000000000000000000000),
+            "Society0xFunds::isFundOverLatestMilestone: Fund With Provided ID Does Not Exist"
         );
         uint256 latestMilestone = fundIdToMilestones[_fundId][fundIdToMilestones[_fundId].length.sub(1)];
         uint256 fundSignalReceived = funds[_fundId].signalReceived;

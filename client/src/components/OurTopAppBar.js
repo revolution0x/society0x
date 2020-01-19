@@ -75,7 +75,7 @@ class OurTopAppBar extends React.Component {
   };
 
   toggleMenu = () => {
-      debounce(refreshCurrentDonationProgressViaServer(), 250);
+      // debounce(refreshCurrentDonationProgressViaServer(), 250);
       this.props.dispatch(showLeftMenu(!this.state.showLeftMenu));
   }
 
