@@ -631,7 +631,7 @@
         "id": 2742,
         "nodeType": "ImportDirective",
         "scope": 3369,
-        "sourceUnit": 6710,
+        "sourceUnit": 6743,
         "src": "58:50:11",
         "symbolAliases": [
           {
@@ -647,7 +647,7 @@
         "id": 2744,
         "nodeType": "ImportDirective",
         "scope": 3369,
-        "sourceUnit": 7188,
+        "sourceUnit": 7221,
         "src": "109:66:11",
         "symbolAliases": [
           {
@@ -663,7 +663,7 @@
         "id": 2746,
         "nodeType": "ImportDirective",
         "scope": 3369,
-        "sourceUnit": 7453,
+        "sourceUnit": 7486,
         "src": "176:70:11",
         "symbolAliases": [
           {
@@ -679,7 +679,7 @@
         "id": 2748,
         "nodeType": "ImportDirective",
         "scope": 3369,
-        "sourceUnit": 7780,
+        "sourceUnit": 7813,
         "src": "247:77:11",
         "symbolAliases": [
           {
@@ -709,10 +709,10 @@
               "id": 2749,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 7779,
+              "referencedDeclaration": 7812,
               "src": "357:8:11",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$7779",
+                "typeIdentifier": "t_contract$_SafeMath_$7812",
                 "typeString": "library SafeMath"
               }
             },
@@ -856,7 +856,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ISignal_$6709",
+              "typeIdentifier": "t_contract$_ISignal_$6742",
               "typeString": "contract ISignal"
             },
             "typeName": {
@@ -864,10 +864,10 @@
               "id": 2761,
               "name": "ISignal",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 6709,
+              "referencedDeclaration": 6742,
               "src": "514:7:11",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ISignal_$6709",
+                "typeIdentifier": "t_contract$_ISignal_$6742",
                 "typeString": "contract ISignal"
               }
             },
@@ -884,7 +884,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+              "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
               "typeString": "contract ISociety0xFunds"
             },
             "typeName": {
@@ -892,10 +892,10 @@
               "id": 2763,
               "name": "ISociety0xFunds",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 7187,
+              "referencedDeclaration": 7220,
               "src": "541:15:11",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                 "typeString": "contract ISociety0xFunds"
               }
             },
@@ -912,7 +912,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+              "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
               "typeString": "contract ISociety0xPersona"
             },
             "typeName": {
@@ -920,10 +920,10 @@
               "id": 2765,
               "name": "ISociety0xPersona",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 7452,
+              "referencedDeclaration": 7485,
               "src": "584:17:11",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                 "typeString": "contract ISociety0xPersona"
               }
             },
@@ -1164,7 +1164,7 @@
                       "referencedDeclaration": 2762,
                       "src": "981:6:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISignal_$6709",
+                        "typeIdentifier": "t_contract$_ISignal_$6742",
                         "typeString": "contract ISignal"
                       }
                     },
@@ -1179,13 +1179,13 @@
                       "referencedDeclaration": 2781,
                       "src": "990:7:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISignal_$6709",
+                        "typeIdentifier": "t_contract$_ISignal_$6742",
                         "typeString": "contract ISignal"
                       }
                     },
                     "src": "981:16:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISignal_$6709",
+                      "typeIdentifier": "t_contract$_ISignal_$6742",
                       "typeString": "contract ISignal"
                     }
                   },
@@ -1210,7 +1210,7 @@
                       "referencedDeclaration": 2764,
                       "src": "1007:14:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                        "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                         "typeString": "contract ISociety0xFunds"
                       }
                     },
@@ -1225,13 +1225,13 @@
                       "referencedDeclaration": 2783,
                       "src": "1024:15:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                        "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                         "typeString": "contract ISociety0xFunds"
                       }
                     },
                     "src": "1007:32:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                      "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                       "typeString": "contract ISociety0xFunds"
                     }
                   },
@@ -1256,7 +1256,7 @@
                       "referencedDeclaration": 2766,
                       "src": "1049:16:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                        "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                         "typeString": "contract ISociety0xPersona"
                       }
                     },
@@ -1271,13 +1271,13 @@
                       "referencedDeclaration": 2785,
                       "src": "1068:17:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                        "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                         "typeString": "contract ISociety0xPersona"
                       }
                     },
                     "src": "1049:36:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                      "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                       "typeString": "contract ISociety0xPersona"
                     }
                   },
@@ -1367,7 +1367,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 8291,
+                        "referencedDeclaration": 8324,
                         "src": "1180:5:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -1421,7 +1421,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ISignal_$6709",
+                    "typeIdentifier": "t_contract$_ISignal_$6742",
                     "typeString": "contract ISignal"
                   },
                   "typeName": {
@@ -1429,10 +1429,10 @@
                     "id": 2780,
                     "name": "ISignal",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 6709,
+                    "referencedDeclaration": 6742,
                     "src": "852:7:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISignal_$6709",
+                      "typeIdentifier": "t_contract$_ISignal_$6742",
                       "typeString": "contract ISignal"
                     }
                   },
@@ -1449,7 +1449,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                    "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                     "typeString": "contract ISociety0xFunds"
                   },
                   "typeName": {
@@ -1457,10 +1457,10 @@
                     "id": 2782,
                     "name": "ISociety0xFunds",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 7187,
+                    "referencedDeclaration": 7220,
                     "src": "869:15:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                      "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                       "typeString": "contract ISociety0xFunds"
                     }
                   },
@@ -1477,7 +1477,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                    "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                     "typeString": "contract ISociety0xPersona"
                   },
                   "typeName": {
@@ -1485,10 +1485,10 @@
                     "id": 2784,
                     "name": "ISociety0xPersona",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 7452,
+                    "referencedDeclaration": 7485,
                     "src": "902:17:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                      "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                       "typeString": "contract ISociety0xPersona"
                     }
                   },
@@ -1531,7 +1531,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "1311:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1569,7 +1569,7 @@
                             "referencedDeclaration": 2766,
                             "src": "1274:16:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                              "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                               "typeString": "contract ISociety0xPersona"
                             }
                           },
@@ -1580,7 +1580,7 @@
                           "lValueRequested": false,
                           "memberName": "isRegisteredAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7437,
+                          "referencedDeclaration": 7470,
                           "src": "1274:36:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
@@ -1635,10 +1635,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "1253:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1715,7 +1715,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8301,
+                                "referencedDeclaration": 8334,
                                 "src": "1511:3:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1745,7 +1745,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 8359,
+                                  "referencedDeclaration": 8392,
                                   "src": "1531:4:11",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_Society0x_$3368",
@@ -1808,7 +1808,7 @@
                               "referencedDeclaration": 2762,
                               "src": "1494:6:11",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ISignal_$6709",
+                                "typeIdentifier": "t_contract$_ISignal_$6742",
                                 "typeString": "contract ISignal"
                               }
                             },
@@ -1819,7 +1819,7 @@
                             "lValueRequested": false,
                             "memberName": "allowance",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 6636,
+                            "referencedDeclaration": 6669,
                             "src": "1494:16:11",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_uint256_$",
@@ -1895,10 +1895,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "1473:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1938,7 +1938,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "1705:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1968,7 +1968,7 @@
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8359,
+                                "referencedDeclaration": 8392,
                                 "src": "1725:4:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_contract$_Society0x_$3368",
@@ -2048,7 +2048,7 @@
                             "referencedDeclaration": 2762,
                             "src": "1685:6:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISignal_$6709",
+                              "typeIdentifier": "t_contract$_ISignal_$6742",
                               "typeString": "contract ISignal"
                             }
                           },
@@ -2059,7 +2059,7 @@
                           "lValueRequested": false,
                           "memberName": "transferFrom",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 6656,
+                          "referencedDeclaration": 6689,
                           "src": "1685:19:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -2114,10 +2114,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "1664:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2272,7 +2272,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 8301,
+                        "referencedDeclaration": 8334,
                         "src": "2084:3:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -2521,7 +2521,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 8301,
+                        "referencedDeclaration": 8334,
                         "src": "2375:3:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -2700,7 +2700,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "2479:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -2767,10 +2767,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "2396:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2827,7 +2827,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "2604:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2901,7 +2901,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8301,
+                                "referencedDeclaration": 8334,
                                 "src": "2638:3:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -2978,7 +2978,7 @@
                         "lValueRequested": false,
                         "memberName": "sub",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 7732,
+                        "referencedDeclaration": 7765,
                         "src": "2618:35:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3187,7 +3187,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8301,
+                                "referencedDeclaration": 8334,
                                 "src": "2858:3:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -3240,7 +3240,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 8301,
+                            "referencedDeclaration": 8334,
                             "src": "2874:3:11",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -3301,10 +3301,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "2800:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3381,7 +3381,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 8301,
+                            "referencedDeclaration": 8334,
                             "src": "3018:3:11",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -3620,7 +3620,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "3422:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3649,7 +3649,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "3434:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3707,7 +3707,7 @@
                         "referencedDeclaration": 2764,
                         "src": "3324:14:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                          "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                           "typeString": "contract ISociety0xFunds"
                         }
                       },
@@ -3718,7 +3718,7 @@
                       "lValueRequested": false,
                       "memberName": "createSociety0xFund",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 6995,
+                      "referencedDeclaration": 7028,
                       "src": "3324:34:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$_t_address_$_t_address_$returns$_t_bool_$",
@@ -4009,7 +4009,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "3701:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4055,7 +4055,7 @@
                         "referencedDeclaration": 2764,
                         "src": "3646:14:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                          "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                           "typeString": "contract ISociety0xFunds"
                         }
                       },
@@ -4066,7 +4066,7 @@
                       "lValueRequested": false,
                       "memberName": "setNewMilestone",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7111,
+                      "referencedDeclaration": 7144,
                       "src": "3646:30:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_uint256_$_t_address_$returns$_t_bool_$",
@@ -4293,7 +4293,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8301,
+                                "referencedDeclaration": 8334,
                                 "src": "3931:3:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -4323,7 +4323,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 8359,
+                                  "referencedDeclaration": 8392,
                                   "src": "3951:4:11",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_Society0x_$3368",
@@ -4386,7 +4386,7 @@
                               "referencedDeclaration": 2762,
                               "src": "3914:6:11",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ISignal_$6709",
+                                "typeIdentifier": "t_contract$_ISignal_$6742",
                                 "typeString": "contract ISignal"
                               }
                             },
@@ -4397,7 +4397,7 @@
                             "lValueRequested": false,
                             "memberName": "allowance",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 6636,
+                            "referencedDeclaration": 6669,
                             "src": "3914:16:11",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_uint256_$",
@@ -4473,10 +4473,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "3893:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4516,7 +4516,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "4118:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -4549,7 +4549,7 @@
                                 "referencedDeclaration": 2764,
                                 "src": "4138:14:11",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                                  "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                                   "typeString": "contract ISociety0xFunds"
                                 }
                               }
@@ -4557,7 +4557,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                                  "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                                   "typeString": "contract ISociety0xFunds"
                                 }
                               ],
@@ -4626,7 +4626,7 @@
                             "referencedDeclaration": 2762,
                             "src": "4098:6:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISignal_$6709",
+                              "typeIdentifier": "t_contract$_ISignal_$6742",
                               "typeString": "contract ISignal"
                             }
                           },
@@ -4637,7 +4637,7 @@
                           "lValueRequested": false,
                           "memberName": "transferFrom",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 6656,
+                          "referencedDeclaration": 6689,
                           "src": "4098:19:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -4692,10 +4692,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "4077:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4786,7 +4786,7 @@
                         "referencedDeclaration": 2762,
                         "src": "4300:6:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISignal_$6709",
+                          "typeIdentifier": "t_contract$_ISignal_$6742",
                           "typeString": "contract ISignal"
                         }
                       },
@@ -4797,7 +4797,7 @@
                       "lValueRequested": false,
                       "memberName": "getTaxedValue",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 6703,
+                      "referencedDeclaration": 6736,
                       "src": "4300:20:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$_t_uint256_$",
@@ -4862,7 +4862,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "4424:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -4908,7 +4908,7 @@
                             "referencedDeclaration": 2764,
                             "src": "4365:14:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                               "typeString": "contract ISociety0xFunds"
                             }
                           },
@@ -4919,7 +4919,7 @@
                           "lValueRequested": false,
                           "memberName": "pledgeSignalToFund",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7168,
+                          "referencedDeclaration": 7201,
                           "src": "4365:33:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_uint256_$_t_address_$returns$_t_bool_$",
@@ -4974,10 +4974,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "4344:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5200,7 +5200,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "4800:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -5246,7 +5246,7 @@
                             "referencedDeclaration": 2764,
                             "src": "4739:14:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                               "typeString": "contract ISociety0xFunds"
                             }
                           },
@@ -5257,7 +5257,7 @@
                           "lValueRequested": false,
                           "memberName": "unpledgeSignalFromFund",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7179,
+                          "referencedDeclaration": 7212,
                           "src": "4739:37:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_uint256_$_t_address_$returns$_t_bool_$",
@@ -5312,10 +5312,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "4718:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5525,7 +5525,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "5141:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -5567,7 +5567,7 @@
                             "referencedDeclaration": 2764,
                             "src": "5091:14:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                               "typeString": "contract ISociety0xFunds"
                             }
                           },
@@ -5578,7 +5578,7 @@
                           "lValueRequested": false,
                           "memberName": "forwardFundsToBeneficiary",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7086,
+                          "referencedDeclaration": 7119,
                           "src": "5091:40:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_address_$returns$_t_bool_$",
@@ -5633,10 +5633,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "5070:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5817,7 +5817,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "5437:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5859,7 +5859,7 @@
                         "referencedDeclaration": 2766,
                         "src": "5390:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -5870,7 +5870,7 @@
                       "lValueRequested": false,
                       "memberName": "registerProfile",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7240,
+                      "referencedDeclaration": 7273,
                       "src": "5390:32:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_address_$returns$__$",
@@ -6000,7 +6000,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "5863:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -6042,7 +6042,7 @@
                         "referencedDeclaration": 2766,
                         "src": "5804:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -6053,7 +6053,7 @@
                       "lValueRequested": false,
                       "memberName": "editProfileImage",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7267,
+                      "referencedDeclaration": 7300,
                       "src": "5804:33:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_address_$returns$_t_address_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$_t_uint256_$_t_uint8_$_t_uint256_$_t_uint256_$",
@@ -6465,7 +6465,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "6281:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -6507,7 +6507,7 @@
                         "referencedDeclaration": 2766,
                         "src": "6226:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -6518,7 +6518,7 @@
                       "lValueRequested": false,
                       "memberName": "editCoverImage",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7294,
+                      "referencedDeclaration": 7327,
                       "src": "6226:31:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_address_$returns$_t_address_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$_t_uint256_$_t_uint8_$_t_uint256_$_t_uint256_$",
@@ -6930,7 +6930,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "6550:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -6972,7 +6972,7 @@
                         "referencedDeclaration": 2766,
                         "src": "6478:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -6983,7 +6983,7 @@
                       "lValueRequested": false,
                       "memberName": "createConnectionRequest",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7335,
+                      "referencedDeclaration": 7368,
                       "src": "6478:40:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -7161,7 +7161,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "6833:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -7203,7 +7203,7 @@
                         "referencedDeclaration": 2766,
                         "src": "6756:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -7214,7 +7214,7 @@
                       "lValueRequested": false,
                       "memberName": "cancelOutgoingConnectionRequest",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7353,
+                      "referencedDeclaration": 7386,
                       "src": "6756:48:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -7392,7 +7392,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "7100:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -7434,7 +7434,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7029:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -7445,7 +7445,7 @@
                       "lValueRequested": false,
                       "memberName": "acceptConnectionRequest",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7344,
+                      "referencedDeclaration": 7377,
                       "src": "7029:40:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -7623,7 +7623,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "7371:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -7665,7 +7665,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7298:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -7676,7 +7676,7 @@
                       "lValueRequested": false,
                       "memberName": "declineConnectionRequest",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7362,
+                      "referencedDeclaration": 7395,
                       "src": "7298:41:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -7854,7 +7854,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "7618:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -7896,7 +7896,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7550:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -7907,7 +7907,7 @@
                       "lValueRequested": false,
                       "memberName": "terminateConnection",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7371,
+                      "referencedDeclaration": 7404,
                       "src": "7550:36:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -8085,7 +8085,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "7826:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -8127,7 +8127,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7769:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -8138,7 +8138,7 @@
                       "lValueRequested": false,
                       "memberName": "isEstablishedConnection",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7380,
+                      "referencedDeclaration": 7413,
                       "src": "7769:40:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
@@ -8297,7 +8297,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "8056:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -8339,7 +8339,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7988:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -8350,7 +8350,7 @@
                       "lValueRequested": false,
                       "memberName": "isPendingIncomingConnection",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7389,
+                      "referencedDeclaration": 7422,
                       "src": "7988:44:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
@@ -8509,7 +8509,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "8286:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -8551,7 +8551,7 @@
                         "referencedDeclaration": 2766,
                         "src": "8218:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -8562,7 +8562,7 @@
                       "lValueRequested": false,
                       "memberName": "isPendingOutgoingConnection",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7398,
+                      "referencedDeclaration": 7431,
                       "src": "8218:44:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
@@ -8732,7 +8732,7 @@
         "id": 2742,
         "nodeType": "ImportDirective",
         "scope": 3369,
-        "sourceUnit": 6710,
+        "sourceUnit": 6743,
         "src": "58:50:11",
         "symbolAliases": [
           {
@@ -8748,7 +8748,7 @@
         "id": 2744,
         "nodeType": "ImportDirective",
         "scope": 3369,
-        "sourceUnit": 7188,
+        "sourceUnit": 7221,
         "src": "109:66:11",
         "symbolAliases": [
           {
@@ -8764,7 +8764,7 @@
         "id": 2746,
         "nodeType": "ImportDirective",
         "scope": 3369,
-        "sourceUnit": 7453,
+        "sourceUnit": 7486,
         "src": "176:70:11",
         "symbolAliases": [
           {
@@ -8780,7 +8780,7 @@
         "id": 2748,
         "nodeType": "ImportDirective",
         "scope": 3369,
-        "sourceUnit": 7780,
+        "sourceUnit": 7813,
         "src": "247:77:11",
         "symbolAliases": [
           {
@@ -8810,10 +8810,10 @@
               "id": 2749,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 7779,
+              "referencedDeclaration": 7812,
               "src": "357:8:11",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$7779",
+                "typeIdentifier": "t_contract$_SafeMath_$7812",
                 "typeString": "library SafeMath"
               }
             },
@@ -8957,7 +8957,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ISignal_$6709",
+              "typeIdentifier": "t_contract$_ISignal_$6742",
               "typeString": "contract ISignal"
             },
             "typeName": {
@@ -8965,10 +8965,10 @@
               "id": 2761,
               "name": "ISignal",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 6709,
+              "referencedDeclaration": 6742,
               "src": "514:7:11",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ISignal_$6709",
+                "typeIdentifier": "t_contract$_ISignal_$6742",
                 "typeString": "contract ISignal"
               }
             },
@@ -8985,7 +8985,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+              "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
               "typeString": "contract ISociety0xFunds"
             },
             "typeName": {
@@ -8993,10 +8993,10 @@
               "id": 2763,
               "name": "ISociety0xFunds",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 7187,
+              "referencedDeclaration": 7220,
               "src": "541:15:11",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                 "typeString": "contract ISociety0xFunds"
               }
             },
@@ -9013,7 +9013,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+              "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
               "typeString": "contract ISociety0xPersona"
             },
             "typeName": {
@@ -9021,10 +9021,10 @@
               "id": 2765,
               "name": "ISociety0xPersona",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 7452,
+              "referencedDeclaration": 7485,
               "src": "584:17:11",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                 "typeString": "contract ISociety0xPersona"
               }
             },
@@ -9265,7 +9265,7 @@
                       "referencedDeclaration": 2762,
                       "src": "981:6:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISignal_$6709",
+                        "typeIdentifier": "t_contract$_ISignal_$6742",
                         "typeString": "contract ISignal"
                       }
                     },
@@ -9280,13 +9280,13 @@
                       "referencedDeclaration": 2781,
                       "src": "990:7:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISignal_$6709",
+                        "typeIdentifier": "t_contract$_ISignal_$6742",
                         "typeString": "contract ISignal"
                       }
                     },
                     "src": "981:16:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISignal_$6709",
+                      "typeIdentifier": "t_contract$_ISignal_$6742",
                       "typeString": "contract ISignal"
                     }
                   },
@@ -9311,7 +9311,7 @@
                       "referencedDeclaration": 2764,
                       "src": "1007:14:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                        "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                         "typeString": "contract ISociety0xFunds"
                       }
                     },
@@ -9326,13 +9326,13 @@
                       "referencedDeclaration": 2783,
                       "src": "1024:15:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                        "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                         "typeString": "contract ISociety0xFunds"
                       }
                     },
                     "src": "1007:32:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                      "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                       "typeString": "contract ISociety0xFunds"
                     }
                   },
@@ -9357,7 +9357,7 @@
                       "referencedDeclaration": 2766,
                       "src": "1049:16:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                        "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                         "typeString": "contract ISociety0xPersona"
                       }
                     },
@@ -9372,13 +9372,13 @@
                       "referencedDeclaration": 2785,
                       "src": "1068:17:11",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                        "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                         "typeString": "contract ISociety0xPersona"
                       }
                     },
                     "src": "1049:36:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                      "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                       "typeString": "contract ISociety0xPersona"
                     }
                   },
@@ -9468,7 +9468,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 8291,
+                        "referencedDeclaration": 8324,
                         "src": "1180:5:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -9522,7 +9522,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ISignal_$6709",
+                    "typeIdentifier": "t_contract$_ISignal_$6742",
                     "typeString": "contract ISignal"
                   },
                   "typeName": {
@@ -9530,10 +9530,10 @@
                     "id": 2780,
                     "name": "ISignal",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 6709,
+                    "referencedDeclaration": 6742,
                     "src": "852:7:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISignal_$6709",
+                      "typeIdentifier": "t_contract$_ISignal_$6742",
                       "typeString": "contract ISignal"
                     }
                   },
@@ -9550,7 +9550,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                    "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                     "typeString": "contract ISociety0xFunds"
                   },
                   "typeName": {
@@ -9558,10 +9558,10 @@
                     "id": 2782,
                     "name": "ISociety0xFunds",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 7187,
+                    "referencedDeclaration": 7220,
                     "src": "869:15:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                      "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                       "typeString": "contract ISociety0xFunds"
                     }
                   },
@@ -9578,7 +9578,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                    "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                     "typeString": "contract ISociety0xPersona"
                   },
                   "typeName": {
@@ -9586,10 +9586,10 @@
                     "id": 2784,
                     "name": "ISociety0xPersona",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 7452,
+                    "referencedDeclaration": 7485,
                     "src": "902:17:11",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                      "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                       "typeString": "contract ISociety0xPersona"
                     }
                   },
@@ -9632,7 +9632,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "1311:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -9670,7 +9670,7 @@
                             "referencedDeclaration": 2766,
                             "src": "1274:16:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                              "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                               "typeString": "contract ISociety0xPersona"
                             }
                           },
@@ -9681,7 +9681,7 @@
                           "lValueRequested": false,
                           "memberName": "isRegisteredAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7437,
+                          "referencedDeclaration": 7470,
                           "src": "1274:36:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
@@ -9736,10 +9736,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "1253:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -9816,7 +9816,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8301,
+                                "referencedDeclaration": 8334,
                                 "src": "1511:3:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -9846,7 +9846,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 8359,
+                                  "referencedDeclaration": 8392,
                                   "src": "1531:4:11",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_Society0x_$3368",
@@ -9909,7 +9909,7 @@
                               "referencedDeclaration": 2762,
                               "src": "1494:6:11",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ISignal_$6709",
+                                "typeIdentifier": "t_contract$_ISignal_$6742",
                                 "typeString": "contract ISignal"
                               }
                             },
@@ -9920,7 +9920,7 @@
                             "lValueRequested": false,
                             "memberName": "allowance",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 6636,
+                            "referencedDeclaration": 6669,
                             "src": "1494:16:11",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_uint256_$",
@@ -9996,10 +9996,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "1473:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -10039,7 +10039,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "1705:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -10069,7 +10069,7 @@
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8359,
+                                "referencedDeclaration": 8392,
                                 "src": "1725:4:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_contract$_Society0x_$3368",
@@ -10149,7 +10149,7 @@
                             "referencedDeclaration": 2762,
                             "src": "1685:6:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISignal_$6709",
+                              "typeIdentifier": "t_contract$_ISignal_$6742",
                               "typeString": "contract ISignal"
                             }
                           },
@@ -10160,7 +10160,7 @@
                           "lValueRequested": false,
                           "memberName": "transferFrom",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 6656,
+                          "referencedDeclaration": 6689,
                           "src": "1685:19:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -10215,10 +10215,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "1664:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -10373,7 +10373,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 8301,
+                        "referencedDeclaration": 8334,
                         "src": "2084:3:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -10622,7 +10622,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 8301,
+                        "referencedDeclaration": 8334,
                         "src": "2375:3:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -10801,7 +10801,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "2479:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -10868,10 +10868,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "2396:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -10928,7 +10928,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "2604:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -11002,7 +11002,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8301,
+                                "referencedDeclaration": 8334,
                                 "src": "2638:3:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -11079,7 +11079,7 @@
                         "lValueRequested": false,
                         "memberName": "sub",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 7732,
+                        "referencedDeclaration": 7765,
                         "src": "2618:35:11",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -11288,7 +11288,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8301,
+                                "referencedDeclaration": 8334,
                                 "src": "2858:3:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -11341,7 +11341,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 8301,
+                            "referencedDeclaration": 8334,
                             "src": "2874:3:11",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -11402,10 +11402,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "2800:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -11482,7 +11482,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 8301,
+                            "referencedDeclaration": 8334,
                             "src": "3018:3:11",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -11721,7 +11721,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "3422:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -11750,7 +11750,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "3434:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -11808,7 +11808,7 @@
                         "referencedDeclaration": 2764,
                         "src": "3324:14:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                          "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                           "typeString": "contract ISociety0xFunds"
                         }
                       },
@@ -11819,7 +11819,7 @@
                       "lValueRequested": false,
                       "memberName": "createSociety0xFund",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 6995,
+                      "referencedDeclaration": 7028,
                       "src": "3324:34:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$_t_address_$_t_address_$returns$_t_bool_$",
@@ -12110,7 +12110,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "3701:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -12156,7 +12156,7 @@
                         "referencedDeclaration": 2764,
                         "src": "3646:14:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                          "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                           "typeString": "contract ISociety0xFunds"
                         }
                       },
@@ -12167,7 +12167,7 @@
                       "lValueRequested": false,
                       "memberName": "setNewMilestone",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7111,
+                      "referencedDeclaration": 7144,
                       "src": "3646:30:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_uint256_$_t_address_$returns$_t_bool_$",
@@ -12394,7 +12394,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 8301,
+                                "referencedDeclaration": 8334,
                                 "src": "3931:3:11",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -12424,7 +12424,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 8359,
+                                  "referencedDeclaration": 8392,
                                   "src": "3951:4:11",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_Society0x_$3368",
@@ -12487,7 +12487,7 @@
                               "referencedDeclaration": 2762,
                               "src": "3914:6:11",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ISignal_$6709",
+                                "typeIdentifier": "t_contract$_ISignal_$6742",
                                 "typeString": "contract ISignal"
                               }
                             },
@@ -12498,7 +12498,7 @@
                             "lValueRequested": false,
                             "memberName": "allowance",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 6636,
+                            "referencedDeclaration": 6669,
                             "src": "3914:16:11",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_uint256_$",
@@ -12574,10 +12574,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "3893:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -12617,7 +12617,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "4118:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -12650,7 +12650,7 @@
                                 "referencedDeclaration": 2764,
                                 "src": "4138:14:11",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                                  "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                                   "typeString": "contract ISociety0xFunds"
                                 }
                               }
@@ -12658,7 +12658,7 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                                  "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                                   "typeString": "contract ISociety0xFunds"
                                 }
                               ],
@@ -12727,7 +12727,7 @@
                             "referencedDeclaration": 2762,
                             "src": "4098:6:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISignal_$6709",
+                              "typeIdentifier": "t_contract$_ISignal_$6742",
                               "typeString": "contract ISignal"
                             }
                           },
@@ -12738,7 +12738,7 @@
                           "lValueRequested": false,
                           "memberName": "transferFrom",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 6656,
+                          "referencedDeclaration": 6689,
                           "src": "4098:19:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -12793,10 +12793,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "4077:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -12887,7 +12887,7 @@
                         "referencedDeclaration": 2762,
                         "src": "4300:6:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISignal_$6709",
+                          "typeIdentifier": "t_contract$_ISignal_$6742",
                           "typeString": "contract ISignal"
                         }
                       },
@@ -12898,7 +12898,7 @@
                       "lValueRequested": false,
                       "memberName": "getTaxedValue",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 6703,
+                      "referencedDeclaration": 6736,
                       "src": "4300:20:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$_t_uint256_$",
@@ -12963,7 +12963,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "4424:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -13009,7 +13009,7 @@
                             "referencedDeclaration": 2764,
                             "src": "4365:14:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                               "typeString": "contract ISociety0xFunds"
                             }
                           },
@@ -13020,7 +13020,7 @@
                           "lValueRequested": false,
                           "memberName": "pledgeSignalToFund",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7168,
+                          "referencedDeclaration": 7201,
                           "src": "4365:33:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_uint256_$_t_address_$returns$_t_bool_$",
@@ -13075,10 +13075,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "4344:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -13301,7 +13301,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "4800:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -13347,7 +13347,7 @@
                             "referencedDeclaration": 2764,
                             "src": "4739:14:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                               "typeString": "contract ISociety0xFunds"
                             }
                           },
@@ -13358,7 +13358,7 @@
                           "lValueRequested": false,
                           "memberName": "unpledgeSignalFromFund",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7179,
+                          "referencedDeclaration": 7212,
                           "src": "4739:37:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_uint256_$_t_address_$returns$_t_bool_$",
@@ -13413,10 +13413,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "4718:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -13626,7 +13626,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 8301,
+                              "referencedDeclaration": 8334,
                               "src": "5141:3:11",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -13668,7 +13668,7 @@
                             "referencedDeclaration": 2764,
                             "src": "5091:14:11",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7187",
+                              "typeIdentifier": "t_contract$_ISociety0xFunds_$7220",
                               "typeString": "contract ISociety0xFunds"
                             }
                           },
@@ -13679,7 +13679,7 @@
                           "lValueRequested": false,
                           "memberName": "forwardFundsToBeneficiary",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 7086,
+                          "referencedDeclaration": 7119,
                           "src": "5091:40:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_address_$returns$_t_bool_$",
@@ -13734,10 +13734,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        8304,
-                        8305
+                        8337,
+                        8338
                       ],
-                      "referencedDeclaration": 8305,
+                      "referencedDeclaration": 8338,
                       "src": "5070:7:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -13918,7 +13918,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "5437:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -13960,7 +13960,7 @@
                         "referencedDeclaration": 2766,
                         "src": "5390:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -13971,7 +13971,7 @@
                       "lValueRequested": false,
                       "memberName": "registerProfile",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7240,
+                      "referencedDeclaration": 7273,
                       "src": "5390:32:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_address_$returns$__$",
@@ -14101,7 +14101,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "5863:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -14143,7 +14143,7 @@
                         "referencedDeclaration": 2766,
                         "src": "5804:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -14154,7 +14154,7 @@
                       "lValueRequested": false,
                       "memberName": "editProfileImage",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7267,
+                      "referencedDeclaration": 7300,
                       "src": "5804:33:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_address_$returns$_t_address_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$_t_uint256_$_t_uint8_$_t_uint256_$_t_uint256_$",
@@ -14566,7 +14566,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "6281:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -14608,7 +14608,7 @@
                         "referencedDeclaration": 2766,
                         "src": "6226:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -14619,7 +14619,7 @@
                       "lValueRequested": false,
                       "memberName": "editCoverImage",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7294,
+                      "referencedDeclaration": 7327,
                       "src": "6226:31:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_address_$returns$_t_address_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$_t_uint256_$_t_uint8_$_t_uint256_$_t_uint256_$",
@@ -15031,7 +15031,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "6550:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -15073,7 +15073,7 @@
                         "referencedDeclaration": 2766,
                         "src": "6478:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -15084,7 +15084,7 @@
                       "lValueRequested": false,
                       "memberName": "createConnectionRequest",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7335,
+                      "referencedDeclaration": 7368,
                       "src": "6478:40:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -15262,7 +15262,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "6833:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -15304,7 +15304,7 @@
                         "referencedDeclaration": 2766,
                         "src": "6756:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -15315,7 +15315,7 @@
                       "lValueRequested": false,
                       "memberName": "cancelOutgoingConnectionRequest",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7353,
+                      "referencedDeclaration": 7386,
                       "src": "6756:48:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -15493,7 +15493,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "7100:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -15535,7 +15535,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7029:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -15546,7 +15546,7 @@
                       "lValueRequested": false,
                       "memberName": "acceptConnectionRequest",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7344,
+                      "referencedDeclaration": 7377,
                       "src": "7029:40:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -15724,7 +15724,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "7371:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -15766,7 +15766,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7298:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -15777,7 +15777,7 @@
                       "lValueRequested": false,
                       "memberName": "declineConnectionRequest",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7362,
+                      "referencedDeclaration": 7395,
                       "src": "7298:41:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -15955,7 +15955,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "7618:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -15997,7 +15997,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7550:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -16008,7 +16008,7 @@
                       "lValueRequested": false,
                       "memberName": "terminateConnection",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7371,
+                      "referencedDeclaration": 7404,
                       "src": "7550:36:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$returns$_t_bool_$",
@@ -16186,7 +16186,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "7826:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -16228,7 +16228,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7769:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -16239,7 +16239,7 @@
                       "lValueRequested": false,
                       "memberName": "isEstablishedConnection",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7380,
+                      "referencedDeclaration": 7413,
                       "src": "7769:40:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
@@ -16398,7 +16398,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "8056:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -16440,7 +16440,7 @@
                         "referencedDeclaration": 2766,
                         "src": "7988:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -16451,7 +16451,7 @@
                       "lValueRequested": false,
                       "memberName": "isPendingIncomingConnection",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7389,
+                      "referencedDeclaration": 7422,
                       "src": "7988:44:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
@@ -16610,7 +16610,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 8301,
+                          "referencedDeclaration": 8334,
                           "src": "8286:3:11",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -16652,7 +16652,7 @@
                         "referencedDeclaration": 2766,
                         "src": "8218:16:11",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7452",
+                          "typeIdentifier": "t_contract$_ISociety0xPersona_$7485",
                           "typeString": "contract ISociety0xPersona"
                         }
                       },
@@ -16663,7 +16663,7 @@
                       "lValueRequested": false,
                       "memberName": "isPendingOutgoingConnection",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7398,
+                      "referencedDeclaration": 7431,
                       "src": "8218:44:11",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
@@ -16806,12 +16806,18 @@
     "4": {
       "events": {},
       "links": {},
-      "address": "0x1c813d1bA65f6E33188755CDC7c71554736cd8D4",
-      "transactionHash": "0xad33d4d4e006cb953b71c45f885966a2fe9880985a7e25b5238e593dd7e01beb"
+      "address": "0x795E7ae9Bf602C044d9b0EA2691614793685F828",
+      "transactionHash": "0xdddf9a2680242add9ba0b54859a2c2c0e033a292366832d9505d11f2e308b875"
+    },
+    "1579437532595": {
+      "events": {},
+      "links": {},
+      "address": "0x1B33c796391c9BEdB238C6f3a03Ebc13DF599F88",
+      "transactionHash": "0xca94c1cd437511323010bada506cb945ca7291cd721f49086a68eef2839a6acb"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2020-01-04T19:22:41.022Z",
+  "updatedAt": "2020-01-19T12:50:31.215Z",
   "devdoc": {
     "methods": {}
   },
