@@ -114,6 +114,7 @@ class ProfilePage extends Component {
             minCoverHeight: null,
             profileName: "Loading...",
             requestedPersonaLink: props.requestedPersona,
+            hideButtons: props.hideButtons || true,
             profileEthereumAddress: false,
             isPendingIncomingConnectionState: false,
             isPendingOutgoingConnectionState: false,
@@ -129,6 +130,7 @@ class ProfilePage extends Component {
             let isPendingIncomingConnectionState = false;
             let isPendingOutgoingConnectionState = false;
             let isEstablishedConnectionState = null;
+            let hideConnectionButtons = reduxState.myProfileMetaData.pseudonym ? false : true;
             if (reduxState.myProfileMetaData && profileEthereumAddress) {
                 const myProfileEthereumAddress = reduxState.myProfileMetaData.id;
                 if(profileEthereumAddress.toLowerCase() !== myProfileEthereumAddress.toLowerCase()){
@@ -147,11 +149,13 @@ class ProfilePage extends Component {
                     isPendingIncomingConnectionState,
                     isPendingOutgoingConnectionState,
                     isEstablishedConnectionState,
+                    hideButtons: hideConnectionButtons,
                 })
             } else if(reduxState.myProfileMetaData) {
                 const myProfileEthereumAddress = reduxState.myProfileMetaData.id;
                 this.setState({
                     myProfileEthereumAddress,
+                    hideButtons: hideConnectionButtons,
                 })
             }
         });
@@ -295,7 +299,11 @@ class ProfilePage extends Component {
     }
 
     render() {
-        const {classes, hideButtons, isPreview, isLinkToProfile} = this.props;
+        const {
+            classes,
+            isPreview,
+            isLinkToProfile
+        } = this.props;
         const {
             minCoverHeight,
             maxCoverHeight,
@@ -308,7 +316,8 @@ class ProfilePage extends Component {
             isEstablishedConnectionState,
             isPendingIncomingConnectionState,
             isPendingOutgoingConnectionState,
-            requestedPersonaLink
+            requestedPersonaLink,
+            hideButtons
         } = this.state;
         let minCoverHeightStyle = {};
         if(minCoverHeight > 0){
