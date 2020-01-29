@@ -130,7 +130,7 @@ class ProfilePage extends Component {
             let isPendingIncomingConnectionState = false;
             let isPendingOutgoingConnectionState = false;
             let isEstablishedConnectionState = null;
-            let hideConnectionButtons = reduxState.myProfileMetaData.pseudonym ? false : true;
+            let hideConnectionButtons = (reduxState.myProfileMetaData.pseudonym && !props.hideButtons) ? false : true;
             if (reduxState.myProfileMetaData && profileEthereumAddress) {
                 const myProfileEthereumAddress = reduxState.myProfileMetaData.id;
                 if(profileEthereumAddress.toLowerCase() !== myProfileEthereumAddress.toLowerCase()){
